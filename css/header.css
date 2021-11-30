@@ -1,0 +1,99 @@
+
+/* ///////////////////////////////////////////////////////
+// меню, дата, логотип, повідомити за новину, соцкнопки //
+/////////////////////////////////////////////////////// */
+
+#header 
+{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    min-height: 140px;
+}
+
+#header-left
+{
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 45px
+}
+
+#nav-button
+{
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23434a54'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-top: -4px
+}
+
+
+#header-left time
+{
+    display: block;
+    line-height: 1;
+    color: var(--light);
+}
+
+/* center */
+#logo 
+{
+    font-family: 'Merriweather', serif;
+    font-size: 90px;
+    font-weight: 900;
+    color: var(--cyan);
+    text-transform: lowercase;
+    text-align: center;
+}
+
+#logo a 
+{
+    text-decoration: none;
+    line-height: 1;
+    color: var(--cyan);
+    display: block;
+    margin: -10px 0 10px;
+}
+
+#logo span
+{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gray);
+    
+}
+
+/* right */
+#header-right
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+/* Повідомити новину */
+#send-post 
+{
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 17px;
+}
+
+/* пошук */
+#search-button 
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23434a54' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    cursor: pointer;
+}

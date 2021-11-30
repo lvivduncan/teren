@@ -1,0 +1,51 @@
+/* //////////
+// важливо //
+////////// */
+
+#hot .articles
+{
+    gap: var(--gap);
+    display: grid;
+    /* grid-template-columns: 920px 440px; */
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: auto 1fr 1fr auto; */
+    grid-template-areas: 
+        /* 'hot-title hot-title' */
+        'hot-1 hot-2'
+        'hot-1 hot-3'
+        /* 'hot-rest hot-rest'; */
+}
+
+#hot .title 
+{
+    /* grid-area: hot-title; */
+}
+
+/* 1 велика новина зліва */
+#hot .article:nth-of-type(1)
+{
+    grid-area: hot-1;
+}
+
+.article:nth-of-type(1) .article-data h1 
+{
+    margin: 0 0 24px;
+    font-size: 30px;
+    /* font-family: 'Merriweather', serif; */
+}
+
+/* 2 і 3 мала справа */
+#hot .article:nth-of-type(2)
+{
+    grid-area: hot-2;
+}
+
+#hot .article:nth-of-type(3)
+{
+    grid-area: hot-3;
+}
+
+#hot .rest 
+{
+    /* grid-area: hot-rest; */
+}

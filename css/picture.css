@@ -1,0 +1,46 @@
+/* default position image */
+img
+{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+picture img, 
+picture source
+{
+    width: 100%;
+    height: auto;
+}
+/* default position image */
+
+/* 19:6 */
+.picture
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.picture picture
+{
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.picture picture img
+{
+    width: 100%!important;
+    height: 100%!important;
+    object-fit: cover;
+}
+/* 19:6 */

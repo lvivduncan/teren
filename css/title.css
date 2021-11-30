@@ -1,0 +1,29 @@
+/* //////////////////
+// заголовок блоку //
+////////////////// */
+.title
+{
+    color: var(--gray);
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: 600;
+    height: 40px;
+    display: flex;
+    gap: 15px;
+    margin: 0 0 20px;
+}
+
+
+
+
+
+/* модифікатори (іконки) */
+/* дзвоник */
+.title.bell::before
+{
+    content: '';
+    display: inline-block;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAMAAABHNWOVAAAAM1BMVEUAAACqsr6nr7upsb2psb2vr7+psb2psbyqsr2psb2ps7yosr2osL2nr7+qr7+psL2psb18eaCWAAAAEHRSTlMAv0CA7xDfz2CPUHCfIDCva2nSxQAAAONJREFUOMvtk1tuwyAUBS/vl2PP/ldbKFYgduyoaj87P9hoODogkAMJJfco+K2hA2gnV8SNTihvpewZ2HIWEhW/mGJSoLIdY5YWrqWzqvbnTglmrmR5PRgNRJlZLcxdwp7gilJmTwHr5gjfxmypjLMrc834LTbSWBaehgfXB/WQefb53e0VfBOnZD0M1bsZmTAnI0O+NyRGuTUa/8ZfGY+PRoYkZwqYPcIfrvGIti0keSrqHVRsEj4hyTLh69IAdgSlQ/ncHs3r1n5mxP6cF1guDGdbAw885AK9t45yyboBIcvMF9I9ElpI6g5uAAAAAElFTkSuQmCC');
+    width: 33px;
+    height: 40px;
+}
