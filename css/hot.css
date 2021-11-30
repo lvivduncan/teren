@@ -16,10 +16,44 @@
         /* 'hot-rest hot-rest'; */
 }
 
-#hot .title 
+
+/* оскільки текст на фото -- використовуємо цей блок */
+.article-data
 {
-    /* grid-area: hot-title; */
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+    right: 45px;
+    color: var(--white);
+    z-index: 2;
 }
+
+.article-data time 
+{
+    display: block;
+    margin: 0 0 20px;
+}
+
+.article-data h1 
+{
+    /* margin: 0 0 24px; */
+    font-size: 21px;
+    font-family: 'Merriweather', serif;
+}
+
+.article-data h1 a
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.article-data p 
+{
+    margin: 24px 0 0;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
 
 /* 1 велика новина зліва */
 #hot .article:nth-of-type(1)
@@ -31,7 +65,6 @@
 {
     margin: 0 0 24px;
     font-size: 30px;
-    /* font-family: 'Merriweather', serif; */
 }
 
 /* 2 і 3 мала справа */
@@ -45,7 +78,30 @@
     grid-area: hot-3;
 }
 
-#hot .rest 
+/* картинки зі затемненням */
+#hot picture
 {
-    /* grid-area: hot-rest; */
+    position: relative;
+    display: block;
+    height: 100%;
 }
+
+#hot picture img
+{
+    height: 100%;
+}
+
+#hot picture::before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(0,0,0,.3);
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,.5) 35%, rgba(0,0,0,0) 100%);
+}
+

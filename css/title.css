@@ -13,7 +13,17 @@
     margin: 0 0 20px;
 }
 
+.title::before
+{
+    content: '';
+    display: inline-block;
+    width: 33px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    align-self: center;
+}
 
 
 
@@ -21,9 +31,44 @@
 /* дзвоник */
 .title.bell::before
 {
-    content: '';
-    display: inline-block;
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAMAAABHNWOVAAAAM1BMVEUAAACqsr6nr7upsb2psb2vr7+psb2psbyqsr2psb2ps7yosr2osL2nr7+qr7+psL2psb18eaCWAAAAEHRSTlMAv0CA7xDfz2CPUHCfIDCva2nSxQAAAONJREFUOMvtk1tuwyAUBS/vl2PP/ldbKFYgduyoaj87P9hoODogkAMJJfco+K2hA2gnV8SNTihvpewZ2HIWEhW/mGJSoLIdY5YWrqWzqvbnTglmrmR5PRgNRJlZLcxdwp7gilJmTwHr5gjfxmypjLMrc834LTbSWBaehgfXB/WQefb53e0VfBOnZD0M1bsZmTAnI0O+NyRGuTUa/8ZfGY+PRoYkZwqYPcIfrvGIti0keSrqHVRsEj4hyTLh69IAdgSlQ/ncHs3r1n5mxP6cF1guDGdbAw885AK9t45yyboBIcvMF9I9ElpI6g5uAAAAAElFTkSuQmCC');
-    width: 33px;
-    height: 40px;
+}
+
+/* календарик */
+.title.calendar::before
+{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAM1BMVEUAAACpsb2nr7uqsr6qr7+osL2vr7+psb2ps7ynr7+osr2psb2psb2psbypsL2qsr2psb0D89PNAAAAEHRSTlMAgEC/MJ8Q31AgcO+Pz69gU3s48QAAANhJREFUOMu1lEEOwyAMBA02mDSk3f+/tqatFCUFmRwypz2MWFZI0M6GQgcKNuoQgUAHEjAnhj9xicYDSPFAAmJDfpowHPijvjDBy2pXQEMZV5egwLq0ac9MhgzH5CeQyGzzGpXlKArXb8grVhOZXBigVugSrokcXD7VU1wTU3RJN6zexWjQKO2iReMxSNdFv/rW1UuMC3XSWSwwSi+dxAQM0knMwci9ND3mdlHYkG66vrr6J1Zg/gNQQDxPAG31mzje1q6aFQDXMCQxAM3mK1xUvk+qjtYe/A0g5h7WBnzV9QAAAABJRU5ErkJggg==');
+    width: 40px;
+}
+
+/* коментарі */
+.title.comment::before
+{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAMAAACfvvDEAAAAM1BMVEUAAACpsb2psb2qsr2qsr6vr7+psb2nr7uosL2nr7+psbypsb2qr7+psL2osr2ps7ypsb0WIwlFAAAAEHRSTlMA74BgvxDfQJ8gz48wr3BQn9J3IgAAAXZJREFUOMuNlFmyhCAMRQkQZvTuf7VP0lajRrre+dDC3EgmMAreU4FQkmOzJCfClR7fdVzFHLw96EEWPhtNC0O2fU3ZjTjIKaF7+RyHtr4Iu07BKmkjwBpB/+G2U5muWkr5tvRzpQJIcxUAVY5XYzvdlvtv5qQCba3kS2geeNVocxCnJfar3PA/JXf8T8lFBuiXsgNnd8hLxZYQyqdAhZ00fcUunY7SVSYQ/ypSk+cuMa9/uku+7cyaSTwWUSJKlPE7W205IDwSp3OdzrOh2WRAgG6mFP1RK7aUIku1r4lYHKRLCNmSHOQwQrylHIN0q27xwNWCSRLlBRvwIEQ/XmTUaOzzvqHuxCxX0Ci86k2OztotNql2lcS2OCrgzJJ0aUcGAmvJNN7c6o/JcLdzh/Xe5b5DXwnvk1DHDhyVjjseyRJoNK08tI4eQhk2CMXNu0daFdojvQGVT+e6PfAf1/oonggcm9hxhVLWk+/jmYJLBYJPu27GH4ZPGVbFw76DAAAAAElFTkSuQmCC');
+    width: 41px;
+    height: 41px;
+}
+
+/* палець догори */
+.title.thumb-up::before
+{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAmCAMAAABu6EIRAAAAM1BMVEUAAACqsr6psb2nr7upsb2osL2vr7+qr7+psbypsb2qsr2psL2psb2osr2nr7+ps7ypsb32jW4HAAAAEHRSTlMAv4BA758QMM+PYK/fcCBQfHx3AAAAAPlJREFUOMuNlFuuhSAMRXkjPtf8R3ttek80QaX7AwSW0N0G3LvKAml2BjVEBrQAE6R9SM6Q3QLbkMxwuAp+SCbQdgQGWM7OD8kIxLOHNLCTxI8bxzlLhora2ga28UW35CufB3q0KxOEr+JojLr3Wr7PVhc7UAf52X9fqjXHJ1Jiu8JQ6dTsLx1Smyu2uOi0/LGdK3e1BsTOY5ZS0ak9h3SS0338Uj2PkP4+jo8ua+rJ1xRnG9nM5A5pRF4rNrLCaiMTBBsJFBvpodrIxUrOkiQTCQQbKVXvyPJyDXqSLXba9Mk52xZUmVcFTcBN6zOY/+/IpVZieFAV8A+4UhboTLZ1ewAAAABJRU5ErkJggg==');
+    width: 41px;
+    height: 38px;
+}
+
+/* відео */
+.title.video::before
+{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAaCAMAAADyku75AAAAM1BMVEUAAACqsr6psb2osL2nr7upsb2qsr2qr7+vr7+psbypsL2psb2ps7ynr7+psb2osr2psb1aXNtbAAAAEHRSTlMAv4CfQN9gMBDPr+9QII9wMIPqnwAAAKtJREFUOMvV1M0KxCAMBOBRa/1t1/d/2s3UBQ8qBPbUOYRCPyvYRADR+raMu/CLawkIZOuUszsrz4h0ZpUiLwLdyUXUKWCVmOUL3RF6LluHm110DJ5VqVUWpg7I3Q46Zx7oIMWyMBYjtbVEB4Hd2BykGEmOGDlE0Q24DiGdBtLpYIYS2hfADOiP598D3//CewKbpjATmNtM3bj6UdAPl2pcP4T7C6CMC+Bu/guSNBVma5sIsQAAAABJRU5ErkJggg==');
+    width: 40px;
+    height: 26px;
+}
+
+/* замок */
+.title.castle::before
+{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAMAAACfvvDEAAAAM1BMVEUAAACnr7uqsr6psb2psb2osr2osL2psbyqsr2vr7+psL2ps7yqr7+nr7+psb2psb2psb3UkcgAAAAAEHRSTlMAQL+A73Cfz2AQr1AwIN+PTdkGIwAAASNJREFUOMvVlMtuhDAMRW3HecNw//9rGzeINNUMYdNFz+IqUo7ENUbQTxKAUGHU0CLRJxwAfcF4aQt3ZxrC0nJhinfO7bS39HJv0uDenLgxE2YSfWSL8FwLpLJH3OgGAVMEEIkhtDArIEB9YDqIjf3IfLnXe3Nn3ls0zPQHjMObyY29C42sgJKiUZJtXAzbfirAeae5mYwZOWvM8DC1H/QytQs6mRszb71Vvczam3/fXSYP/GV6HnTzec+smChkFEy02U3FeFLAQZ0DYTRCEw2Axxfqfp16P/ozk6eeYT6dPXlMuaKMN7dAzm2s8KfJNLPxRjP81sxWR/IDM8KIazMBqcfKLAgtA8rSFLj+L/u3Zo7zNiNCy4A4bzNmUjxDSeUZ+gXoPCDfKm6d0wAAAABJRU5ErkJggg==');
+    width: 41px;
+    height: 41px;
 }

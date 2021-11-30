@@ -8,40 +8,6 @@
     position: relative;
 }
 
-/* якщо текст на фото -- використовуємо цей блок */
-.article-data
-{
-    position: absolute;
-    bottom: 50px;
-    left: 45px;
-    right: 45px;
-    color: var(--white);
-}
-
-.article-data time 
-{
-    display: block;
-    /* margin: 0 0 28px; */
-    margin: 0 0 20px;
-}
-
-.article-data h1 
-{
-    margin: 0 0 24px;
-    font-size: 21px;
-    font-family: 'Merriweather', serif;
-}
-
-.article-data h1 a
-{
-    color: var(--white);
-    text-decoration: none;
-}
-
-
-
-
-
 
 
 
@@ -49,6 +15,7 @@
 
 
 /* якщо 4 анонса */
+
 
 
 
@@ -63,4 +30,14 @@
 .rest 
 {
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rest a 
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--gray);
 }
