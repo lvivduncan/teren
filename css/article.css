@@ -37,6 +37,12 @@
     justify-content: flex-end;
 }
 
+/* у боковій колонці */
+aside .rest 
+{
+    height: 85px;
+}
+
 .rest a 
 {
     text-decoration: none;

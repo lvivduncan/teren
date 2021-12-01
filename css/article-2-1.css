@@ -36,9 +36,11 @@
     font-family: 'Merriweather', serif;
 }
 
-.article-2-1 .article-data h1 a
+.article-2-1 .article-data h1 a,
+.article-2-1 .article-data h1 a:hover,
+.article-2-1 .article-data h1 a:focus
 {
-    color: var(--white);
+    color: var(--white)!important;
     text-decoration: none;
 }
 

@@ -42,6 +42,13 @@ body
 
     /* колір бордеру в артиклях */
     --border: #e6e9ee;
+
+    --aside: #656d78;
+
+    --fb: #515eb3;
+    --tw: #6ab8ff;
+    --tg: #389ce9;
+    --social: #f6f7f8;
 }
 
 a
@@ -55,7 +62,7 @@ a:hover,
 a:focus
 {
     text-decoration: none;
-    color: var(--black);
+    color: var(--black)!important;
 }
 
 

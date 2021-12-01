@@ -45,6 +45,11 @@
     font-size: 14px;
 }
 
+#footer-content p
+{
+    margin: 0 0 5px;
+}
+
 /* right */
 #footer-contact
 {

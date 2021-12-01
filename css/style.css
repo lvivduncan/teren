@@ -27,4 +27,14 @@
 /* стіна анонсів */
 @import url('./list.css');
 
+/* окрема новина */
+@import url('./page.css');
+
+
+/* error */
+
 @import url('./footer.css');
+
+@import url('./blockquote.css');
+
+@import url('./share-buttons.css');
