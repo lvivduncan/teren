@@ -4,10 +4,24 @@
 
 @import url('./social.css');
 
-@import url('./hot.css');
+/* заголовок блоку анонсів */
+@import url('./title.css');
+
+/* окремий анонс  */
+@import url('./article.css');
 
 @import url('./picture.css');
 
-@import url('./article.css');
+/* великий анонс злвіва, 2 малих справа */
+@import url('./article-2-1.css');
 
-@import url('./title.css');
+/* по 4 анонси у ряд, 2 рядки */
+@import url('./article-8.css');
+
+/* по 3 анонси */
+@import url('./article-3.css');
+
+/* по 4 анонси */
+@import url('./article-4.css');
+
+@import url('./footer.css');

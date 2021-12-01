@@ -1,0 +1,31 @@
+
+/* ///////////
+// 3 анонси //
+/////////// */
+
+.article-3 
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--gap);
+}
+
+/* .article-3 .article time 
+{
+    display: block;
+    margin: 20px 0;
+    color: var(--light);
+} */
+
+.article-3 .article h1 a 
+{
+    font-size: 21px;
+    /* font-family: 'Merriweather', serif; */
+    /* color: var(--gray); */
+    /* text-decoration: none; */
+}
+
+/* .article-3 .article h1 a:hover 
+{
+    color: var(--black);
+} */

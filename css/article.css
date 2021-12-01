@@ -8,28 +8,30 @@
     position: relative;
 }
 
+.article time 
+{
+    display: block;
+    margin: 20px 0;
+    color: var(--light);
 
+    font-size: 14px;
+}
 
+.article h1 a 
+{
+    font-family: 'Merriweather', serif;
+    color: var(--gray);
+    text-decoration: none;
+}
 
-
-
-
-/* якщо 4 анонса */
-
-
-
-
-/* якщо 4 маленьких анонса (картинка поруч) */
-
-
-
-
-
-
-/* лінк справа внизу "читати все"/"інші новини" тощо */
+/* ////////////////////////////////////////////////////
+// лінк справа внизу "читати все"/"інші новини" тощо //
+// має додаткову міссію -- відступ блоку знизу =)    //
+//////////////////////////////////////////////////// */
 .rest 
 {
-    height: 50px;
+    /* height: 50px; */
+    height: 115px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -39,5 +41,12 @@
 {
     text-decoration: none;
     font-size: 18px;
+    font-weight: 300;
     color: var(--gray);
+    transition: .5s;
+}
+
+.rest a:hover
+{
+    color: var(--black);
 }

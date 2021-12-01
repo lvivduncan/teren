@@ -1,0 +1,74 @@
+/* /////////////////////
+// новини 2 листопада //
+///////////////////// */
+
+.article-8 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: var(--border);
+    grid-gap: 1px;
+}
+  
+.article-8 .article
+{
+    background: var(--white);
+    padding: calc(var(--gap) + 5px) calc(var(--gap)/2);
+
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: calc(var(--gap)/2)
+}
+
+/* цей блок може мити інший фон. модифікатор */
+.bg-gray .article-8 .article
+{
+    background: var(--bg-gray);
+}
+
+/* щоб картинку не пердоліло */
+.bg-gray .article-8 .article .picture 
+{
+    align-self: flex-start;
+}
+
+.article-8 .article .article-data time 
+{
+    color: var(--cyan);
+    /* font-size: 14px; */
+    display: block;
+    /* margin: 0 0 24px; */
+    margin: 0 0 20px;
+}
+
+.article-8 .article .article-data h1 a
+{
+    color: var(--gray);
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: .5s;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+
+/* .article-8 .article .article-data h1 a:hover 
+{
+    color: var(--black);
+} */
+
+/* 1 і 5 артикль повинні мати додатковий стиль для вирівнювання */
+.article-8 .article:nth-of-type(1) .picture,
+.article-8 .article:nth-of-type(5) .picture
+{
+    margin-left: -20px;
+}
+
+.article-8 .article:nth-of-type(1) .article-data,
+.article-8 .article:nth-of-type(5) .article-data
+{
+    margin: 0 -20px;
+}
+/* 1 і 5 артикль повинні мати додатковий стиль для вирівнювання */
+

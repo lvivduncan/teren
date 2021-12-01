@@ -1,0 +1,101 @@
+
+#footer 
+{
+    background: var(--bg-gray);
+    padding: 50px 0 0;
+}
+
+#footer .wrapper 
+{
+    display: grid;
+    gap: 35px 0;
+    grid-template-columns: 1fr 710px 1fr;
+    grid-template-areas:
+        'footer-logo footer-content footer-contact'
+        'copy copy copy'
+}
+
+/* left */
+#footer-logo
+{
+    grid-area: footer-logo;
+}
+
+/* текстовий логотип */
+#footer-logo a
+{
+    color: var(--cyan);
+    font-size: 40px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#footer-logo p 
+{
+    color: var(--gray);
+}
+
+/* center */
+#footer-content 
+{
+    grid-area: footer-content;
+
+    color: var(--light);
+    font-size: 14px;
+}
+
+/* right */
+#footer-contact
+{
+    grid-area: footer-contact;
+
+    text-align: center;
+}
+
+#footer-contact > a
+{
+    display: block;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+    margin: 0 0 20px;
+}
+
+/* phone */
+#footer-contact a[href^='tel']
+{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+/* mail */
+#footer-contact a[href^='mailto']
+{
+    font-size: 14px;
+    color: var(--cyan);
+}
+
+/* bottom */
+#copy 
+{
+    grid-area: copy;
+
+    text-align: center;
+    padding: 0 0 35px;
+    color: var(--cyan);
+    font-size: 16px;
+}
+
+#copy a 
+{
+    color: var(--cyan);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#copy a:hover, 
+#copy a:focus 
+{
+    text-decoration: underline;
+}

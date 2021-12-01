@@ -1,0 +1,18 @@
+/* //////////////
+// по 4 анонси //
+////////////// */
+
+.article-4 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: var(--gap);
+}
+
+.article-4 .article h1 a 
+{
+    font-size: 18px;
+    /* font-family: 'Merriweather', serif; */
+    /* color: var(--gray); */
+    /* text-decoration: none; */
+}

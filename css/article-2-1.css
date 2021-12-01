@@ -2,23 +2,18 @@
 // важливо //
 ////////// */
 
-#hot .articles
+.article-2-1
 {
     gap: var(--gap);
-    display: grid;
-    /* grid-template-columns: 920px 440px; */
+    display: grid;    
     grid-template-columns: 2fr 1fr;
-    /* grid-template-rows: auto 1fr 1fr auto; */
     grid-template-areas: 
-        /* 'hot-title hot-title' */
         'hot-1 hot-2'
         'hot-1 hot-3'
-        /* 'hot-rest hot-rest'; */
 }
 
-
 /* оскільки текст на фото -- використовуємо цей блок */
-.article-data
+.article-2-1 .article-data
 {
     position: absolute;
     bottom: 50px;
@@ -28,26 +23,26 @@
     z-index: 2;
 }
 
-.article-data time 
+.article-2-1 .article-data time 
 {
     display: block;
     margin: 0 0 20px;
+    color: var(--white);
 }
 
-.article-data h1 
+.article-2-1 .article-data h1 
 {
-    /* margin: 0 0 24px; */
     font-size: 21px;
     font-family: 'Merriweather', serif;
 }
 
-.article-data h1 a
+.article-2-1 .article-data h1 a
 {
     color: var(--white);
     text-decoration: none;
 }
 
-.article-data p 
+.article-2-1 .article-data p 
 {
     margin: 24px 0 0;
     font-weight: 300;
@@ -56,42 +51,42 @@
 
 
 /* 1 велика новина зліва */
-#hot .article:nth-of-type(1)
+.article-2-1 .article:nth-of-type(1)
 {
     grid-area: hot-1;
 }
 
-.article:nth-of-type(1) .article-data h1 
+.article-2-1 .article:nth-of-type(1) .article-data h1 
 {
     margin: 0 0 24px;
     font-size: 30px;
 }
 
 /* 2 і 3 мала справа */
-#hot .article:nth-of-type(2)
+.article-2-1 .article:nth-of-type(2)
 {
     grid-area: hot-2;
 }
 
-#hot .article:nth-of-type(3)
+.article-2-1 .article:nth-of-type(3)
 {
     grid-area: hot-3;
 }
 
 /* картинки зі затемненням */
-#hot picture
+.article-2-1 picture
 {
     position: relative;
     display: block;
     height: 100%;
 }
 
-#hot picture img
+.article-2-1 picture img
 {
     height: 100%;
 }
 
-#hot picture::before
+.article-2-1 picture::before
 {
     content: '';
     display: block;
