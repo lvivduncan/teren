@@ -12,7 +12,7 @@
 
 @import url('./picture.css');
 
-/* великий анонс злвіва, 2 малих справа */
+/* великий анонс зліва, 2 малих справа */
 @import url('./article-2-1.css');
 
 /* по 4 анонси у ряд, 2 рядки */
@@ -23,5 +23,8 @@
 
 /* по 4 анонси */
 @import url('./article-4.css');
+
+/* стіна анонсів */
+@import url('./list.css');
 
 @import url('./footer.css');

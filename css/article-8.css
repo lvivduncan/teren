@@ -9,7 +9,7 @@
     background: var(--border);
     grid-gap: 1px;
 }
-  
+
 .article-8 .article
 {
     background: var(--white);
@@ -53,10 +53,6 @@
     /* font-family: 'Ubuntu', sans-serif; */
 }
 
-/* .article-8 .article .article-data h1 a:hover 
-{
-    color: var(--black);
-} */
 
 /* 1 і 5 артикль повинні мати додатковий стиль для вирівнювання */
 .article-8 .article:nth-of-type(1) .picture,

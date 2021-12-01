@@ -111,3 +111,22 @@ section
 {
     padding-top: var(--gap);
 }
+
+/* синя дата по середині */
+time.date 
+{
+    text-align: center;
+    display: block;
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    color: var(--cyan);
+    font-weight: 600;
+    margin: 0 0 15px;
+    /* line-height: 1; */
+}
+
+time.date span 
+{
+    display: block;
+    font-size: 14px;
+}
