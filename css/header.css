@@ -43,7 +43,8 @@
 {
     display: block;
     line-height: 1;
-    color: var(--light);
+    /* color: var(--light); */
+    color: var(--time);
     white-space: nowrap;
 }
 
