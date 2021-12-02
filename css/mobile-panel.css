@@ -62,6 +62,12 @@
     gap: 20px;
 }
 
+#mobile-panel a:hover,
+#mobile-panel a:focus
+{
+    color: var(--light)!important;
+}
+
 #mobile-panel a::before
 {
     content: '';
