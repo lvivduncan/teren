@@ -10,6 +10,23 @@
     grid-gap: 1px;
 }
 
+@media(max-width:996px)
+{
+    .article-8 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+
+@media(max-width:776px)
+{
+    .article-8 
+    {
+        grid-template-columns: 1fr;
+        margin: 0 -2.5%;
+    }  
+}
+
 .article-8 .article
 {
     background: var(--white);
@@ -20,7 +37,42 @@
     gap: calc(var(--gap)/2)
 }
 
-/* цей блок може мити інший фон. модифікатор */
+/* перехідний варіант: можуть бути довгі слова і попердолить шпальту */
+@media(max-width:1240px)
+{
+    .article-8 .article
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }    
+}
+
+@media(max-width:996px)
+{
+    .article-8 .article
+    {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .article-8 .article:nth-of-type(5),
+    .article-8 .article:nth-of-type(6),
+    .article-8 .article:nth-of-type(7),
+    .article-8 .article:nth-of-type(8)
+    {
+        display: none;
+    }
+}
+
+@media(max-width:776px)
+{
+    .article-8 .article
+    {
+        padding: calc(var(--gap)/2) 2.5% var(--gap);
+        gap: 0 var(--gap);
+    }    
+}
+
+/* цей блок може мaти інший фон. модифікатор */
 .bg-gray .article-8 .article
 {
     background: var(--bg-gray);
@@ -35,7 +87,6 @@
 .article-8 .article .article-data time 
 {
     color: var(--cyan);
-    /* font-size: 14px; */
     display: block;
     /* margin: 0 0 24px; */
     margin: 0 0 20px;
@@ -61,10 +112,64 @@
     margin-left: -20px;
 }
 
+@media(max-width:1240px)
+{
+    .article-8 .article:nth-of-type(1) .picture,
+    .article-8 .article:nth-of-type(5) .picture
+    {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:996px)
+{
+    .article-8 .article:nth-of-type(1) .picture,
+    .article-8 .article:nth-of-type(5) .picture
+    {
+        margin-left: -20px;
+    }
+}
+
+@media(max-width:776px)
+{
+    .article-8 .article:nth-of-type(1) .picture,
+    .article-8 .article:nth-of-type(5) .picture
+    {
+        margin-left: 0;
+    }
+}
+
 .article-8 .article:nth-of-type(1) .article-data,
 .article-8 .article:nth-of-type(5) .article-data
 {
     margin: 0 -20px;
+}
+
+@media(max-width:1240px)
+{
+    .article-8 .article:nth-of-type(1) .article-data,
+    .article-8 .article:nth-of-type(5) .article-data
+    {
+        margin: 0;
+    }
+}
+
+@media(max-width:996px)
+{
+    .article-8 .article:nth-of-type(1) .article-data,
+    .article-8 .article:nth-of-type(5) .article-data
+    {
+        margin: 0 -20px;
+    }
+}
+
+@media(max-width:776px)
+{
+    .article-8 .article:nth-of-type(1) .article-data,
+    .article-8 .article:nth-of-type(5) .article-data
+    {
+        margin: 0;
+    }
 }
 /* 1 і 5 артикль повинні мати додатковий стиль для вирівнювання */
 

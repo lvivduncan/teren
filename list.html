@@ -12,8 +12,9 @@
 
     <div class="wrapper">
         <header id="header">
+
             <div id="header-left">
-                <div id="nav-button"></div>
+                <div id="nav-button" class="desktop"></div>
                 <time class="desktop">Понеділок, 1 Листопада</time>
                 <time class="mobile">Пон, 1 Лис</time>
             </div>
@@ -24,7 +25,9 @@
                 <span>тернопільські новини</span>
             </div>
             <div id="header-right">
-                <a href="#" id="send-post">Повідомити новину</a>
+                <a href="#" id="send-post">
+                    <span>Повідомити новину</span>
+                </a>
 
                 <ul class="social">
                     <li><a href="#" class="facebook" title="facebook"></a></li>
@@ -35,8 +38,9 @@
                     <li><a href="#" class="rss" title="rss"></a></li>
                 </ul>
 
-                <div id="search-button"></div>
+                <div id="search-button" class="desktop"></div>
             </div>
+
         </header>
     </div>
     <!-- header -->
@@ -551,6 +555,24 @@
             </div>
         </div>
     </footer>
+
+    <ul id="mobile-panel">
+        <li id="nav-home">
+            <a href="#">Головна</a>
+        </li>
+        <li id="nav-search">
+            <a href="#">Пошук</a>
+        </li>
+        <li id="nav-menu">
+            <a href="#">Меню</a>
+        </li>
+        <li id="nav-news">
+            <a href="#">Новини</a>
+        </li>
+        <li id="nav-send">
+            <a href="#">Повідомити новину</a>
+        </li>
+    </ul>
     
     <script src="js/script.js"></script>
 </body>

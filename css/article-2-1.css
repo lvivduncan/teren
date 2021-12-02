@@ -12,7 +12,27 @@
         'hot-1 hot-3'
 }
 
-/* оскільки текст на фото -- використовуємо цей блок */
+@media(max-width:996px)
+{
+    .article-2-1
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+            'hot-1 hot-2'
+    }    
+}
+
+@media(max-width:776px)
+{
+    .article-2-1
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'hot-1'
+            'hot-2'
+    }    
+}
+
 .article-2-1 .article-data
 {
     position: absolute;
@@ -21,6 +41,26 @@
     right: 45px;
     color: var(--white);
     z-index: 2;
+}
+
+@media(max-width:996px)
+{
+    .article-2-1 .article-data
+    {
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+    }    
+}
+
+@media(max-width:400px)
+{
+    .article-2-1 .article-data
+    {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }     
 }
 
 .article-2-1 .article-data time 
@@ -34,6 +74,14 @@
 {
     font-size: 21px;
     font-family: 'Merriweather', serif;
+}
+
+@media(max-width:400px)
+{
+    .article-2-1 .article-data h1 
+    {
+        font-size: 18px;
+    }    
 }
 
 .article-2-1 .article-data h1 a,
@@ -51,6 +99,13 @@
     line-height: 1.5;
 }
 
+@media(max-width:996px)
+{
+    .article-2-1 .article-data p 
+    {
+        display: none;
+    }    
+}
 
 /* 1 велика новина зліва */
 .article-2-1 .article:nth-of-type(1)
@@ -64,6 +119,23 @@
     font-size: 30px;
 }
 
+@media(max-width:996px)
+{
+    .article-2-1 .article:nth-of-type(1) .article-data h1 
+    {
+        margin: 0;
+        font-size: 21px;
+    }    
+}
+
+@media(max-width:400px)
+{
+    .article-2-1 .article:nth-of-type(1) .article-data h1 
+    {
+        font-size: 18px;
+    }      
+}
+
 /* 2 і 3 мала справа */
 .article-2-1 .article:nth-of-type(2)
 {
@@ -73,6 +145,14 @@
 .article-2-1 .article:nth-of-type(3)
 {
     grid-area: hot-3;
+}
+
+@media(max-width:996px)
+{
+    .article-2-1 .article:nth-of-type(3)
+    {
+        display: none;
+    }    
 }
 
 /* картинки зі затемненням */
@@ -98,7 +178,7 @@
     bottom: 0;
     right: 0;
     z-index: 1;
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.5);
     background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,.5) 35%, rgba(0,0,0,0) 100%);
 }
 

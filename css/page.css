@@ -10,6 +10,14 @@
     grid-template-columns: 2fr 1fr;
 }
 
+@media(max-width:996px)
+{
+    #page
+    {
+        grid-template-columns: 1fr;
+    }    
+}
+
 #content
 {
     display: grid;
@@ -21,6 +29,14 @@
         'content-aside content-main';
 
     color: var(--gray);
+}
+
+@media(max-width:996px)
+{
+    #content
+    {        
+        display: block;
+    }    
 }
 
 #content header
@@ -42,16 +58,34 @@
     color: var(--gray);
 }
 
+@media(max-width:996px)
+{
+    #content header h1 
+    {
+        margin: 15px 0;
+    }    
+}
+
 #content header p 
 {
     margin: 0 0 28px;
     line-height: 1.5;
 }
 
-/* шарбатони */
+/* шарбатони + До теми */
 #content aside
 {
     grid-area: content-aside;
+}
+
+@media(max-width:996px)
+{
+    #content aside
+    {
+        float: left;
+        width: 160px;
+        grid-area: initial;
+    }    
 }
 
 /* До теми */
@@ -63,9 +97,25 @@
     color: var(--gray);
 }
 
+@media(max-width:996px)
+{
+    #content aside h1 
+    {
+        display: none;
+    }
+}
+
 #content aside ul 
 {
     display: block;
+}
+
+@media(max-width:996px)
+{
+    #content aside ul
+    {
+        display: none;
+    }
 }
 
 #content aside li 
@@ -99,6 +149,14 @@
     margin: 0 0 var(--gap);
 }
 
+@media(max-width:996px)
+{
+    #content .picture 
+    {
+        margin: var(--gap) 0;
+    }    
+}
+
 #content main ul,
 #content main ol
 {
@@ -118,6 +176,14 @@
     padding: var(--gap) 30px 0;
 }
 
+@media(max-width:996px)
+{
+    #page > aside 
+    {
+        margin: 0 -2.5%;
+    }    
+}
+
 #page > aside .article
 {
     background: var(--white);
@@ -127,6 +193,14 @@
     display: grid;
     grid-template-columns: 110px 1fr;
     gap: calc(var(--gap)/2);
+}
+
+@media(max-width:996px)
+{
+    #page > aside .article
+    {
+        padding: 20px 0;
+    }    
 }
 
 /* цей блок може мити інший фон. модифікатор */

@@ -51,6 +51,14 @@ body
     --social: #f6f7f8;
 }
 
+@media(max-width:776px)
+{
+    :root
+    {
+        --gap: 20px;
+    }
+}
+
 a
 {
     text-decoration: underline;
@@ -92,7 +100,7 @@ a:focus
     display: block!important;
 }
 
-@media(max-width: 776px)
+@media(max-width:996px)
 {
     .mobile
     {

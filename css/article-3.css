@@ -10,22 +10,41 @@
     gap: var(--gap);
 }
 
-/* .article-3 .article time 
+@media(max-width:996px)
 {
-    display: block;
-    margin: 20px 0;
-    color: var(--light);
-} */
+    .article-3 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .article-3 .article:nth-of-type(3)
+    {
+        display: none;
+    }
+}
+
+@media(max-width:776px)
+{
+    .article-3 
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .article-3 .article:nth-of-type(2)
+    {
+        display: none;
+    }
+}
 
 .article-3 .article h1 a 
 {
     font-size: 21px;
-    /* font-family: 'Merriweather', serif; */
-    /* color: var(--gray); */
-    /* text-decoration: none; */
 }
 
-/* .article-3 .article h1 a:hover 
+@media(max-width:776px)
 {
-    color: var(--black);
-} */
+    .article-3 .article h1 a 
+    {
+        font-size: 18px;
+    }    
+}

@@ -8,9 +8,19 @@
     font-size: 30px;
     font-weight: 600;
     height: 40px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 32px 1fr;
     gap: 15px;
     margin: 0 0 20px;
+}
+
+@media(max-width:776px)
+{
+    .title
+    {
+        font-size: 21px;
+        align-items: center;
+    }    
 }
 
 .title::before
@@ -19,19 +29,22 @@
     display: inline-block;
     width: 33px;
     height: 40px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
 
     align-self: center;
 }
-
-
 
 /* модифікатори (іконки) */
 /* дзвоник */
 .title.bell::before
 {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAMAAABHNWOVAAAAM1BMVEUAAACqsr6nr7upsb2psb2vr7+psb2psbyqsr2psb2ps7yosr2osL2nr7+qr7+psL2psb18eaCWAAAAEHRSTlMAv0CA7xDfz2CPUHCfIDCva2nSxQAAAONJREFUOMvtk1tuwyAUBS/vl2PP/ldbKFYgduyoaj87P9hoODogkAMJJfco+K2hA2gnV8SNTihvpewZ2HIWEhW/mGJSoLIdY5YWrqWzqvbnTglmrmR5PRgNRJlZLcxdwp7gilJmTwHr5gjfxmypjLMrc834LTbSWBaehgfXB/WQefb53e0VfBOnZD0M1bsZmTAnI0O+NyRGuTUa/8ZfGY+PRoYkZwqYPcIfrvGIti0keSrqHVRsEj4hyTLh69IAdgSlQ/ncHs3r1n5mxP6cF1guDGdbAw885AK9t45yyboBIcvMF9I9ElpI6g5uAAAAAElFTkSuQmCC');
+}
+
+@media(max-width:776px)
+{
+ 
 }
 
 /* календарик */
@@ -41,12 +54,22 @@
     width: 40px;
 }
 
+@media(max-width:776px)
+{
+ 
+}
+
 /* коментарі */
 .title.comment::before
 {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAMAAACfvvDEAAAAM1BMVEUAAACpsb2psb2qsr2qsr6vr7+psb2nr7uosL2nr7+psbypsb2qr7+psL2osr2ps7ypsb0WIwlFAAAAEHRSTlMA74BgvxDfQJ8gz48wr3BQn9J3IgAAAXZJREFUOMuNlFmyhCAMRQkQZvTuf7VP0lajRrre+dDC3EgmMAreU4FQkmOzJCfClR7fdVzFHLw96EEWPhtNC0O2fU3ZjTjIKaF7+RyHtr4Iu07BKmkjwBpB/+G2U5muWkr5tvRzpQJIcxUAVY5XYzvdlvtv5qQCba3kS2geeNVocxCnJfar3PA/JXf8T8lFBuiXsgNnd8hLxZYQyqdAhZ00fcUunY7SVSYQ/ypSk+cuMa9/uku+7cyaSTwWUSJKlPE7W205IDwSp3OdzrOh2WRAgG6mFP1RK7aUIku1r4lYHKRLCNmSHOQwQrylHIN0q27xwNWCSRLlBRvwIEQ/XmTUaOzzvqHuxCxX0Ci86k2OztotNql2lcS2OCrgzJJ0aUcGAmvJNN7c6o/JcLdzh/Xe5b5DXwnvk1DHDhyVjjseyRJoNK08tI4eQhk2CMXNu0daFdojvQGVT+e6PfAf1/oonggcm9hxhVLWk+/jmYJLBYJPu27GH4ZPGVbFw76DAAAAAElFTkSuQmCC');
     width: 41px;
     height: 41px;
+}
+
+@media(max-width:776px)
+{
+ 
 }
 
 /* палець догори */
@@ -65,10 +88,20 @@
     height: 26px;
 }
 
+@media(max-width:776px)
+{
+ 
+}
+
 /* замок */
 .title.castle::before
 {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAMAAACfvvDEAAAAM1BMVEUAAACnr7uqsr6psb2psb2osr2osL2psbyqsr2vr7+psL2ps7yqr7+nr7+psb2psb2psb3UkcgAAAAAEHRSTlMAQL+A73Cfz2AQr1AwIN+PTdkGIwAAASNJREFUOMvVlMtuhDAMRW3HecNw//9rGzeINNUMYdNFz+IqUo7ENUbQTxKAUGHU0CLRJxwAfcF4aQt3ZxrC0nJhinfO7bS39HJv0uDenLgxE2YSfWSL8FwLpLJH3OgGAVMEEIkhtDArIEB9YDqIjf3IfLnXe3Nn3ls0zPQHjMObyY29C42sgJKiUZJtXAzbfirAeae5mYwZOWvM8DC1H/QytQs6mRszb71Vvczam3/fXSYP/GV6HnTzec+smChkFEy02U3FeFLAQZ0DYTRCEw2Axxfqfp16P/ozk6eeYT6dPXlMuaKMN7dAzm2s8KfJNLPxRjP81sxWR/IDM8KIazMBqcfKLAgtA8rSFLj+L/u3Zo7zNiNCy4A4bzNmUjxDSeUZ+gXoPCDfKm6d0wAAAABJRU5ErkJggg==');
     width: 41px;
     height: 41px;
+}
+
+@media(max-width:776px)
+{
+ 
 }

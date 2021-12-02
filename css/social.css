@@ -9,6 +9,14 @@
     gap: 22px;
 }
 
+@media(max-width:996px)
+{
+    .social
+    {
+        display: none;
+    }
+}
+
 .social li 
 {
     display: inline-block;

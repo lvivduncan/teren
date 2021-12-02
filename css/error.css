@@ -1,0 +1,18 @@
+
+#error
+{
+    height: calc(100vh - 140px - 266px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 var(--gap);
+}
+
+#error h1 
+{
+    font-family: 'Merriweather', serif;
+    color: var(--cyan);
+    font-weight: 900;
+    margin: 0 0 var(--gap);
+}

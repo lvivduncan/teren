@@ -9,10 +9,32 @@
     gap: var(--gap);
 }
 
+@media(max-width:996px)
+{
+    .article-4 
+    {
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+
+@media(max-width:776px)
+{
+    .article-4 .article:nth-of-type(3),
+    .article-4 .article:nth-of-type(4)
+    {
+        display: none;
+    }  
+}
+
 .article-4 .article h1 a 
 {
     font-size: 18px;
-    /* font-family: 'Merriweather', serif; */
-    /* color: var(--gray); */
-    /* text-decoration: none; */
+}
+
+@media(max-width:776px)
+{
+    .article-4 .article h1 a 
+    {
+        font-size: 16px;
+    }    
 }

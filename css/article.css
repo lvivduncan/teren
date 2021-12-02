@@ -37,6 +37,14 @@
     justify-content: flex-end;
 }
 
+@media(max-width:776px)
+{
+    .rest 
+    {
+        height: 76px;
+    }    
+}
+
 /* у боковій колонці */
 aside .rest 
 {
