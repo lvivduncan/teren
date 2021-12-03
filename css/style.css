@@ -2,6 +2,9 @@
 
 @import url('./header.css');
 
+/* прихований блок */
+@import url('./nav.css');
+
 @import url('./social.css');
 
 /* заголовок блоку анонсів */

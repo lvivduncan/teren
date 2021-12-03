@@ -1,0 +1,158 @@
+
+/* ////////////////////////////////////////////
+// Прихований блок з меню та фічами з хедера //
+//////////////////////////////////////////// */
+
+body.fixed
+{
+    overflow-y: hidden;
+    padding-right: 15px;
+}
+
+#nav
+{
+    width: 350px;
+    height: 100vh;
+    padding: 60px 40px;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+
+    display: none;
+}
+
+#nav.active
+{
+    display: block;
+}
+
+#nav-button-close
+{
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/%3E%3Cpath fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/%3E%3C/svg%3E");
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#nav-wrapper
+{
+    background: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+
+    display: none;
+}
+
+#nav-wrapper.active
+{
+    display: block;
+}
+
+#nav ul
+{
+    display: block;
+}
+
+#nav li 
+{
+    display: block;
+}
+
+#nav a 
+{
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    color: var(--gray);
+    transition: .5s;
+    display: block;
+    padding: 5px 0;
+}
+
+#nav a:hover,
+#nav a:focus,
+#nav a.active
+{
+    color: var(--cyan)!important;
+}
+
+#nav hr 
+{
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid var(--light);
+}
+
+/* дані під меню */
+#nav aside 
+{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 20px;
+}
+
+/* phone */
+#nav aside a[href^='tel']
+{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+@media(max-width:400px)
+{
+    #nav aside a[href^='tel']
+    {
+        font-size: 18px;
+    }    
+}
+
+/* mail */
+#nav aside a[href^='mailto']
+{
+    font-size: 14px;
+    color: var(--cyan);
+}
+
+/* пошук */
+#nav form
+{
+    display: block;
+    position: relative;
+}
+
+#nav form input[type=search]
+{
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+#nav form button
+{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 0;
+    z-index: 1;
+}
+
+#nav form button svg
+{
+    fill: var(--gray);
+    width: 20px;
+    height: 20px;
+}
