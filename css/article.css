@@ -23,6 +23,7 @@
     font-family: 'Merriweather', serif;
     color: var(--gray);
     text-decoration: none;
+    display: block;
 }
 
 /* ////////////////////////////////////////////////////

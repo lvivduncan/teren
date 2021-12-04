@@ -1,0 +1,60 @@
+/* //////////////////
+// сторінка пошуку // 
+////////////////// */
+
+#result 
+{
+    padding: var(--gap) 0;
+}
+
+#result > p
+{
+    color: var(--cyan);
+    margin: 0 0 20px;
+}
+
+#result > p strong 
+{
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+}
+
+/* пошук */
+#result form
+{
+    display: block;
+    position: relative;
+    margin: 0 0 20px;
+}
+
+#result form input[type=search]
+{
+    border: 1px solid transparent;
+    outline: none;
+    padding: 10px 25px 10px 10px;
+    width: 100%;
+}
+
+#result form input[type=search]:focus,
+#result form input[type=search].active
+{
+    border-color: var(--cyan);
+}
+
+#result form button
+{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 5px;
+    z-index: 1;
+}
+
+#result form button svg
+{
+    fill: var(--gray);
+    width: 20px;
+    height: 20px;
+}

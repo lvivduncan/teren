@@ -1,0 +1,53 @@
+
+/* у новинах та пошуці */
+
+.pagination
+{
+    text-align: center;
+    margin: var(--gap) 0;
+}
+
+.pagination li
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5px
+}
+
+.pagination li a
+{
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--light);
+    color: var(--black);
+    transition: .5s;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+}
+
+.pagination li a:hover
+{
+    background: var(--cyan);
+}
+
+.pagination svg
+{
+    height: 14px;
+    fill: var(--cyan)
+}
+
+.pagination li.active a
+{
+    background-color: var(--cyan);
+    color: var(--white);
+    font-weight: 800;
+}
+
+.pagination li.disabled a
+{
+    color: var(--black);
+    /* background: var(--aside); */
+    font-weight: bold;
+    pointer-events: none;
+}

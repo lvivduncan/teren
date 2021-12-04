@@ -31,11 +31,12 @@
     gap: calc(var(--gap)/2)
 }
 
-@media(max-width:400px)
+@media(max-width:420px)
 {
     .list .article
     {
-        grid-template-columns: repeat(2,1fr);
+        /* grid-template-columns: repeat(2,1fr); */
+        grid-template-columns: 1fr 2.5fr;
     }    
 
     .list .article h1 a
@@ -100,7 +101,6 @@
     .list .article h1 
     {
         margin: 10px 0;
-        /* line-height: 1.3; */
     }    
 }
 

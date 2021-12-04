@@ -30,7 +30,8 @@
     {
         grid-template-columns: 1fr auto 1fr;
         gap: 35px 10px;
-        padding: 0 0 99px;
+        /* padding: 0 0 99px; */
+        padding: 0 0 70px;
     }    
 }
 
