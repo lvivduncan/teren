@@ -131,6 +131,9 @@ a:focus
 section 
 {
     padding-top: var(--gap);
+
+    /* for pagination */
+    overflow: hidden;
 }
 
 /* синя дата по середині */
