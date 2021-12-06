@@ -126,6 +126,11 @@
 
 @media(max-width:400px)
 {
+    .list .picture
+    {
+        overflow: visible;
+    }
+
     .list time {
         top: auto;
         right: 0;
