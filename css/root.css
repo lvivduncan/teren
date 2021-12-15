@@ -135,7 +135,6 @@ time.date
     color: var(--cyan);
     font-weight: 600;
     margin: 0 0 15px;
-    /* line-height: 1; */
 }
 
 time.date span 
