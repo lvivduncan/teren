@@ -1,15 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-
-/*
-font-family: 'Merriweather', serif;
-*/
-
-/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,400;1,500;1,700&display=swap'); */
-
-/*
-font-family: 'Ubuntu', sans-serif;
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 
@@ -153,4 +142,68 @@ time.date span
 {
     display: block;
     font-size: 14px;
+}
+
+::placeholder
+{
+    font-size: 14px;
+    font-family: inherit!important;
+}
+
+
+/* завантаження файлів */
+input[type=file]
+{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+input[type=file] + label
+{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+
+    height: 48px;
+    padding: 0 calc(var(--gap)/2);
+    font-family: inherit;
+    font-size: 14px;;
+
+    display: grid;
+    grid-template-columns: 20px auto;
+    align-items: center;
+    gap: 10px;
+    transition: .5s;
+
+    color: var(--cyan);
+    background-color: var(--bg-gray);
+    margin: 0 0 calc(var(--gap)/2);
+}
+
+input[type=file]:focus + label,
+input[type=file].has-focus + label,
+input[type=file] + label:hover
+{
+    color: var(--light);
+    background-color: var(--cyan);
+}
+
+input[type=file] + label svg
+{
+    width: 20px;
+    height: 17px;
+    fill: var(--cyan);
+    transition: .5s;
+}
+
+input[type=file]:focus + label svg,
+input[type=file].has-focus + label svg,
+input[type=file] + label:hover svg
+{
+    fill: var(--light);
 }

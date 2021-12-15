@@ -5,6 +5,9 @@
 /* прихований блок */
 @import url('./nav.css');
 
+/* повідомити новину */
+@import url('./send-post.css');
+
 @import url('./social.css');
 
 /* заголовок блоку анонсів */
