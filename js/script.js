@@ -64,10 +64,11 @@
 
         nav.classList.add('active')
         bodyWrapper.classList.add('active')
+        body.classList.add('fixed')
 
         document.querySelector('#nav input[type=search]').classList.add('active')
 
-        document.body.scrollTop = document.documentElement.scrollTop = 500
+        document.body.scrollTop = document.documentElement.scrollTop = 0
     })
 
     // клік на кнопку мобільного надсилання новини
@@ -90,6 +91,9 @@
             sendPost.className = 'active'
 
             nav.classList.remove('active')
+
+            // test
+            body.classList.add('fixed')
 
             document.body.scrollTop = document.documentElement.scrollTop = 0
         })
