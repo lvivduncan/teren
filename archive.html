@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Архів :: Teren</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" type="image/svg" href="./favicon.svg" />
+		<meta name="description" content="Окремий пост :: Teren" />
+	</head>
+	<body>
+		<nav id="nav">
+			<ul>
+				<li><a href="#" class="active">Тема дня</a></li>
+				<li><a href="#">Думка тернополян</a></li>
+				<li><a href="#">Інтерв’ю</a></li>
+				<li><a href="#">Аграрне Тернопілля</a></li>
+				<li><a href="#">Корисно знати</a></li>
+				<li><a href="#">Економіка</a></li>
+				<li><a href="#">Політика</a></li>
+				<li><a href="#">Суспільство</a></li>
+				<li><a href="#">Здоров’я</a></li>
+				<li><a href="#">Культура</a></li>
+				<li><a href="#">Спорт</a></li>
+				<li><a href="#">Скандал</a></li>
+				<li><a href="#">Кримінал</a></li>
+				<li><a href="#">Сільський господар</a></li>
+				<hr />
+				<li><a href="#">Про нас</a></li>
+				<li><a href="#">Партнери</a></li>
+				<li><a href="#">Замовити послугу</a></li>
+			</ul>
+
+			<aside>
+				<form>
+					<input type="search" placeholder="Шукати" />
+					<button>
+						<svg viewBox="0 0 16 16">
+							<path
+								d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+							/>
+						</svg>
+					</button>
+				</form>
+
+				<div class="send-post">
+					<span>Повідомити новину</span>
+				</div>
+
+				<a href="tel:+380671234567" title="Дзвінок">+380671234567</a>
+
+				<a href="mailto://office@teren.in.ua" title="Надіслати імейл"
+					>office@teren.in.ua</a
+				>
+
+				<ul class="social">
+					<li><a href="#" class="facebook" title="facebook"></a></li>
+					<li>
+						<a href="#" class="instagram" title="instagram"></a>
+					</li>
+					<li><a href="#" class="youtube" title="youtube"></a></li>
+					<!-- <li><a href="#" class="twitter" title="twitter"></a></li> -->
+					<!-- <li><a href="#" class="telegram" title="telegram"></a></li> -->
+					<li><a href="#" class="rss" title="rss"></a></li>
+				</ul>
+			</aside>
+		</nav>
+		<!-- Випадачка -->
+
+		<div id="send-post">
+			<form>
+				<input type="text" placeholder="Прізвище та Ім'я" />
+				<input type="email" placeholder="email" />
+				<textarea placeholder="Новина"></textarea>
+
+				<input
+					type="file"
+					name="files[]"
+					id="files"
+					data-multiple-caption="{count} files selected"
+					multiple
+				/>
+				<label for="files">
+					<svg viewBox="0 0 20 17">
+						<path
+							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+						/>
+					</svg>
+					<span>Обрати файл</span>
+				</label>
+
+				<button>Надіслати</button>
+			</form>
+		</div>
+		<!-- Випадачка справа (надіслати новину) -->
+
+		<div class="wrapper">
+			<header id="header">
+				<div id="header-left">
+					<div id="nav-button" class="desktop"></div>
+					<time class="desktop">Понеділок, 1 Листопада</time>
+					<time class="mobile">Пон, 1 Лис</time>
+				</div>
+				<div id="logo">
+					<a href="#" title="Терен: тернопільські новини"> Терен </a>
+					<span>тернопільські новини</span>
+				</div>
+				<div id="header-right">
+					<a href="#" class="send-post">
+						<span>Повідомити новину</span>
+					</a>
+
+					<ul class="social">
+						<li>
+							<a href="#" class="facebook" title="facebook"></a>
+						</li>
+						<li>
+							<a href="#" class="instagram" title="instagram"></a>
+						</li>
+						<li>
+							<a href="#" class="youtube" title="youtube"></a>
+						</li>
+						<!-- <li><a href="#" class="twitter" title="twitter"></a></li> -->
+						<!-- <li><a href="#" class="telegram" title="telegram"></a></li> -->
+						<li><a href="#" class="rss" title="rss"></a></li>
+					</ul>
+
+					<div id="search-button" class="desktop"></div>
+				</div>
+			</header>
+		</div>
+		<!-- header -->
+
+		<div class="wrapper">
+			<div id="archive">
+				<div class="title">Архів новин</div>
+
+				<nav>
+					<a href="#" class="year-down">
+						<svg viewBox="0 0 256 512">
+							<path
+								d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"
+							></path>
+						</svg>
+					</a>
+
+					<span class="year">2020</span>
+
+					<a href="#" class="year-up">
+						<svg viewBox="0 0 256 512">
+							<path
+								d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+							></path>
+						</svg>
+					</a>
+				</nav>
+
+				<div id="calendar">
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-1">Січень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-1-1">1</a>
+							<a href="/archive/2020-1-2">2</a>
+							<a href="/archive/2020-1-3">3</a>
+							<a href="/archive/2020-1-4">4</a>
+							<a href="/archive/2020-1-5">5</a>
+							<a href="/archive/2020-1-6">6</a>
+							<a href="/archive/2020-1-7">7</a>
+							<a href="/archive/2020-1-8">8</a>
+							<a href="/archive/2020-1-9">9</a>
+							<a href="/archive/2020-1-10">10</a>
+							<a href="/archive/2020-1-11">11</a>
+							<a href="/archive/2020-1-12">12</a>
+							<a href="/archive/2020-1-13">13</a>
+							<a href="/archive/2020-1-14">14</a>
+							<a href="/archive/2020-1-15">15</a>
+							<a href="/archive/2020-1-16">16</a>
+							<a href="/archive/2020-1-17">17</a>
+							<a href="/archive/2020-1-18">18</a>
+							<a href="/archive/2020-1-19">19</a>
+							<a href="/archive/2020-1-20">20</a>
+							<a href="/archive/2020-1-21">21</a>
+							<a href="/archive/2020-1-22">22</a>
+							<a href="/archive/2020-1-23">23</a>
+							<a href="/archive/2020-1-24">24</a>
+							<a href="/archive/2020-1-25">25</a>
+							<a href="/archive/2020-1-26">26</a>
+							<a href="/archive/2020-1-27">27</a>
+							<a href="/archive/2020-1-28">28</a>
+							<a href="/archive/2020-1-29">29</a>
+							<a href="/archive/2020-1-30">30</a>
+							<a href="/archive/2020-1-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-2">Лютий 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-2-1">1</a>
+							<a href="/archive/2020-2-2">2</a>
+							<a href="/archive/2020-2-3">3</a>
+							<a href="/archive/2020-2-4">4</a>
+							<a href="/archive/2020-2-5">5</a>
+							<a href="/archive/2020-2-6">6</a>
+							<a href="/archive/2020-2-7">7</a>
+							<a href="/archive/2020-2-8">8</a>
+							<a href="/archive/2020-2-9">9</a>
+							<a href="/archive/2020-2-10">10</a>
+							<a href="/archive/2020-2-11">11</a>
+							<a href="/archive/2020-2-12">12</a>
+							<a href="/archive/2020-2-13">13</a>
+							<a href="/archive/2020-2-14">14</a>
+							<a href="/archive/2020-2-15">15</a>
+							<a href="/archive/2020-2-16">16</a>
+							<a href="/archive/2020-2-17">17</a>
+							<a href="/archive/2020-2-18">18</a>
+							<a href="/archive/2020-2-19">19</a>
+							<a href="/archive/2020-2-20">20</a>
+							<a href="/archive/2020-2-21">21</a>
+							<a href="/archive/2020-2-22">22</a>
+							<a href="/archive/2020-2-23">23</a>
+							<a href="/archive/2020-2-24">24</a>
+							<a href="/archive/2020-2-25">25</a>
+							<a href="/archive/2020-2-26">26</a>
+							<a href="/archive/2020-2-27">27</a>
+							<a href="/archive/2020-2-28">28</a>
+							<a href="/archive/2020-2-29">29</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-3">Березень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-3-1">1</a>
+							<a href="/archive/2020-3-2">2</a>
+							<a href="/archive/2020-3-3">3</a>
+							<a href="/archive/2020-3-4">4</a>
+							<a href="/archive/2020-3-5">5</a>
+							<a href="/archive/2020-3-6">6</a>
+							<a href="/archive/2020-3-7">7</a>
+							<a href="/archive/2020-3-8">8</a>
+							<a href="/archive/2020-3-9">9</a>
+							<a href="/archive/2020-3-10">10</a>
+							<a href="/archive/2020-3-11">11</a>
+							<a href="/archive/2020-3-12">12</a>
+							<a href="/archive/2020-3-13">13</a>
+							<a href="/archive/2020-3-14">14</a>
+							<a href="/archive/2020-3-15">15</a>
+							<a href="/archive/2020-3-16">16</a>
+							<a href="/archive/2020-3-17">17</a>
+							<a href="/archive/2020-3-18">18</a>
+							<a href="/archive/2020-3-19">19</a>
+							<a href="/archive/2020-3-20">20</a>
+							<a href="/archive/2020-3-21">21</a>
+							<a href="/archive/2020-3-22">22</a>
+							<a href="/archive/2020-3-23">23</a>
+							<a href="/archive/2020-3-24">24</a>
+							<a href="/archive/2020-3-25">25</a>
+							<a href="/archive/2020-3-26">26</a>
+							<a href="/archive/2020-3-27">27</a>
+							<a href="/archive/2020-3-28">28</a>
+							<a href="/archive/2020-3-29">29</a>
+							<a href="/archive/2020-3-30">30</a>
+							<a href="/archive/2020-3-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-4">Квітень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-4-1">1</a>
+							<a href="/archive/2020-4-2">2</a>
+							<a href="/archive/2020-4-3">3</a>
+							<a href="/archive/2020-4-4">4</a>
+							<a href="/archive/2020-4-5">5</a>
+							<a href="/archive/2020-4-6">6</a>
+							<a href="/archive/2020-4-7">7</a>
+							<a href="/archive/2020-4-8">8</a>
+							<a href="/archive/2020-4-9">9</a>
+							<a href="/archive/2020-4-10">10</a>
+							<a href="/archive/2020-4-11">11</a>
+							<a href="/archive/2020-4-12">12</a>
+							<a href="/archive/2020-4-13">13</a>
+							<a href="/archive/2020-4-14">14</a>
+							<a href="/archive/2020-4-15">15</a>
+							<a href="/archive/2020-4-16">16</a>
+							<a href="/archive/2020-4-17">17</a>
+							<a href="/archive/2020-4-18">18</a>
+							<a href="/archive/2020-4-19">19</a>
+							<a href="/archive/2020-4-20">20</a>
+							<a href="/archive/2020-4-21">21</a>
+							<a href="/archive/2020-4-22">22</a>
+							<a href="/archive/2020-4-23">23</a>
+							<a href="/archive/2020-4-24">24</a>
+							<a href="/archive/2020-4-25">25</a>
+							<a href="/archive/2020-4-26">26</a>
+							<a href="/archive/2020-4-27">27</a>
+							<a href="/archive/2020-4-28">28</a>
+							<a href="/archive/2020-4-29">29</a>
+							<a href="/archive/2020-4-30">30</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-5">Травень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-5-1">1</a>
+							<a href="/archive/2020-5-2">2</a>
+							<a href="/archive/2020-5-3">3</a>
+							<a href="/archive/2020-5-4">4</a>
+							<a href="/archive/2020-5-5">5</a>
+							<a href="/archive/2020-5-6">6</a>
+							<a href="/archive/2020-5-7">7</a>
+							<a href="/archive/2020-5-8">8</a>
+							<a href="/archive/2020-5-9">9</a>
+							<a href="/archive/2020-5-10">10</a>
+							<a href="/archive/2020-5-11">11</a>
+							<a href="/archive/2020-5-12">12</a>
+							<a href="/archive/2020-5-13">13</a>
+							<a href="/archive/2020-5-14">14</a>
+							<a href="/archive/2020-5-15">15</a>
+							<a href="/archive/2020-5-16">16</a>
+							<a href="/archive/2020-5-17">17</a>
+							<a href="/archive/2020-5-18">18</a>
+							<a href="/archive/2020-5-19">19</a>
+							<a href="/archive/2020-5-20">20</a>
+							<a href="/archive/2020-5-21">21</a>
+							<a href="/archive/2020-5-22">22</a>
+							<a href="/archive/2020-5-23">23</a>
+							<a href="/archive/2020-5-24">24</a>
+							<a href="/archive/2020-5-25">25</a>
+							<a href="/archive/2020-5-26">26</a>
+							<a href="/archive/2020-5-27">27</a>
+							<a href="/archive/2020-5-28">28</a>
+							<a href="/archive/2020-5-29">29</a>
+							<a href="/archive/2020-5-30">30</a>
+							<a href="/archive/2020-5-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-6">Червень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<a href="/archive/2020-6-1">1</a>
+							<a href="/archive/2020-6-2">2</a>
+							<a href="/archive/2020-6-3">3</a>
+							<a href="/archive/2020-6-4">4</a>
+							<a href="/archive/2020-6-5">5</a>
+							<a href="/archive/2020-6-6">6</a>
+							<a href="/archive/2020-6-7">7</a>
+							<a href="/archive/2020-6-8">8</a>
+							<a href="/archive/2020-6-9">9</a>
+							<a href="/archive/2020-6-10">10</a>
+							<a href="/archive/2020-6-11">11</a>
+							<a href="/archive/2020-6-12">12</a>
+							<a href="/archive/2020-6-13">13</a>
+							<a href="/archive/2020-6-14">14</a>
+							<a href="/archive/2020-6-15">15</a>
+							<a href="/archive/2020-6-16">16</a>
+							<a href="/archive/2020-6-17">17</a>
+							<a href="/archive/2020-6-18">18</a>
+							<a href="/archive/2020-6-19">19</a>
+							<a href="/archive/2020-6-20">20</a>
+							<a href="/archive/2020-6-21">21</a>
+							<a href="/archive/2020-6-22">22</a>
+							<a href="/archive/2020-6-23">23</a>
+							<a href="/archive/2020-6-24">24</a>
+							<a href="/archive/2020-6-25">25</a>
+							<a href="/archive/2020-6-26">26</a>
+							<a href="/archive/2020-6-27">27</a>
+							<a href="/archive/2020-6-28">28</a>
+							<a href="/archive/2020-6-29">29</a>
+							<a href="/archive/2020-6-30">30</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-7">Липень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-7-1">1</a>
+							<a href="/archive/2020-7-2">2</a>
+							<a href="/archive/2020-7-3">3</a>
+							<a href="/archive/2020-7-4">4</a>
+							<a href="/archive/2020-7-5">5</a>
+							<a href="/archive/2020-7-6">6</a>
+							<a href="/archive/2020-7-7">7</a>
+							<a href="/archive/2020-7-8">8</a>
+							<a href="/archive/2020-7-9">9</a>
+							<a href="/archive/2020-7-10">10</a>
+							<a href="/archive/2020-7-11">11</a>
+							<a href="/archive/2020-7-12">12</a>
+							<a href="/archive/2020-7-13">13</a>
+							<a href="/archive/2020-7-14">14</a>
+							<a href="/archive/2020-7-15">15</a>
+							<a href="/archive/2020-7-16">16</a>
+							<a href="/archive/2020-7-17">17</a>
+							<a href="/archive/2020-7-18">18</a>
+							<a href="/archive/2020-7-19">19</a>
+							<a href="/archive/2020-7-20">20</a>
+							<a href="/archive/2020-7-21">21</a>
+							<a href="/archive/2020-7-22">22</a>
+							<a href="/archive/2020-7-23">23</a>
+							<a href="/archive/2020-7-24">24</a>
+							<a href="/archive/2020-7-25">25</a>
+							<a href="/archive/2020-7-26">26</a>
+							<a href="/archive/2020-7-27">27</a>
+							<a href="/archive/2020-7-28">28</a>
+							<a href="/archive/2020-7-29">29</a>
+							<a href="/archive/2020-7-30">30</a>
+							<a href="/archive/2020-7-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-8">Серпень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-8-1">1</a>
+							<a href="/archive/2020-8-2">2</a>
+							<a href="/archive/2020-8-3">3</a>
+							<a href="/archive/2020-8-4">4</a>
+							<a href="/archive/2020-8-5">5</a>
+							<a href="/archive/2020-8-6">6</a>
+							<a href="/archive/2020-8-7">7</a>
+							<a href="/archive/2020-8-8">8</a>
+							<a href="/archive/2020-8-9">9</a>
+							<a href="/archive/2020-8-10">10</a>
+							<a href="/archive/2020-8-11">11</a>
+							<a href="/archive/2020-8-12">12</a>
+							<a href="/archive/2020-8-13">13</a>
+							<a href="/archive/2020-8-14">14</a>
+							<a href="/archive/2020-8-15">15</a>
+							<a href="/archive/2020-8-16">16</a>
+							<a href="/archive/2020-8-17">17</a>
+							<a href="/archive/2020-8-18">18</a>
+							<a href="/archive/2020-8-19">19</a>
+							<a href="/archive/2020-8-20">20</a>
+							<a href="/archive/2020-8-21">21</a>
+							<a href="/archive/2020-8-22">22</a>
+							<a href="/archive/2020-8-23">23</a>
+							<a href="/archive/2020-8-24">24</a>
+							<a href="/archive/2020-8-25">25</a>
+							<a href="/archive/2020-8-26">26</a>
+							<a href="/archive/2020-8-27">27</a>
+							<a href="/archive/2020-8-28">28</a>
+							<a href="/archive/2020-8-29">29</a>
+							<a href="/archive/2020-8-30">30</a>
+							<a href="/archive/2020-8-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-9">Вересень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<a href="/archive/2020-9-1">1</a>
+							<a href="/archive/2020-9-2">2</a>
+							<a href="/archive/2020-9-3">3</a>
+							<a href="/archive/2020-9-4">4</a>
+							<a href="/archive/2020-9-5">5</a>
+							<a href="/archive/2020-9-6">6</a>
+							<a href="/archive/2020-9-7">7</a>
+							<a href="/archive/2020-9-8">8</a>
+							<a href="/archive/2020-9-9">9</a>
+							<a href="/archive/2020-9-10">10</a>
+							<a href="/archive/2020-9-11">11</a>
+							<a href="/archive/2020-9-12">12</a>
+							<a href="/archive/2020-9-13">13</a>
+							<a href="/archive/2020-9-14">14</a>
+							<a href="/archive/2020-9-15">15</a>
+							<a href="/archive/2020-9-16">16</a>
+							<a href="/archive/2020-9-17">17</a>
+							<a href="/archive/2020-9-18">18</a>
+							<a href="/archive/2020-9-19">19</a>
+							<a href="/archive/2020-9-20">20</a>
+							<a href="/archive/2020-9-21">21</a>
+							<a href="/archive/2020-9-22">22</a>
+							<a href="/archive/2020-9-23">23</a>
+							<a href="/archive/2020-9-24">24</a>
+							<a href="/archive/2020-9-25">25</a>
+							<a href="/archive/2020-9-26">26</a>
+							<a href="/archive/2020-9-27">27</a>
+							<a href="/archive/2020-9-28">28</a>
+							<a href="/archive/2020-9-29">29</a>
+							<a href="/archive/2020-9-30">30</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-10">Жовтень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-10-1">1</a>
+							<a href="/archive/2020-10-2">2</a>
+							<a href="/archive/2020-10-3">3</a>
+							<a href="/archive/2020-10-4">4</a>
+							<a href="/archive/2020-10-5">5</a>
+							<a href="/archive/2020-10-6">6</a>
+							<a href="/archive/2020-10-7">7</a>
+							<a href="/archive/2020-10-8">8</a>
+							<a href="/archive/2020-10-9">9</a>
+							<a href="/archive/2020-10-10">10</a>
+							<a href="/archive/2020-10-11">11</a>
+							<a href="/archive/2020-10-12">12</a>
+							<a href="/archive/2020-10-13">13</a>
+							<a href="/archive/2020-10-14">14</a>
+							<a href="/archive/2020-10-15">15</a>
+							<a href="/archive/2020-10-16">16</a>
+							<a href="/archive/2020-10-17">17</a>
+							<a href="/archive/2020-10-18">18</a>
+							<a href="/archive/2020-10-19">19</a>
+							<a href="/archive/2020-10-20">20</a>
+							<a href="/archive/2020-10-21">21</a>
+							<a href="/archive/2020-10-22">22</a>
+							<a href="/archive/2020-10-23">23</a>
+							<a href="/archive/2020-10-24">24</a>
+							<a href="/archive/2020-10-25">25</a>
+							<a href="/archive/2020-10-26">26</a>
+							<a href="/archive/2020-10-27">27</a>
+							<a href="/archive/2020-10-28">28</a>
+							<a href="/archive/2020-10-29">29</a>
+							<a href="/archive/2020-10-30">30</a>
+							<a href="/archive/2020-10-31">31</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-11">Листопад 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<a href="/archive/2020-11-1">1</a>
+							<a href="/archive/2020-11-2">2</a>
+							<a href="/archive/2020-11-3">3</a>
+							<a href="/archive/2020-11-4">4</a>
+							<a href="/archive/2020-11-5">5</a>
+							<a href="/archive/2020-11-6">6</a>
+							<a href="/archive/2020-11-7">7</a>
+							<a href="/archive/2020-11-8">8</a>
+							<a href="/archive/2020-11-9">9</a>
+							<a href="/archive/2020-11-10">10</a>
+							<a href="/archive/2020-11-11">11</a>
+							<a href="/archive/2020-11-12">12</a>
+							<a href="/archive/2020-11-13">13</a>
+							<a href="/archive/2020-11-14">14</a>
+							<a href="/archive/2020-11-15">15</a>
+							<a href="/archive/2020-11-16">16</a>
+							<a href="/archive/2020-11-17">17</a>
+							<a href="/archive/2020-11-18">18</a>
+							<a href="/archive/2020-11-19">19</a>
+							<a href="/archive/2020-11-20">20</a>
+							<a href="/archive/2020-11-21">21</a>
+							<a href="/archive/2020-11-22">22</a>
+							<a href="/archive/2020-11-23">23</a>
+							<a href="/archive/2020-11-24">24</a>
+							<a href="/archive/2020-11-25">25</a>
+							<a href="/archive/2020-11-26">26</a>
+							<a href="/archive/2020-11-27">27</a>
+							<a href="/archive/2020-11-28">28</a>
+							<a href="/archive/2020-11-29">29</a>
+							<a href="/archive/2020-11-30">30</a>
+						</div>
+					</article>
+
+					<article>
+						<h1 class="month">
+							<a href="/archive/2020-12">Грудень 2020</a>
+						</h1>
+						<div class="weeks">
+							<span>Пн</span><span>Вт</span><span>Ср</span
+							><span>Чт</span><span>Пт</span><span>Сб</span
+							><span>Нд</span>
+						</div>
+						<div class="days">
+							<span></span>
+							<a href="/archive/2020-12-1">1</a>
+							<a href="/archive/2020-12-2">2</a>
+							<a href="/archive/2020-12-3">3</a>
+							<a href="/archive/2020-12-4">4</a>
+							<a href="/archive/2020-12-5">5</a>
+							<a href="/archive/2020-12-6">6</a>
+							<a href="/archive/2020-12-7">7</a>
+							<a href="/archive/2020-12-8">8</a>
+							<a href="/archive/2020-12-9">9</a>
+							<a href="/archive/2020-12-10">10</a>
+							<a href="/archive/2020-12-11">11</a>
+							<a href="/archive/2020-12-12">12</a>
+							<a href="/archive/2020-12-13">13</a>
+							<a href="/archive/2020-12-14">14</a>
+							<a href="/archive/2020-12-15">15</a>
+							<a href="/archive/2020-12-16">16</a>
+							<a href="/archive/2020-12-17">17</a>
+							<a href="/archive/2020-12-18">18</a>
+							<a href="/archive/2020-12-19">19</a>
+							<a href="/archive/2020-12-20">20</a>
+							<a href="/archive/2020-12-21">21</a>
+							<a href="/archive/2020-12-22">22</a>
+							<a href="/archive/2020-12-23">23</a>
+							<a href="/archive/2020-12-24">24</a>
+							<a href="/archive/2020-12-25">25</a>
+							<a href="/archive/2020-12-26">26</a>
+							<a href="/archive/2020-12-27">27</a>
+							<a href="/archive/2020-12-28">28</a>
+							<a href="/archive/2020-12-29">29</a>
+							<a href="/archive/2020-12-30">30</a>
+							<a href="/archive/2020-12-31">31</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<!-- .wrapper -->
+
+		<footer id="footer">
+			<div class="wrapper">
+				<div id="footer-logo">
+					<a href="#" title="Терен">терен</a>
+					<p>Тернопільські новини</p>
+					<p>teren.in.ua © 2014-2021</p>
+				</div>
+
+				<div id="footer-content">
+					<p>
+						Допускається цитування матеріалів без отримання
+						попередньої згоди teren.in.ua за умови розміщення в
+						тексті обов'язкового посилання на teren.in.ua - Терен.
+						Для інтернет-видань обов'язкове розміщення прямого,
+						відкритого для пошукових систем гіперпосилання на
+						цитовані статті не нижче другого абзацу в тексті або в
+						якості джерела. Порушення виняткових прав переслідується
+						Законом.
+					</p>
+					<p>
+						Матеріали з плашками "Новини компаній", "Промо",
+						"Партнерський матеріал", "Політичні новини",
+						"Прес-реліз" та "Партнерські новини" публікуються на
+						правах реклами.
+					</p>
+					<p>
+						Адміністрація сайту може не розділяти думку автора та не
+						несе відповідальності за авторські матеріали.
+					</p>
+				</div>
+
+				<div id="footer-contact">
+					<a href="tel:+380671234567">+380671234567</a>
+
+					<a href="mailto://office@teren.in.ua">office@teren.in.ua</a>
+
+					<ul class="social">
+						<li>
+							<a href="#" class="facebook" title="facebook"></a>
+						</li>
+						<li>
+							<a href="#" class="instagram" title="instagram"></a>
+						</li>
+						<li>
+							<a href="#" class="youtube" title="youtube"></a>
+						</li>
+						<!-- <li><a href="#" class="twitter" title="twitter"></a></li> -->
+						<!-- <li><a href="#" class="telegram" title="telegram"></a></li> -->
+						<li><a href="#" class="rss" title="rss"></a></li>
+					</ul>
+				</div>
+
+				<div id="copy">
+					<a href="#" title="редакція">редакція</a> |
+					<a href="#" title="розміщення реклами"
+						>розміщення реклами</a
+					>
+					|
+					<a href="#" title="редакційна політика"
+						>редакційна політика</a
+					>
+					|
+					<a href="#" title="політика конфіденційності"
+						>політика конфіденційності</a
+					>
+					|
+					<a href="#" title="структура власності"
+						>структура власності</a
+					>
+				</div>
+			</div>
+		</footer>
+
+		<ul id="mobile-panel">
+			<li id="nav-home">
+				<a href="#">Головна</a>
+			</li>
+			<li id="nav-search">
+				<a href="#">Пошук</a>
+			</li>
+			<li id="nav-menu">
+				<a href="#">Меню</a>
+			</li>
+			<li id="nav-news">
+				<a href="#">Новини</a>
+			</li>
+			<li id="nav-send">
+				<a href="#">Повідомити новину</a>
+			</li>
+		</ul>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

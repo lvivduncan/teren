@@ -1,0 +1,134 @@
+
+#archive
+{
+    padding: var(--gap);
+    text-align: center;
+}
+
+#archive .title
+{
+    display: block;
+}
+
+#archive .title::before
+{
+    display: none;
+}
+
+#archive a
+{
+    text-decoration: none;
+    transition: .5s;
+}
+
+#archive nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--gap);
+    gap: var(--gap);
+}
+
+#archive nav svg
+{
+    fill: var(--gray);
+    height: 24px;
+    margin-top: 1px;
+}
+
+#archive nav span
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cyan);
+}
+
+#archive nav a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#calendar
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: var(--gap);
+}
+
+@media(max-width:996px)
+{
+    #calendar
+    {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:776px)
+{
+    #calendar
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:450px)
+{
+    #calendar
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+#calendar h1.month 
+{
+    margin: 0 0 5px;
+}
+
+#calendar h1.month a
+{
+    display: block;
+    padding: 5px 3px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: var(--cyan);
+    color: var(--white)!important;
+}
+
+#calendar .weeks
+{
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 11px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-gap: 2px;
+}
+
+#calendar .days
+{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-gap: 1px;
+}
+
+#calendar .days a
+{
+    padding: 2px;
+    background: var(--white);
+    color: var(--black);
+}
+
+#calendar .days a:hover
+{
+    background: var(--cyan);
+    color: var(--white)!important;
+}
+
+#calendar .weeks span
+{
+    padding: 5px;
+}
