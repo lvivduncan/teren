@@ -10,7 +10,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap"
 			rel="stylesheet"
 		/>
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
@@ -90,7 +90,6 @@
 				--light: #aab2bd;
 				--black: #000;
 				--bg-gray: #f6f7fb;
-				--gap: 40px;
 				--border: #e6e9ee;
 				--aside: #656d78;
 				--time: #595e64;
@@ -98,17 +97,21 @@
 				--tw: #6ab8ff;
 				--tg: #389ce9;
 				--social: #f6f7f8;
+
+				--gap: 20px;
 			}
 			html,
 			body {
 				height: 100%;
-				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+				/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
 					Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-					"Helvetica Neue", sans-serif;
+					"Helvetica Neue", sans-serif; */
+				font-family: "Open Sans", sans-serif;
 				font-weight: 400;
 				font-size: 16px;
 			}
-			header {
+
+			#header {
 				height: 100px;
 				margin: auto;
 				width: 95%;
@@ -116,7 +119,7 @@
 				grid-template-columns: 1fr auto 1fr;
 				align-items: center;
 			}
-			header time {
+			#header time {
 				display: block;
 				line-height: 1;
 				color: var(--time);
@@ -146,6 +149,392 @@
 				display: block;
 				font-weight: 400;
 				color: var(--gray);
+			}
+			.send-post {
+				display: inline-block;
+				background: var(--cyan);
+				color: var(--white);
+				font-size: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 17px;
+				cursor: pointer;
+				border: none;
+
+				width: 50px;
+				height: 50px;
+				position: relative;
+				align-items: center;
+				justify-content: center;
+				margin-left: auto;
+			}
+			.send-post::before {
+				content: "";
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAMAAAAVHr4VAAAAaVBMVEUAAACpsr2osbypsb2wtrapsb2qsb2psb2psb2psb2psbytr8Gpsbyqsb2qsryqsb2osb2psb2psr6psr2ttLuosr2qsb2qsb6psr2qsL2psbyosb2psL6psb2qsb2psb2psb2nsLypsb1oLzNNAAAAInRSTlMAnBn6CO9u8+vhVw7m1R7FoZB0SyOHeE/JvLSXLdKuZV4911HupgAAAPFJREFUKM99UlmWhCAQQ3ZcwH1p7S33P+Tga0ZxxjY/FV9SpoAiv6BNUgiPImkoOYL2BoA2RgMw/UF+KuRdY1dqhy6Hem4SL8FktlszyVDywEdM9phiJ4wfd4mE/EOCci0pHDmBQ+oDNaNnImWa+8Yu+lkUUPnWG6JhGNt5ixtRBdmR59FHocg2Kq2lVErKmm4DE1SBvxHw3kKvO8VV5gPt92lTVF/PeX1DvvWenYgj0rXM6E9fJdThr2QdHPeVz3jwdq7jTagZEr6yFzA5AKIbLPfedqgE1OtjWxxDXjbSrAZjxHH7smWhYW+1EPoe7e0P04MRgkmPYPQAAAAASUVORK5CYII=");
+				width: 28px;
+				height: 25px;
+				display: block;
+				position: absolute;
+				top: calc(50% - 12px);
+				left: calc(50% - 14px);
+			}
+			main {
+				width: 95%;
+				margin: auto;
+				color: var(--gray);
+			}
+			main p {
+				margin: 0 0 var(--gap);
+				line-height: 1.7;
+				font-weight: 300;
+				color: var(--gray);
+				/* opacity: .6; */
+				font-weight: 300;
+			}
+			main time {
+				font-size: 14px;
+				font-weight: 700;
+				color: var(--cyan);
+			}
+			main header {
+				margin: 0 0 var(--gap);
+			}
+			main header h1 {
+				margin: 15px 0;
+				font-family: "Merriweather", serif;
+				color: var(--gray);
+			}
+			main header p {
+				margin: 0 0 28px;
+				line-height: 1.5;
+				font-weight: 400;
+			}
+			blockquote {
+				position: relative;
+				min-height: 60px;
+				border-top: 1px solid var(--border);
+				border-bottom: 1px solid var(--border);
+				padding: var(--gap) var(--gap) var(--gap) 100px;
+				margin: var(--gap) -2.5%;
+			}
+			blockquote::before {
+				width: 40px;
+				height: 38px;
+				content: "";
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA4CAMAAACWs2tWAAAAhFBMVEUAAACqsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr2qsr1cT5GAAAAAK3RSTlMABPrecVEJ5M/08Kh5aC8nFA6Mh+rYyL9cNRvTu7efl4BGIsJMQTmvP5Ri+drWeAAAAghJREFUSMeF1e12gjAMBuAUlM/x5QBRlM1t6rbc//3tcDjdKX0Tff7GljZJIy3KXZJx2k0X0jTFueUgvheNF6hztpIbiYbM/iLbGDfwEbLjhQQ7duxr57sdr+wIvPBKdyTrjT3w7TLwfpFE9tB+hINvb3HOvpwWGwZhRK4oYLC126J3ch0Yxcv+e0bpqphfLNjQrMeAl7MtC2Izh05SKCTHhSVftlLo5jYRhm3CBzH0So6YBamZOz6TQj00JzjY3gOBW+o6VfMdhVKo9HobTXo2t+QwCaPPJfajHQqfBpYzGp91KBUMMlpUqVor6445JXha2kioW3WxGbVj6wfPoPn1cWL8irZ6Cxbkgat19O8H6uyrsM7WAJ0LMnhW1re3uCaQqMWsIBvgzCuD+uL3hO7q06ngTOAMw8AqcUK5cM6eSEtY0BBK1C7aQg1BqE6LjfeakZGHM07gI6FKz+heToZ6sco9U+o1NnpVk3KA+4Be3f7dSxeq9e07J5I1JCjU7W9QftDDX7uVixE1Kb9QQhhA6qvojPbhxIko97oSyS8qgPkDPTRBLrRhjxOurbUijGK2mhifOv5RpRVJcu1oUSJ2nXa0k5tPcxYaR39O46r7rsKJ9PETHklZ/EbPFscfXiJP3mxAQwDftczk3RddMp71dq3/ltsrPVDG862MGPsNppoeOo7hhcAfViMS4HHD32MAAAAASUVORK5CYII=");
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: block;
+				position: absolute;
+				top: calc(50% - 28px);
+				left: var(--gap);
+			}
+			blockquote p {
+				margin: 0 0 20px !important;
+				font-style: italic;
+			}
+			blockquote p:last-child {
+				margin: 0 !important;
+			}
+			main ul,
+			main ol {
+				margin: var(--gap) 0 var(--gap) 40px;
+			}
+			main li {
+				margin: 20px 0;
+				line-height: 1.5;
+			}
+
+			#articles {
+				background: var(--bg-gray);
+				padding: var(--gap) 30px 0;
+			}
+
+			/* 			#articles .title {
+				color: var(--gray);
+				font-family: "Merriweather", serif;
+				font-weight: 600;
+				height: 40px;
+				display: grid;
+				grid-template-columns: 32px 1fr;
+				gap: 15px;
+				margin: 0 0 20px;
+
+				font-size: 21px;
+				align-items: center;
+			} */
+
+			.title {
+				color: var(--gray);
+				font-family: "Merriweather", serif;
+				font-weight: 600;
+				height: 40px;
+				display: grid;
+				grid-template-columns: 32px 1fr;
+				gap: 15px;
+				margin: 0 0 20px;
+
+				font-size: 21px;
+				align-items: center;
+			}
+
+			.title::before {
+				content: "";
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+			}
+
+			#articles .title::before {
+				background-repeat: no-repeat !important;
+				background-size: cover !important;
+				align-self: center;
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAM1BMVEUAAACpsb2nr7uqsr6qr7+osL2vr7+psb2ps7ynr7+osr2psb2psb2psbypsL2qsr2psb0D89PNAAAAEHRSTlMAgEC/MJ8Q31AgcO+Pz69gU3s48QAAANhJREFUOMu1lEEOwyAMBA02mDSk3f+/tqatFCUFmRwypz2MWFZI0M6GQgcKNuoQgUAHEjAnhj9xicYDSPFAAmJDfpowHPijvjDBy2pXQEMZV5egwLq0ac9MhgzH5CeQyGzzGpXlKArXb8grVhOZXBigVugSrokcXD7VU1wTU3RJN6zexWjQKO2iReMxSNdFv/rW1UuMC3XSWSwwSi+dxAQM0knMwci9ND3mdlHYkG66vrr6J1Zg/gNQQDxPAG31mzje1q6aFQDXMCQxAM3mK1xUvk+qjtYe/A0g5h7WBnzV9QAAAABJRU5ErkJggg==");
+			}
+
+			#articles article {
+				position: relative;
+				display: grid;
+				grid-template-columns: 110px 1fr;
+				grid-template-areas:
+					"articles-img articles-time"
+					"articles-img articles-h1";
+				gap: 0 calc(var(--gap) / 2);
+				padding: 20px 0;
+				border-top: 1px solid var(--border);
+			}
+
+			#articles article amp-img {
+				grid-area: articles-img;
+
+				align-self: flex-start;
+			}
+
+			#articles article time {
+				grid-area: articles-time;
+
+				color: var(--cyan);
+				display: block;
+				margin: 0 0 20px;
+				font-size: 14px;
+			}
+
+			#articles article h1 {
+				grid-area: articles-h1;
+
+				font-family: "Merriweather", serif;
+				font-size: 16px;
+				font-weight: 300;
+			}
+
+			#articles article h1 a {
+				grid-area: articles-h1;
+
+				font-family: "Merriweather", serif;
+				color: var(--gray);
+				text-decoration: none;
+			}
+
+			#articles article:nth-of-type(1) {
+				border-top: none;
+			}
+
+			.rest {
+				height: 85px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+
+			.rest a {
+				text-decoration: none;
+				font-size: 18px;
+				font-weight: 300;
+				color: var(--gray);
+			}
+
+			#choice {
+				padding-top: var(--gap);
+				width: 95%;
+				margin: auto;
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-areas:
+					"choice-title choice-title"
+					"choice-1 choice-2"
+					"choice-rest choice-rest";
+				gap: var(--gap);
+			}
+
+			#choice .title {
+				grid-area: choice-title;
+				margin: 0;
+			}
+
+			#choice .title::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAmCAMAAABu6EIRAAAAM1BMVEUAAACqsr6psb2nr7upsb2osL2vr7+qr7+psbypsb2qsr2psL2psb2osr2nr7+ps7ypsb32jW4HAAAAEHRSTlMAv4BA758QMM+PYK/fcCBQfHx3AAAAAPlJREFUOMuNlFuuhSAMRXkjPtf8R3ttek80QaX7AwSW0N0G3LvKAml2BjVEBrQAE6R9SM6Q3QLbkMxwuAp+SCbQdgQGWM7OD8kIxLOHNLCTxI8bxzlLhora2ga28UW35CufB3q0KxOEr+JojLr3Wr7PVhc7UAf52X9fqjXHJ1Jiu8JQ6dTsLx1Smyu2uOi0/LGdK3e1BsTOY5ZS0ak9h3SS0338Uj2PkP4+jo8ua+rJ1xRnG9nM5A5pRF4rNrLCaiMTBBsJFBvpodrIxUrOkiQTCQQbKVXvyPJyDXqSLXba9Mk52xZUmVcFTcBN6zOY/+/IpVZieFAV8A+4UhboTLZ1ewAAAABJRU5ErkJggg==");
+				width: 41px;
+				height: 38px;
+			}
+
+			#choice article {
+				grid-area: choice-2;
+			}
+
+			#choice article:nth-of-type(1) {
+				grid-area: choice-1;
+			}
+
+			#choice article time {
+				display: block;
+				margin: 20px 0;
+				color: var(--time);
+				font-size: 14px;
+			}
+
+			.article h1 a {
+				font-family: "Merriweather", serif;
+				color: var(--gray);
+				text-decoration: none;
+				display: block;
+				font-size: 16px;
+			}
+
+			#choice .rest {
+				grid-area: choice-rest;
+			}
+
+			footer {
+				padding: var(--gap) 2.5% 0;
+				background: var(--bg-gray);
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: var(--gap);
+				grid-template-areas:
+					"footer-logo footer-contact"
+					"footer-content footer-content";
+				font-size: 14px;
+			}
+			#footer-logo {
+				grid-area: footer-logo;
+			}
+
+			#footer-logo a {
+				color: var(--cyan);
+				font-size: 40px;
+				font-family: "Merriweather", serif;
+				font-weight: 700;
+				text-decoration: none;
+				line-height: 0.7;
+				margin: 0 0 20px;
+				display: block;
+			}
+
+			#footer-logo p {
+				color: var(--gray);
+			}
+
+			#footer-contact {
+				grid-area: footer-contact;
+				text-align: center;
+			}
+
+			#footer-contact a {
+				display: block;
+				text-decoration: none;
+				font-family: "Merriweather", serif;
+				margin: 0 0 20px;
+			}
+
+			#footer-contact a[href^="tel"] {
+				font-size: 24px;
+				font-weight: 700;
+				color: var(--black);
+			}
+
+			#footer-contact a[href^="mailto"] {
+				font-size: 14px;
+				color: var(--cyan);
+			}
+
+			#footer-content {
+				grid-area: footer-content;
+				color: var(--time);
+				font-size: 14px;
+			}
+			#footer-content p {
+				margin: 0 0 5px;
+			}
+			footer nav {
+				text-align: center;
+				padding: 0 0 35px;
+				color: var(--cyan);
+				font-size: 16px;
+				margin: var(--gap) 0 0;
+			}
+			footer nav a {
+				color: var(--cyan);
+				font-size: 16px;
+				text-decoration: none;
+			}
+			#mobile-panel {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				z-index: 2;
+				height: 75px;
+				width: 100%;
+				background: var(--cyan);
+				align-items: flex-start;
+				display: flex;
+			}
+			#mobile-panel li {
+				width: 20%;
+				display: block;
+				padding: 10px 0 0;
+			}
+			#mobile-panel a {
+				font-size: 10px;
+				color: var(--light);
+				text-decoration: none;
+				text-transform: uppercase;
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				flex-flow: column;
+				gap: 10px;
+			}
+			#mobile-panel a::before {
+				content: "";
+				display: block;
+				min-height: 25px;
+				background-repeat: no-repeat !important;
+			}
+			#nav-home a::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAMAAACE9bUqAAAAWlBMVEUAAACrrb6psb6psb2psb2psbypsb2psb2psb2psb2psb2qsr2qsryqsLufv7+psb2psb2qsbypsb2psb2psb2psbyosb2psbypsb6qsb6msbyzs7OAgICpsb1fIlhVAAAAHXRSTlMAD9752l/z7GawjV09Fgjl0Mu+uqedloJ9Ti4KApMxt+MAAACQSURBVCjPzZFbDoQgDEVRmfJSfL+9+9/mhCFCYFyA56cXTtKkLQuYFkBrWE4xA1pqYC5SUXPwOtbIBmj7S1YDW/g/Bog9vHaB4fBRElTDIo0CSVcngLMUDkwNI/TUZaajHsT4akWZmVLY1fW5qj9TXX7IB1O83zxsx5uTRGYEnT4sUNJ8boxUWO5Lj0gZXbMvdVEJcKIXkOUAAAAASUVORK5CYII=");
+				width: 25px;
+				height: 21px;
+			}
+			#nav-search a::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAKlBMVEUAAACpsb2psb2psb2qsb2psb2psb2psb2qsbyos72zs7OqsLypsr2psb1/H2YEAAAADXRSTlMA89GqVbqXaEUyCipZpbGloQAAAHhJREFUCNdjAAIuN0WhlAUMYNB8FwgswEweXeHK6YaXDoDYTVcdGBhYYjVAqm2jQSJbLy8AilwECgMpWSDFdhligm0CAwPTdQi7VoGBgfEmhD1XAJWNUIOqF2Emsl2obmC4i3Ab712Em+9egPgFLAwxEiKMYPMimAABTC1dyGCcdgAAAABJRU5ErkJggg==");
+				width: 21px;
+				height: 21px;
+			}
+			#nav-menu a::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASAQMAAAB7IozdAAAABlBMVEUAAACpsb07wI/oAAAAAXRSTlMAQObYZgAAABJJREFUCNdj+P//PxjjAMTKAwCF3hHvH/jF7AAAAABJRU5ErkJggg==");
+				width: 24px;
+				height: 18px;
+			}
+			#nav-news a::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAZlBMVEUAAACpsr2psb2osb2qs7+qsLypsb6psb2qs7upsb6psb2psb6psb2osL2psb2nr7upsb2psb2osL2psb2psr6psbypsrynsLmrrsCpsb2psb2qsr2qsb6or72psb2psb2qqripsb3TbKxpAAAAIXRSTlMAj9WJKlQyzh6MW4R8ZOlA+PHfqaNzOh0Y9uPKvCPrlxKnYSARAAAAuUlEQVQoz33N2Q6CMBSE4enGsRTLquLuvP9LigS1iOFL+l90mhSjx2mHSXFCwtJjcufnshNpeBM9kkgt0lkgOzKeG9bvoaY+Rx4zCHOgZ8DEcEhOAS8YlD0mffnqhWDAH4GoJHjzwwepUPOvGuxsltnhpLXdyh9UwFbrfF61Pix8B2uR9DsU5C7tZyiV2s+6/ocHNs5t5vUEDWDI4rdgO746zNsSsbpi4VpFOLI1XiW8b0kHuIYLjcMTkNMUjOZlX+cAAAAASUVORK5CYII=");
+				width: 24px;
+				height: 24px;
+			}
+			#nav-send a::before {
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAMAAAAVHr4VAAAAaVBMVEUAAACpsr2osbypsb2wtrapsb2qsb2psb2psb2psb2psbytr8Gpsbyqsb2qsryqsb2osb2psb2psr6psr2ttLuosr2qsb2qsb6psr2qsL2psbyosb2psL6psb2qsb2psb2psb2nsLypsb1oLzNNAAAAInRSTlMAnBn6CO9u8+vhVw7m1R7FoZB0SyOHeE/JvLSXLdKuZV4911HupgAAAPFJREFUKM99UlmWhCAQQ3ZcwH1p7S33P+Tga0ZxxjY/FV9SpoAiv6BNUgiPImkoOYL2BoA2RgMw/UF+KuRdY1dqhy6Hem4SL8FktlszyVDywEdM9phiJ4wfd4mE/EOCci0pHDmBQ+oDNaNnImWa+8Yu+lkUUPnWG6JhGNt5ixtRBdmR59FHocg2Kq2lVErKmm4DE1SBvxHw3kKvO8VV5gPt92lTVF/PeX1DvvWenYgj0rXM6E9fJdThr2QdHPeVz3jwdq7jTagZEr6yFzA5AKIbLPfedqgE1OtjWxxDXjbSrAZjxHH7smWhYW+1EPoe7e0P04MRgkmPYPQAAAAASUVORK5CYII=");
+				width: 28px;
+				height: 25px;
 			}
 		</style>
 	</head>
@@ -207,18 +596,16 @@
 			</aside>
 		</amp-sidebar>
 
-		<header>
+		<header id="header">
 			<time>Пон, 1 Лис</time>
 			<div id="logo">
 				<a href="#" title="Терен: тернопільські новини"> Терен </a>
 				<span>тернопільські новини</span>
 			</div>
-			<a href="#" class="send-post">
-				<span>Повідомити новину</span>
-			</a>
+			<button class="send-post"></button>
 		</header>
 
-		<div id="send-post">
+		<!-- 		<div id="send-post">
 			<form>
 				<input type="text" placeholder="Прізвище та Ім'я" />
 				<input type="email" placeholder="email" />
@@ -242,520 +629,355 @@
 
 				<button>Надіслати</button>
 			</form>
-		</div>
+		</div> -->
 		<!-- Випадачка справа (надіслати новину) -->
 
-		<div class="wrapper">
-			<div id="page">
-				<div id="content">
-					<header>
-						<time>18 Жовтня, 2021, 19:01</time>
+		<main>
+			<header>
+				<time>18 Жовтня, 2021, 19:01</time>
 
-						<h1>
-							Магія Кременця очима художниці Ірини Остап
-							(фоторепортаж)
-						</h1>
+				<h1>
+					Магія Кременця очима художниці Ірини Остап (фоторепортаж)
+				</h1>
 
-						<p>
-							Кременець, мабуть, одне із найживописніших міст
-							краю. Це потверджує кількість митців, котрі у ньому
-							творять і творили. Чи не тому важко знайти інше
-							місто, котре б так часто з’являлося на полотні. Ось
-							і кременецька художниця Ірина Остап переконана, що
-							це місто неймовірне, а коли точніше — магічне.
-							Мисткиня каже, що сама атмосфера тут надзвичайна.
-							Чому? Про це ми й поговорили.
-						</p>
+				<p>
+					Кременець, мабуть, одне із найживописніших міст краю. Це
+					потверджує кількість митців, котрі у ньому творять і
+					творили. Чи не тому важко знайти інше місто, котре б так
+					часто з’являлося на полотні. Ось і кременецька художниця
+					Ірина Остап переконана, що це місто неймовірне, а коли
+					точніше — магічне. Мисткиня каже, що сама атмосфера тут
+					надзвичайна. Чому? Про це ми й поговорили.
+				</p>
 
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/04.webp"
-									type="image/webp"
-								/>
-								<img src="temp/04.jpg" alt="" />
-							</picture>
-						</div>
-					</header>
+				<amp-img
+					src="temp/04.jpg"
+					alt=""
+					layout="responsive"
+					width="900"
+					height="552"
+				></amp-img>
+			</header>
 
-					<aside>
-						<!-- Тут вайбера немає -->
-						<div
-							class="share-buttons"
-							data-share_count='{"facebook":0,"twitter":0,"telegram":0,"viber":0}'
-							data-news_id="0"
+			<div class="share-buttons" style="float: left; width: 160px">
+				<a
+					href="#"
+					class="facebook"
+					data-share="facebook"
+					title="share to facebook"
+				>
+					<span style="display: block">1</span>
+				</a>
+				<a
+					href="#"
+					class="twitter"
+					data-share="twitter"
+					title="share to twitter"
+				>
+					<span style="display: block">35</span>
+				</a>
+				<a
+					href="#"
+					class="telegram"
+					data-share="telegram"
+					title="share to telegram"
+				>
+					<span>3</span>
+				</a>
+			</div>
+			<!-- .share-buttons -->
+
+			<p>
+				Народилася Ірина Остап 17 квітня 1988 року у Кременці, закінчила
+				Тернопільський кооперативний торговельно-економічний коледж,
+				факультет дизайну та Кременецький обласний
+				гуманітарно-педагогічний інститут ім. Тараса Шевченка, факультет
+				іноземних мов. Вивчаючи дизайн, зацікавилась малюванням. Її
+				перша виставка «Зростання» відбулася в галереї «Печерській» на
+				території Національного Києво-Печерського історико-культурного
+				заповідника. Згодом Ірина Остап перемогла в міжнародному
+				конкурсі «Тріада». А нещодавно у Кременці відбулася друга
+				виставка художниці «Магія мого міста». До речі, крім малювання,
+				художниця вивчає історію свого міста й працює екскурсоводкою в
+				Кременецько-Почаївському ДІАЗі.
+			</p>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Voluptates placeat corrupti suscipit facere ratione esse, saepe
+				eaque accusamus incidunt possimus magnam quo, delectus ipsa
+				commodi molestiae explicabo omnis unde? Optio voluptatem eveniet
+				vero ipsa sed dicta dignissimos deserunt officiis? At nulla
+				debitis, a sunt vitae cupiditate aliquam assumenda quam
+				voluptatem eum hic accusamus maiores, maxime quidem eaque quis
+				deleniti, quos autem repellat eligendi nihil. Beatae iste
+				suscipit ut quibusdam sed earum sunt dignissimos laborum
+				corrupti maxime saepe quo doloribus aperiam deleniti, minus in
+				aut possimus culpa asperiores magni magnam? Quo perspiciatis
+				quam perferendis neque et sed! Eveniet atque perspiciatis
+				deleniti.
+			</p>
+
+			<amp-img
+				src="temp/02.jpg"
+				alt=""
+				layout="responsive"
+				width="900"
+				height="626"
+			></amp-img>
+
+			<blockquote>
+				<p>
+					<strong
+						>— Доброго дня, пані Ірино, ваша остання в часі виставка
+						називається «Магія мого міста» та складається з робіт,
+						присвячених Кременцю. Чому так? Чому вам подобається
+						малювати куточки свого міста?</strong
+					>
+				</p>
+				<p>
+					— Назва виставки «Магія мого міста» — не випадкова. Гуляючи
+					по Кременцю, відчуваєш таємничий дух, енергію людей, котрі
+					доклали чимало зусиль, аби Кременець став особливим містом.
+					І це все я намагаюся донести до глядача через свої полотна.
+				</p>
+			</blockquote>
+
+			<p>
+				Народилася Ірина Остап 17 квітня 1988 року у Кременці, закінчила
+				Тернопільський кооперативний торговельно-економічний коледж,
+				факультет дизайну та Кременецький обласний
+				гуманітарно-педагогічний інститут ім. Тараса Шевченка, факультет
+				іноземних мов. Вивчаючи дизайн, зацікавилась малюванням. Її
+				перша виставка «Зростання» відбулася в галереї «Печерській» на
+				території Національного Києво-Печерського історико-культурного
+				заповідника. Згодом Ірина Остап перемогла в міжнародному
+				конкурсі «Тріада». А нещодавно у Кременці відбулася друга
+				виставка художниці «Магія мого міста». До речі, крім малювання,
+				художниця вивчає історію свого міста й працює екскурсоводкою в
+				Кременецько-Почаївському ДІАЗі.
+			</p>
+
+			<p>Маркований список</p>
+			<ul>
+				<li>
+					Доброго дня, пані Ірино, ваша остання в часі виставка
+					називається «Магія мого міста» та складається з робіт,
+					присвячених Кременцю. Чому так? Чому вам подобається
+					малювати куточки свого міста?
+				</li>
+				<li>
+					Назва виставки «Магія мого міста» — не випадкова. Гуляючи по
+					Кременцю, відчуваєш таємничий дух, енергію людей, котрі
+					доклали чимало зусиль, аби Кременець став особливим містом
+				</li>
+			</ul>
+
+			<p>Нумерований список</p>
+			<ol>
+				<li>
+					Доброго дня, пані Ірино, ваша остання в часі виставка
+					називається «Магія мого міста» та складається з робіт,
+					присвячених Кременцю. Чому так? Чому вам подобається
+					малювати куточки свого міста?
+				</li>
+				<li>
+					Назва виставки «Магія мого міста» — не випадкова. Гуляючи по
+					Кременцю, відчуваєш таємничий дух, енергію людей, котрі
+					доклали чимало зусиль, аби Кременець став особливим містом
+				</li>
+			</ol>
+
+			<p>
+				<strong>Півжирний</strong> <br />
+				<em>Курсивний текст</em> <br />
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Voluptates placeat corrupti suscipit facere ratione esse, saepe
+				eaque accusamus incidunt possimus magnam quo, delectus ipsa
+				commodi molestiae explicabo omnis unde? Optio voluptatem eveniet
+				vero ipsa sed dicta dignissimos deserunt officiis? At nulla
+				debitis, a sunt vitae cupiditate aliquam assumenda quam
+				voluptatem eum hic accusamus maiores, maxime quidem eaque quis
+				deleniti, quos autem repellat eligendi nihil. Beatae iste
+				suscipit ut quibusdam sed earum sunt dignissimos laborum
+				corrupti maxime saepe quo doloribus aperiam deleniti, minus in
+				aut possimus culpa asperiores magni magnam? Quo perspiciatis
+				quam perferendis neque et sed! Eveniet atque perspiciatis
+				deleniti.
+			</p>
+		</main>
+
+		<aside id="articles">
+			<h1 class="title">Новини</h1>
+
+			<article>
+				<amp-img
+					src="temp/01.jpg"
+					alt=""
+					layout="responsive"
+					width="110"
+					height="62"
+				></amp-img>
+				<time>31 Жовтня, 2021, 22:00</time>
+				<h1>
+					<a
+						href="#"
+						title="Яким буде перший день листопада у Тернополі?"
+						>Яким буде перший день листопада у Тернополі?</a
+					>
+				</h1>
+			</article>
+
+			<article>
+				<amp-img
+					src="temp/02.jpg"
+					alt=""
+					layout="responsive"
+					width="110"
+					height="62"
+				></amp-img>
+
+				<div class="article-data">
+					<time>31 Жовтня, 2021, 22:00</time>
+					<h1>
+						<a
+							href="#"
+							title="Краєзнавець зібрав найбільшу на Тернопільщині колекцію значків і медалей про рідний край (фоторепортаж)"
+							>Краєзнавець зібрав найбільшу на Тернопільщині
+							колекцію значків і медалей про рідний край
+							(фоторепортаж)</a
 						>
-							<a
-								href="#"
-								class="facebook"
-								data-share="facebook"
-								title="share to facebook"
-							>
-								<span style="display: block">1</span>
-							</a>
-							<a
-								href="#"
-								class="twitter"
-								data-share="twitter"
-								title="share to twitter"
-							>
-								<span style="display: block">35</span>
-							</a>
-							<a
-								href="#"
-								class="telegram"
-								data-share="telegram"
-								title="share to telegram"
-							>
-								<span>3</span>
-							</a>
-						</div>
-						<!-- .share-buttons -->
-
-						<h1>До теми</h1>
-						<ul>
-							<li>
-								<a
-									href="#"
-									title="У містечку на Тернопільщині відкрили пам’ятник букві українського алфавіту (фото)"
-									>У містечку на Тернопільщині відкрили
-									пам’ятник букві українського алфавіту
-									(фото)</a
-								>
-							</li>
-							<li>
-								<a
-									href="#"
-									title="Це потверджує кількість митців, котрі у ньому творять і творили"
-									>Це потверджує кількість митців, котрі у
-									ньому творять і творили</a
-								>
-							</li>
-							<li>
-								<a
-									href="#"
-									title="Чи не тому важко знайти інше місто, котре б так часто з’являлося на полотні"
-									>Чи не тому важко знайти інше місто, котре б
-									так часто з’являлося на полотні</a
-								>
-							</li>
-						</ul>
-					</aside>
-
-					<main>
-						<p>
-							Народилася Ірина Остап 17 квітня 1988 року у
-							Кременці, закінчила Тернопільський кооперативний
-							торговельно-економічний коледж, факультет дизайну та
-							Кременецький обласний гуманітарно-педагогічний
-							інститут ім. Тараса Шевченка, факультет іноземних
-							мов. Вивчаючи дизайн, зацікавилась малюванням. Її
-							перша виставка «Зростання» відбулася в галереї
-							«Печерській» на території Національного
-							Києво-Печерського історико-культурного заповідника.
-							Згодом Ірина Остап перемогла в міжнародному конкурсі
-							«Тріада». А нещодавно у Кременці відбулася друга
-							виставка художниці «Магія мого міста». До речі, крім
-							малювання, художниця вивчає історію свого міста й
-							працює екскурсоводкою в Кременецько-Почаївському
-							ДІАЗі.
-						</p>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit. Voluptates placeat corrupti suscipit facere
-							ratione esse, saepe eaque accusamus incidunt
-							possimus magnam quo, delectus ipsa commodi molestiae
-							explicabo omnis unde? Optio voluptatem eveniet vero
-							ipsa sed dicta dignissimos deserunt officiis? At
-							nulla debitis, a sunt vitae cupiditate aliquam
-							assumenda quam voluptatem eum hic accusamus maiores,
-							maxime quidem eaque quis deleniti, quos autem
-							repellat eligendi nihil. Beatae iste suscipit ut
-							quibusdam sed earum sunt dignissimos laborum
-							corrupti maxime saepe quo doloribus aperiam
-							deleniti, minus in aut possimus culpa asperiores
-							magni magnam? Quo perspiciatis quam perferendis
-							neque et sed! Eveniet atque perspiciatis deleniti.
-						</p>
-
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/02.webp"
-									type="image/webp"
-								/>
-								<img src="temp/02.jpg" alt="" />
-							</picture>
-						</div>
-
-						<blockquote>
-							<p>
-								<strong
-									>— Доброго дня, пані Ірино, ваша остання в
-									часі виставка називається «Магія мого міста»
-									та складається з робіт, присвячених
-									Кременцю. Чому так? Чому вам подобається
-									малювати куточки свого міста?</strong
-								>
-							</p>
-							<p>
-								— Назва виставки «Магія мого міста» — не
-								випадкова. Гуляючи по Кременцю, відчуваєш
-								таємничий дух, енергію людей, котрі доклали
-								чимало зусиль, аби Кременець став особливим
-								містом. І це все я намагаюся донести до глядача
-								через свої полотна.
-							</p>
-						</blockquote>
-
-						<p>
-							Народилася Ірина Остап 17 квітня 1988 року у
-							Кременці, закінчила Тернопільський кооперативний
-							торговельно-економічний коледж, факультет дизайну та
-							Кременецький обласний гуманітарно-педагогічний
-							інститут ім. Тараса Шевченка, факультет іноземних
-							мов. Вивчаючи дизайн, зацікавилась малюванням. Її
-							перша виставка «Зростання» відбулася в галереї
-							«Печерській» на території Національного
-							Києво-Печерського історико-культурного заповідника.
-							Згодом Ірина Остап перемогла в міжнародному конкурсі
-							«Тріада». А нещодавно у Кременці відбулася друга
-							виставка художниці «Магія мого міста». До речі, крім
-							малювання, художниця вивчає історію свого міста й
-							працює екскурсоводкою в Кременецько-Почаївському
-							ДІАЗі.
-						</p>
-
-						<p>Маркований список</p>
-						<ul>
-							<li>
-								Доброго дня, пані Ірино, ваша остання в часі
-								виставка називається «Магія мого міста» та
-								складається з робіт, присвячених Кременцю. Чому
-								так? Чому вам подобається малювати куточки свого
-								міста?
-							</li>
-							<li>
-								Назва виставки «Магія мого міста» — не
-								випадкова. Гуляючи по Кременцю, відчуваєш
-								таємничий дух, енергію людей, котрі доклали
-								чимало зусиль, аби Кременець став особливим
-								містом
-							</li>
-						</ul>
-
-						<p>Нумерований список</p>
-						<ol>
-							<li>
-								Доброго дня, пані Ірино, ваша остання в часі
-								виставка називається «Магія мого міста» та
-								складається з робіт, присвячених Кременцю. Чому
-								так? Чому вам подобається малювати куточки свого
-								міста?
-							</li>
-							<li>
-								Назва виставки «Магія мого міста» — не
-								випадкова. Гуляючи по Кременцю, відчуваєш
-								таємничий дух, енергію людей, котрі доклали
-								чимало зусиль, аби Кременець став особливим
-								містом
-							</li>
-						</ol>
-
-						<p>
-							<strong>Півжирний</strong> <br />
-							<em>Курсивний текст</em> <br />
-							Lorem ipsum dolor sit amet, consectetur adipisicing
-							elit. Voluptates placeat corrupti suscipit facere
-							ratione esse, saepe eaque accusamus incidunt
-							possimus magnam quo, delectus ipsa commodi molestiae
-							explicabo omnis unde? Optio voluptatem eveniet vero
-							ipsa sed dicta dignissimos deserunt officiis? At
-							nulla debitis, a sunt vitae cupiditate aliquam
-							assumenda quam voluptatem eum hic accusamus maiores,
-							maxime quidem eaque quis deleniti, quos autem
-							repellat eligendi nihil. Beatae iste suscipit ut
-							quibusdam sed earum sunt dignissimos laborum
-							corrupti maxime saepe quo doloribus aperiam
-							deleniti, minus in aut possimus culpa asperiores
-							magni magnam? Quo perspiciatis quam perferendis
-							neque et sed! Eveniet atque perspiciatis deleniti.
-						</p>
-					</main>
+					</h1>
 				</div>
-				<!-- #content -->
+			</article>
 
-				<aside class="bg-gray">
-					<div class="title calendar">Новини</div>
+			<article>
+				<amp-img
+					src="temp/03.jpg"
+					alt=""
+					layout="responsive"
+					width="110"
+					height="62"
+				></amp-img>
+				<div class="article-data">
+					<time>31 Жовтня, 2021, 22:00</time>
+					<h1>
+						<a
+							href="#"
+							title="Яким буде перший день листопада у Тернополі?"
+							>Міський голова громади Тернопільщини нагородив
+							переможців конкурсу «Бюджет участі»</a
+						>
+					</h1>
+				</div>
+			</article>
 
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/01.webp"
-									type="image/webp"
-								/>
-								<img src="temp/01.jpg" alt="" />
-							</picture>
-						</div>
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 22:00</time>
-							<h1>
-								<a
-									href="#"
-									title="Яким буде перший день листопада у Тернополі?"
-									>Яким буде перший день листопада у
-									Тернополі?</a
-								>
-							</h1>
-						</div>
-					</article>
+			<article>
+				<amp-img
+					src="temp/04.jpg"
+					alt=""
+					layout="responsive"
+					width="110"
+					height="62"
+				></amp-img>
+				<div class="article-data">
+					<time>31 Жовтня, 2021, 22:00</time>
+					<h1>
+						<a
+							href="#"
+							title="На Тернопільщині працюватиме медичний кабінет для людей з особливими потребами"
+							>На Тернопільщині працюватиме медичний кабінет для
+							людей з особливими потребами</a
+						>
+					</h1>
+				</div>
+			</article>
 
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/02.webp"
-									type="image/webp"
-								/>
-								<img src="temp/02.jpg" alt="" />
-							</picture>
-						</div>
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 22:00</time>
-							<h1>
-								<a
-									href="#"
-									title="Краєзнавець зібрав найбільшу на Тернопільщині колекцію значків і медалей про рідний край (фоторепортаж)"
-									>Краєзнавець зібрав найбільшу на
-									Тернопільщині колекцію значків і медалей про
-									рідний край (фоторепортаж)</a
-								>
-							</h1>
-						</div>
-					</article>
-
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/03.webp"
-									type="image/webp"
-								/>
-								<img src="temp/03.jpg" alt="" />
-							</picture>
-						</div>
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 22:00</time>
-							<h1>
-								<a
-									href="#"
-									title="Яким буде перший день листопада у Тернополі?"
-									>Міський голова громади Тернопільщини
-									нагородив переможців конкурсу «Бюджет
-									участі»</a
-								>
-							</h1>
-						</div>
-					</article>
-
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/04.webp"
-									type="image/webp"
-								/>
-								<img src="temp/04.jpg" alt="" />
-							</picture>
-						</div>
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 22:00</time>
-							<h1>
-								<a
-									href="#"
-									title="На Тернопільщині працюватиме медичний кабінет для людей з особливими потребами"
-									>На Тернопільщині працюватиме медичний
-									кабінет для людей з особливими потребами</a
-								>
-							</h1>
-						</div>
-					</article>
-
-					<div class="rest">
-						<a href="#" title="Читати ще">Читати ще &#8594;</a>
-					</div>
-				</aside>
+			<div class="rest">
+				<a href="#" title="Читати ще">Читати ще &#8594;</a>
 			</div>
-			<!-- #page -->
-		</div>
-		<!-- .wrapper -->
+		</aside>
 
-		<section>
-			<div class="wrapper">
-				<h1 class="title thumb-up">Вибір читачів за тиждень</h1>
+		<aside id="choice">
+			<h1 class="title">Вибір читачів за тиждень</h1>
 
-				<div class="article-4">
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/04.webp"
-									type="image/webp"
-								/>
-								<img src="temp/04.jpg" alt="" />
-							</picture>
-						</div>
+			<article class="article">
+				<amp-img
+					src="temp/04.jpg"
+					alt=""
+					layout="responsive"
+					width="170"
+					height="95"
+				></amp-img>
+				<time>31 Жовтня, 2021, 20:19</time>
+				<h1>
+					<a
+						href="#"
+						title="Порушив правила і в кювет: у Тернополі нетверезий водій тікав від патрульних (відео)"
+						>Порушив правила і в кювет: у Тернополі нетверезий водій
+						тікав від патрульних (відео)</a
+					>
+				</h1>
+			</article>
 
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 20:19</time>
-							<h1>
-								<a
-									href="#"
-									title="Порушив правила і в кювет: у Тернополі нетверезий водій тікав від патрульних (відео)"
-									>Порушив правила і в кювет: у Тернополі
-									нетверезий водій тікав від патрульних
-									(відео)</a
-								>
-							</h1>
-						</div>
-					</article>
+			<article class="article">
+				<amp-img
+					src="temp/05.jpg"
+					alt=""
+					layout="responsive"
+					width="170"
+					height="95"
+				></amp-img>
+				<time>31 Жовтня, 2021, 20:19</time>
+				<h1>
+					<a
+						href="#"
+						title="За підозру у підпалі автомобілів, тернополянина триматимуть під вартою (фото)"
+						>За підозру у підпалі автомобілів, тернополянина
+						триматимуть під вартою (фото)</a
+					>
+				</h1>
+			</article>
 
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/05.webp"
-									type="image/webp"
-								/>
-								<img src="temp/05.jpg" alt="" />
-							</picture>
-						</div>
-
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 20:19</time>
-							<h1>
-								<a
-									href="#"
-									title="За підозру у підпалі автомобілів, тернополянина триматимуть під вартою (фото)"
-									>За підозру у підпалі автомобілів,
-									тернополянина триматимуть під вартою
-									(фото)</a
-								>
-							</h1>
-						</div>
-					</article>
-
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/06.webp"
-									type="image/webp"
-								/>
-								<img src="temp/06.jpg" alt="" />
-							</picture>
-						</div>
-
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 20:19</time>
-							<h1>
-								<a
-									href="#"
-									title="На Тернопільщині зі ставу рятувальники витягли чоловіка"
-									>На Тернопільщині зі ставу рятувальники
-									витягли чоловіка</a
-								>
-							</h1>
-						</div>
-					</article>
-
-					<article class="article">
-						<div class="picture">
-							<picture>
-								<source
-									srcset="temp/07.webp"
-									type="image/webp"
-								/>
-								<img src="temp/07.jpg" alt="" />
-							</picture>
-						</div>
-
-						<div class="article-data">
-							<time>31 Жовтня, 2021, 20:19</time>
-							<h1>
-								<a
-									href="#"
-									title="Відвалені дошки, іржа й гнилі опори: дитячий майданчик Тернопільщини в аварійному стані (фотофакт)"
-									>Відвалені дошки, іржа й гнилі опори:
-									дитячий майданчик Тернопільщини в аварійному
-									стані (фотофакт)</a
-								>
-							</h1>
-						</div>
-					</article>
-				</div>
-
-				<div class="rest">
-					<a href="#" title="Читати ще">Читати ще →</a>
-				</div>
+			<div class="rest">
+				<a href="#" title="Читати ще">Читати ще →</a>
 			</div>
-		</section>
+		</aside>
 
-		<footer id="footer">
-			<div class="wrapper">
-				<div id="footer-logo">
-					<a href="#" title="Терен">терен</a>
-					<p>Тернопільські новини</p>
-					<p>teren.in.ua © 2014-2021</p>
-				</div>
+		<footer>
+			<div id="footer-logo">
+				<a href="#" title="Терен">терен</a>
+				<p>Тернопільські новини</p>
+				<p>teren.in.ua © 2014-2021</p>
+			</div>
 
-				<div id="footer-content">
-					<p>
-						Допускається цитування матеріалів без отримання
-						попередньої згоди teren.in.ua за умови розміщення в
-						тексті обов'язкового посилання на teren.in.ua - Терен.
-						Для інтернет-видань обов'язкове розміщення прямого,
-						відкритого для пошукових систем гіперпосилання на
-						цитовані статті не нижче другого абзацу в тексті або в
-						якості джерела. Порушення виняткових прав переслідується
-						Законом.
-					</p>
-					<p>
-						Матеріали з плашками "Новини компаній", "Промо",
-						"Партнерський матеріал", "Політичні новини",
-						"Прес-реліз" та "Партнерські новини" публікуються на
-						правах реклами.
-					</p>
-					<p>
-						Адміністрація сайту може не розділяти думку автора та не
-						несе відповідальності за авторські матеріали.
-					</p>
-				</div>
+			<div id="footer-contact">
+				<a href="tel:+380671234567">+380671234567</a>
 
-				<div id="footer-contact">
-					<a href="tel:+380671234567">+380671234567</a>
+				<a href="mailto://office@teren.in.ua">office@teren.in.ua</a>
+			</div>
 
-					<a href="mailto://office@teren.in.ua">office@teren.in.ua</a>
+			<div id="footer-content">
+				<p>
+					Допускається цитування матеріалів без отримання попередньої
+					згоди teren.in.ua за умови розміщення в тексті обов'язкового
+					посилання на teren.in.ua - Терен. Для інтернет-видань
+					обов'язкове розміщення прямого, відкритого для пошукових
+					систем гіперпосилання на цитовані статті не нижче другого
+					абзацу в тексті або в якості джерела. Порушення виняткових
+					прав переслідується Законом.
+				</p>
+				<p>
+					Матеріали з плашками "Новини компаній", "Промо",
+					"Партнерський матеріал", "Політичні новини", "Прес-реліз" та
+					"Партнерські новини" публікуються на правах реклами.
+				</p>
+				<p>
+					Адміністрація сайту може не розділяти думку автора та не
+					несе відповідальності за авторські матеріали.
+				</p>
 
-					<ul class="social">
-						<li>
-							<a href="#" class="facebook" title="facebook"></a>
-						</li>
-						<li>
-							<a href="#" class="instagram" title="instagram"></a>
-						</li>
-						<li>
-							<a href="#" class="youtube" title="youtube"></a>
-						</li>
-						<!-- <li><a href="#" class="twitter" title="twitter"></a></li> -->
-						<!-- <li><a href="#" class="telegram" title="telegram"></a></li> -->
-						<li><a href="#" class="rss" title="rss"></a></li>
-					</ul>
-				</div>
-
-				<div id="copy">
+				<nav>
 					<a href="#" title="редакція">редакція</a> |
 					<a href="#" title="розміщення реклами"
 						>розміщення реклами</a
@@ -772,7 +994,7 @@
 					<a href="#" title="структура власності"
 						>структура власності</a
 					>
-				</div>
+				</nav>
 			</div>
 		</footer>
 
@@ -783,11 +1005,11 @@
 			<li id="nav-search">
 				<a href="#">Пошук</a>
 			</li>
-			<!-- <li id="nav-menu"> -->
-			<button on="tap:mobile.toggle" id="nav-menu">
+
+			<li on="tap:mobile.toggle" id="nav-menu">
 				<a href="#">Меню</a>
-			</button>
-			<!-- </li> -->
+			</li>
+
 			<li id="nav-news">
 				<a href="#">Новини</a>
 			</li>
