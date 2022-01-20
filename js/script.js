@@ -8,189 +8,188 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 {
-    const body = document.getElementsByTagName('body')[0]
+	const body = document.body
 
-    const bodyWrapper = document.createElement('div')
-    bodyWrapper.id = 'body-wrapper'
+	const bodyWrapper = setEl()
+	bodyWrapper.id = "body-wrapper"
 
-    body.append(bodyWrapper)
+	body.append(bodyWrapper)
 
-    // хрестик для лівої панелі
-    const navButtonClose = document.createElement('div')
-    navButtonClose.id = 'nav-button-close'
+	// хрестик для лівої панелі
+	const navButtonClose = setEl()
+	navButtonClose.id = "nav-button-close"
 
-    const nav = document.getElementById('nav')
-    nav.append(navButtonClose)
+	const nav = getId("nav")
+	nav.append(navButtonClose)
 
-    // хрестик для правої панелі
-    const sendButtonClose = document.createElement('div')
-    sendButtonClose.id = 'send-button-close'
+	// хрестик для правої панелі
+	const sendButtonClose = setEl()
+	sendButtonClose.id = "send-button-close"
 
-    const sendPost = document.getElementById('send-post')
-    sendPost.append(sendButtonClose)
+	const sendPost = getId("send-post")
+	sendPost.append(sendButtonClose)
 
-    // клік на кнопку пошуку
-    document.getElementById('search-button').addEventListener('click', () => {
+	// клік на кнопку пошуку
+	getId("search-button").addEventListener("click", () => {
+		nav.classList.add("active")
+		bodyWrapper.classList.add("active")
+		body.classList.add("fixed")
+		$("#nav input[type=search]").classList.add("active")
+	})
 
-        nav.classList.add('active')
-        bodyWrapper.classList.add('active')
-        body.classList.add('fixed')
-        document.querySelector('#nav input[type=search]').classList.add('active')      
-    })
+	// клік на кнопку меню
+	getId("nav-button").addEventListener("click", () => {
+		nav.classList.add("active")
+		bodyWrapper.classList.add("active")
+		body.classList.add("fixed")
+	})
 
-    // клік на кнопку меню
-    document.getElementById('nav-button').addEventListener('click', () => {
+	// клік на кнопку мобільного меню
+	getId("nav-menu").addEventListener("click", (event) => {
+		event.preventDefault()
 
-        nav.classList.add('active')
-        bodyWrapper.classList.add('active')
-        body.classList.add('fixed')        
-    })
+		nav.classList.add("active")
+		bodyWrapper.classList.add("active")
 
-    // клік на кнопку мобільного меню
-    document.getElementById('nav-menu').addEventListener('click', event => {
+		body.scrollTop = document.documentElement.scrollTop = 0
+	})
 
-        event.preventDefault()
+	// клік на кнопку мобільного пошуку
+	getId("nav-search").addEventListener("click", (event) => {
+		event.preventDefault()
 
-        nav.classList.add('active')
-        bodyWrapper.classList.add('active')
+		nav.classList.add("active")
+		bodyWrapper.classList.add("active")
+		body.classList.add("fixed")
 
-        document.body.scrollTop = document.documentElement.scrollTop = 0 
-    })
+		$("#nav input[type=search]").classList.add("active")
 
-    // клік на кнопку мобільного пошуку
-    document.getElementById('nav-search').addEventListener('click', event => {
+		body.scrollTop = document.documentElement.scrollTop = 0
+	})
 
-        event.preventDefault()  
+	// клік на кнопку мобільного надсилання новини
+	getId("nav-send").addEventListener("click", (event) => {
+		event.preventDefault()
 
-        nav.classList.add('active')
-        bodyWrapper.classList.add('active')
-        body.classList.add('fixed')
+		bodyWrapper.classList.add("active")
+		sendPost.className = "active"
 
-        document.querySelector('#nav input[type=search]').classList.add('active')
+		body.scrollTop = document.documentElement.scrollTop = 0
+	})
 
-        document.body.scrollTop = document.documentElement.scrollTop = 0
-    })
+	// клік на одну з двох кнопок "надіслати новину"
+	$$(".send-post").forEach((item) => {
+		item.addEventListener("click", () => {
+			bodyWrapper.classList.add("active")
+			sendPost.className = "active"
 
-    // клік на кнопку мобільного надсилання новини
-    document.getElementById('nav-send').addEventListener('click', event => {
+			nav.classList.remove("active")
 
-        event.preventDefault()
+			// test
+			body.classList.add("fixed")
 
-        bodyWrapper.classList.add('active')
-        sendPost.className = 'active'
+			body.scrollTop = document.documentElement.scrollTop = 0
+		})
+	})
 
-        document.body.scrollTop = document.documentElement.scrollTop = 0 
-    })
-    
-    // клік на одну з двох кнопок "надіслати новину"
-    document.querySelectorAll('.send-post').forEach(item => {
+	// клік на врапері -- любе місце на екрані, ну майже любе =)
+	bodyWrapper.addEventListener("click", () => {
+		nav.classList.remove("active")
+		bodyWrapper.classList.remove("active")
+		body.classList.remove("fixed")
 
-        item.addEventListener('click', () => {
+		$("#nav input[type=search]").classList.remove("active")
 
-            bodyWrapper.classList.add('active')
-            sendPost.className = 'active'
+		sendPost.className = ""
 
-            nav.classList.remove('active')
+		body.scrollTop = document.documentElement.scrollTop = 0
+	})
 
-            // test
-            body.classList.add('fixed')
+	// клік на хрестик, ліва панель
+	navButtonClose.addEventListener("click", () => {
+		nav.classList.remove("active")
+		bodyWrapper.classList.remove("active")
+		body.classList.remove("fixed")
 
-            document.body.scrollTop = document.documentElement.scrollTop = 0
-        })
-    })
+		$("#nav input[type=search]").classList.remove("active")
 
-    // клік на врапері -- любе місце на екрані, ну майже любе =)
-    bodyWrapper.addEventListener('click', () => {
+		body.scrollTop = document.documentElement.scrollTop = 0
+	})
 
-        nav.classList.remove('active')
-        bodyWrapper.classList.remove('active')
-        body.classList.remove('fixed')
+	// клік на хрестик, права панель
+	sendButtonClose.addEventListener("click", () => {
+		nav.classList.remove("active")
+		bodyWrapper.classList.remove("active")
+		body.classList.remove("fixed")
 
-        document.querySelector('#nav input[type=search]').classList.remove('active')
+		$("#nav input[type=search]").classList.remove("active")
 
-        sendPost.className = ''
+		sendPost.className = ""
+	})
 
-        document.body.scrollTop = document.documentElement.scrollTop = 0 
-    })
+	// натиск на ескейп
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape" || event.code === "Escape") {
+			nav.classList.remove("active")
+			bodyWrapper.classList.remove("active")
+			body.classList.remove("fixed")
 
-    // клік на хрестик, ліва панель
-    navButtonClose.addEventListener('click', () => {
+			$("#nav input[type=search]").classList.remove("active")
 
-        nav.classList.remove('active')
-        bodyWrapper.classList.remove('active')
-        body.classList.remove('fixed')
-
-        document.querySelector('#nav input[type=search]').classList.remove('active')
-
-        document.body.scrollTop = document.documentElement.scrollTop = 0
-    })
-
-    // клік на хрестик, права панель
-    sendButtonClose.addEventListener('click', () => {
-
-        nav.classList.remove('active')
-        bodyWrapper.classList.remove('active')
-        body.classList.remove('fixed')
-
-        document.querySelector('#nav input[type=search]').classList.remove('active')
-
-        sendPost.className = ''
-    })
-
-    // натиск на ескейп
-    document.addEventListener('keydown', event => {
-
-        if(event.key === 'Escape' || event.code === 'Escape'){
-
-            nav.classList.remove('active')
-            bodyWrapper.classList.remove('active')
-            body.classList.remove('fixed')
-
-            document.querySelector('#nav input[type=search]').classList.remove('active')
-
-            sendPost.className = ''
-        }
-    })
+			sendPost.className = ""
+		}
+	})
 }
 
 {
-    // https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
-    const inputs = document.querySelectorAll( 'input[type=file]' )
+	// https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/
+	const inputs = $$("input[type=file]")
 
-    Array.prototype.forEach.call( inputs, function( input ){
-        const label	 = input.nextElementSibling,
-              labelVal = label.innerHTML
+	Array.prototype.forEach.call(inputs, function (input) {
+		const label = input.nextElementSibling,
+			labelVal = label.innerHTML
 
-        input.addEventListener( 'change', function( event )
-        {
-            let fileName = ''
+		input.addEventListener("change", function (event) {
+			let fileName = ""
 
-            if( this.files && this.files.length > 1 ){
+			if (this.files && this.files.length > 1) {
+				fileName = (
+					this.getAttribute("data-multiple-caption") || ""
+				).replace("{count}", this.files.length)
+			} else {
+				fileName = event.target.value.split("\\").pop()
+			}
 
-                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length )
-            } else {
+			if (fileName) {
+				label.querySelector("span").innerHTML = fileName
+			} else {
+				label.innerHTML = labelVal
+			}
+		})
 
-                fileName = event.target.value.split( '\\' ).pop()
-            }
+		// Firefox bug fix
+		input.addEventListener("focus", function () {
+			input.classList.add("has-focus")
+		})
 
-            if( fileName ){
+		input.addEventListener("blur", function () {
+			input.classList.remove("has-focus")
+		})
+	})
+}
 
-                label.querySelector( 'span' ).innerHTML = fileName
-            } else {
+function getId(selector) {
+	return document.getElementById(selector)
+}
 
-                label.innerHTML = labelVal
-            }
-        })
+function setEl(selector = "div") {
+	return document.createElement(selector)
+}
 
-        // Firefox bug fix
-        input.addEventListener( 'focus', function(){ 
+function $$(selectors) {
+	return document.querySelectorAll(selectors)
+}
 
-            input.classList.add( 'has-focus' )
-        })
-
-        input.addEventListener( 'blur', function(){ 
-
-            input.classList.remove( 'has-focus' )
-        })
-    })
+function $(selector) {
+	return document.querySelector(selector)
 }
