@@ -14,11 +14,19 @@
 			rel="stylesheet"
 		/>
 		<script async src="https://cdn.ampproject.org/v0.js"></script>
+
 		<script
 			async
 			custom-element="amp-sidebar"
 			src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"
 		></script>
+
+		<script
+			async
+			custom-element="amp-social-share"
+			src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"
+		></script>
+
 		<style amp-boilerplate>
 			body {
 				-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -550,9 +558,6 @@
 
 			#send-post {
 				padding: 20px 40px;
-				/* top: 100px; */
-				/* right: 0; */
-				/* left: 0; */
 			}
 			#send-post form {
 				display: block;
@@ -632,6 +637,54 @@
 				cursor: pointer;
 				font-family: inherit;
 			}
+			#mobile {
+				padding: 20px 40px;
+			}
+			#mobile ul,
+			#mobile li {
+				display: block;
+			}
+			#mobile a {
+				font-family: "Merriweather", serif;
+				text-decoration: none;
+				color: var(--gray);
+				display: block;
+				padding: 5px 0;
+			}
+			#mobile a.active {
+				color: var(--cyan);
+			}
+			#mobile hr {
+				margin: 10px 0;
+				border: none;
+				border-top: 1px solid var(--light);
+			}
+			#search {
+				padding: 0 var(--gap);
+			}
+			#search form {
+				height: 92%;
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				gap: var(--gap);
+			}
+			#search input {
+				border: 1px solid var(--light);
+				outline: none;
+				padding: 10px;
+			}
+			#search button {
+				outline: none;
+				padding: 10px;
+				border: none;
+				background: var(--cyan);
+				color: var(--white);
+			}
+			#share-buttons {
+				float: left;
+				width: 80px;
+			}
 		</style>
 	</head>
 	<body>
@@ -656,40 +709,6 @@
 				<li><a href="#">Партнери</a></li>
 				<li><a href="#">Замовити послугу</a></li>
 			</ul>
-
-			<aside>
-				<form>
-					<input type="search" placeholder="Шукати" />
-					<button>
-						<svg viewBox="0 0 16 16">
-							<path
-								d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-							/>
-						</svg>
-					</button>
-				</form>
-
-				<div class="send-post">
-					<span>Повідомити новину</span>
-				</div>
-
-				<a href="tel:+380671234567" title="Дзвінок">+380671234567</a>
-
-				<a href="mailto://office@teren.in.ua" title="Надіслати імейл"
-					>office@teren.in.ua</a
-				>
-
-				<ul class="social">
-					<li><a href="#" class="facebook" title="facebook"></a></li>
-					<li>
-						<a href="#" class="instagram" title="instagram"></a>
-					</li>
-					<li><a href="#" class="youtube" title="youtube"></a></li>
-					<!-- <li><a href="#" class="twitter" title="twitter"></a></li> -->
-					<!-- <li><a href="#" class="telegram" title="telegram"></a></li> -->
-					<li><a href="#" class="rss" title="rss"></a></li>
-				</ul>
-			</aside>
 		</amp-sidebar>
 
 		<amp-sidebar id="send-post" layout="nodisplay" side="right">
@@ -700,61 +719,30 @@
 				<input type="email" placeholder="email" />
 				<textarea placeholder="Новина"></textarea>
 
-				<amp-script layout="container" script="files">
-					<input
-						type="file"
-						name="files[]"
-						id="files"
-						data-multiple-caption="{count} files selected"
-						multiple
-					/>
-					<label for="files">
-						<svg viewBox="0 0 20 17">
-							<path
-								d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-							/>
-						</svg>
-						<span>Обрати файл</span>
-					</label>
-				</amp-script>
-
-				<script id="files" type="text/plane" target="amp-script">
-					const inputs = document.querySelectorAll("input[type=file]")
-
-					Array.prototype.forEach.call(inputs, function (input) {
-						const label = input.nextElementSibling,
-							labelVal = label.innerHTML
-
-						input.addEventListener("change", function (event) {
-							let fileName = ""
-
-							if (this.files && this.files.length > 1) {
-								fileName = (
-									this.getAttribute("data-multiple-caption") || ""
-								).replace("{count}", this.files.length)
-							} else {
-								fileName = event.target.value.split("\\").pop()
-							}
-
-							if (fileName) {
-								label.querySelector("span").innerHTML = fileName
-							} else {
-								label.innerHTML = labelVal
-							}
-						})
-
-						// Firefox bug fix
-						input.addEventListener("focus", function () {
-							input.classList.add("has-focus")
-						})
-
-						input.addEventListener("blur", function () {
-							input.classList.remove("has-focus")
-						})
-					})
-				</script>
+				<input
+					type="file"
+					name="files[]"
+					id="files"
+					data-multiple-caption="{count} files selected"
+					multiple
+				/>
+				<label for="files">
+					<svg viewBox="0 0 20 17">
+						<path
+							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+						/>
+					</svg>
+					<span>Обрати файл</span>
+				</label>
 
 				<button>Надіслати</button>
+			</form>
+		</amp-sidebar>
+
+		<amp-sidebar id="search" layout="nodisplay" side="left">
+			<form>
+				<input type="search" value="" placeholder="введіть текст" />
+				<button>Шукати</button>
 			</form>
 		</amp-sidebar>
 
@@ -794,31 +782,15 @@
 				></amp-img>
 			</header>
 
-			<div class="share-buttons" style="float: left; width: 160px">
-				<a
-					href="#"
-					class="facebook"
-					data-share="facebook"
-					title="share to facebook"
-				>
-					<span style="display: block">1</span>
-				</a>
-				<a
-					href="#"
-					class="twitter"
-					data-share="twitter"
-					title="share to twitter"
-				>
-					<span style="display: block">35</span>
-				</a>
-				<a
-					href="#"
-					class="telegram"
-					data-share="telegram"
-					title="share to telegram"
-				>
-					<span>3</span>
-				</a>
+			<div id="share-buttons">
+				<amp-social-share
+					type="twitter"
+					aria-label="Share on twitter"
+				></amp-social-share>
+				<amp-social-share
+					type="facebook"
+					aria-label="Share on facebook"
+				></amp-social-share>
 			</div>
 			<!-- .share-buttons -->
 
@@ -1135,9 +1107,9 @@
 
 		<ul id="mobile-panel">
 			<li id="nav-home">
-				<span>Головна</span>
+				<a href="/">Головна</a>
 			</li>
-			<li id="nav-search">
+			<li on="tap:search.toggle" id="nav-search">
 				<span>Пошук</span>
 			</li>
 
@@ -1148,11 +1120,10 @@
 			<li id="nav-news">
 				<span>Новини</span>
 			</li>
+
 			<li id="nav-send" on="tap:send-post.toggle">
 				<span>Повідомити новину</span>
 			</li>
 		</ul>
-
-		<!-- <script src="js/script.js"></script> -->
 	</body>
 </html>
