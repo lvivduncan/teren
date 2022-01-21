@@ -178,6 +178,7 @@
 				top: calc(50% - 12px);
 				left: calc(50% - 14px);
 			}
+
 			main {
 				width: 95%;
 				margin: auto;
@@ -493,6 +494,7 @@
 				display: block;
 				padding: 10px 0 0;
 			}
+			#mobile-panel span,
 			#mobile-panel a {
 				font-size: 10px;
 				color: var(--light);
@@ -505,36 +507,130 @@
 				flex-flow: column;
 				gap: 10px;
 			}
+			#mobile-panel span::before,
 			#mobile-panel a::before {
 				content: "";
 				display: block;
 				min-height: 25px;
 				background-repeat: no-repeat !important;
 			}
-			#nav-home a::before {
+			#nav-home ::before {
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAMAAACE9bUqAAAAWlBMVEUAAACrrb6psb6psb2psb2psbypsb2psb2psb2psb2psb2qsr2qsryqsLufv7+psb2psb2qsbypsb2psb2psb2psbyosb2psbypsb6qsb6msbyzs7OAgICpsb1fIlhVAAAAHXRSTlMAD9752l/z7GawjV09Fgjl0Mu+uqedloJ9Ti4KApMxt+MAAACQSURBVCjPzZFbDoQgDEVRmfJSfL+9+9/mhCFCYFyA56cXTtKkLQuYFkBrWE4xA1pqYC5SUXPwOtbIBmj7S1YDW/g/Bog9vHaB4fBRElTDIo0CSVcngLMUDkwNI/TUZaajHsT4akWZmVLY1fW5qj9TXX7IB1O83zxsx5uTRGYEnT4sUNJ8boxUWO5Lj0gZXbMvdVEJcKIXkOUAAAAASUVORK5CYII=");
 				width: 25px;
 				height: 21px;
 			}
-			#nav-search a::before {
+			#nav-search ::before {
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAKlBMVEUAAACpsb2psb2psb2qsb2psb2psb2psb2qsbyos72zs7OqsLypsr2psb1/H2YEAAAADXRSTlMA89GqVbqXaEUyCipZpbGloQAAAHhJREFUCNdjAAIuN0WhlAUMYNB8FwgswEweXeHK6YaXDoDYTVcdGBhYYjVAqm2jQSJbLy8AilwECgMpWSDFdhligm0CAwPTdQi7VoGBgfEmhD1XAJWNUIOqF2Emsl2obmC4i3Ab712Em+9egPgFLAwxEiKMYPMimAABTC1dyGCcdgAAAABJRU5ErkJggg==");
 				width: 21px;
 				height: 21px;
 			}
-			#nav-menu a::before {
+			#nav-menu ::before {
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASAQMAAAB7IozdAAAABlBMVEUAAACpsb07wI/oAAAAAXRSTlMAQObYZgAAABJJREFUCNdj+P//PxjjAMTKAwCF3hHvH/jF7AAAAABJRU5ErkJggg==");
 				width: 24px;
 				height: 18px;
 			}
-			#nav-news a::before {
+			#nav-news ::before {
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAZlBMVEUAAACpsr2psb2osb2qs7+qsLypsb6psb2qs7upsb6psb2psb6psb2osL2psb2nr7upsb2psb2osL2psb2psr6psbypsrynsLmrrsCpsb2psb2qsr2qsb6or72psb2psb2qqripsb3TbKxpAAAAIXRSTlMAj9WJKlQyzh6MW4R8ZOlA+PHfqaNzOh0Y9uPKvCPrlxKnYSARAAAAuUlEQVQoz33N2Q6CMBSE4enGsRTLquLuvP9LigS1iOFL+l90mhSjx2mHSXFCwtJjcufnshNpeBM9kkgt0lkgOzKeG9bvoaY+Rx4zCHOgZ8DEcEhOAS8YlD0mffnqhWDAH4GoJHjzwwepUPOvGuxsltnhpLXdyh9UwFbrfF61Pix8B2uR9DsU5C7tZyiV2s+6/ocHNs5t5vUEDWDI4rdgO746zNsSsbpi4VpFOLI1XiW8b0kHuIYLjcMTkNMUjOZlX+cAAAAASUVORK5CYII=");
 				width: 24px;
 				height: 24px;
 			}
-			#nav-send a::before {
+			#nav-send ::before {
 				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAMAAAAVHr4VAAAAaVBMVEUAAACpsr2osbypsb2wtrapsb2qsb2psb2psb2psb2psbytr8Gpsbyqsb2qsryqsb2osb2psb2psr6psr2ttLuosr2qsb2qsb6psr2qsL2psbyosb2psL6psb2qsb2psb2psb2nsLypsb1oLzNNAAAAInRSTlMAnBn6CO9u8+vhVw7m1R7FoZB0SyOHeE/JvLSXLdKuZV4911HupgAAAPFJREFUKM99UlmWhCAQQ3ZcwH1p7S33P+Tga0ZxxjY/FV9SpoAiv6BNUgiPImkoOYL2BoA2RgMw/UF+KuRdY1dqhy6Hem4SL8FktlszyVDywEdM9phiJ4wfd4mE/EOCci0pHDmBQ+oDNaNnImWa+8Yu+lkUUPnWG6JhGNt5ixtRBdmR59FHocg2Kq2lVErKmm4DE1SBvxHw3kKvO8VV5gPt92lTVF/PeX1DvvWenYgj0rXM6E9fJdThr2QdHPeVz3jwdq7jTagZEr6yFzA5AKIbLPfedqgE1OtjWxxDXjbSrAZjxHH7smWhYW+1EPoe7e0P04MRgkmPYPQAAAAASUVORK5CYII=");
 				width: 28px;
 				height: 25px;
+			}
+
+			[amp-sidebar] {
+				width: 100vw;
+			}
+
+			amp-sidebar[side="left"][open] {
+				width: 100%;
+			}
+
+			#send-post {
+				padding: 20px 40px;
+				/* top: 100px; */
+				/* right: 0; */
+				/* left: 0; */
+			}
+			#send-post form {
+				display: block;
+				position: relative;
+				margin-top: calc(var(--gap) * 2);
+			}
+			#send-post input[type="text"],
+			#send-post input[type="email"],
+			#send-post textarea {
+				border: 1px solid var(--light);
+				outline: none;
+				padding: 10px 25px 10px 10px;
+				width: 100%;
+				margin: 0 0 calc(var(--gap) / 2);
+				font-family: inherit;
+				font-size: 14px;
+			}
+			#send-post form textarea {
+				resize: vertical;
+				height: 120px;
+				max-height: 300px;
+				min-height: 80px;
+			}
+			input[type="file"] {
+				width: 0.1px;
+				height: 0.1px;
+				opacity: 0;
+				overflow: hidden;
+				position: absolute;
+				z-index: -1;
+			}
+			input[type="file"] + label {
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				cursor: pointer;
+				overflow: hidden;
+				height: 48px;
+				padding: 0 calc(var(--gap) / 2);
+				font-family: inherit;
+				font-size: 14px;
+				display: grid;
+				grid-template-columns: 20px auto;
+				align-items: center;
+				gap: 10px;
+				transition: 0.5s;
+				color: var(--cyan);
+				background-color: var(--bg-gray);
+				margin: 0 0 calc(var(--gap) / 2);
+			}
+			input[type="file"] + label svg {
+				width: 20px;
+				height: 17px;
+				fill: var(--cyan);
+				transition: 0.5s;
+			}
+
+			#send-button-close {
+				position: absolute;
+				top: 25px;
+				right: 25px;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/%3E%3Cpath fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/%3E%3C/svg%3E");
+				width: 20px;
+				height: 20px;
+				/* cursor: pointer; */
+			}
+			#send-post button {
+				display: block;
+				background: var(--cyan);
+				color: var(--white);
+				width: 100%;
+				font-size: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 17px;
+				outline: none;
+				border: none;
+				cursor: pointer;
+				font-family: inherit;
 			}
 		</style>
 	</head>
@@ -596,41 +692,80 @@
 			</aside>
 		</amp-sidebar>
 
+		<amp-sidebar id="send-post" layout="nodisplay" side="right">
+			<div id="send-button-close" on="tap:send-post.close"></div>
+
+			<form>
+				<input type="text" placeholder="Прізвище та Ім'я" />
+				<input type="email" placeholder="email" />
+				<textarea placeholder="Новина"></textarea>
+
+				<amp-script layout="container" script="files">
+					<input
+						type="file"
+						name="files[]"
+						id="files"
+						data-multiple-caption="{count} files selected"
+						multiple
+					/>
+					<label for="files">
+						<svg viewBox="0 0 20 17">
+							<path
+								d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+							/>
+						</svg>
+						<span>Обрати файл</span>
+					</label>
+				</amp-script>
+
+				<script id="files" type="text/plane" target="amp-script">
+					const inputs = document.querySelectorAll("input[type=file]")
+
+					Array.prototype.forEach.call(inputs, function (input) {
+						const label = input.nextElementSibling,
+							labelVal = label.innerHTML
+
+						input.addEventListener("change", function (event) {
+							let fileName = ""
+
+							if (this.files && this.files.length > 1) {
+								fileName = (
+									this.getAttribute("data-multiple-caption") || ""
+								).replace("{count}", this.files.length)
+							} else {
+								fileName = event.target.value.split("\\").pop()
+							}
+
+							if (fileName) {
+								label.querySelector("span").innerHTML = fileName
+							} else {
+								label.innerHTML = labelVal
+							}
+						})
+
+						// Firefox bug fix
+						input.addEventListener("focus", function () {
+							input.classList.add("has-focus")
+						})
+
+						input.addEventListener("blur", function () {
+							input.classList.remove("has-focus")
+						})
+					})
+				</script>
+
+				<button>Надіслати</button>
+			</form>
+		</amp-sidebar>
+
 		<header id="header">
 			<time>Пон, 1 Лис</time>
 			<div id="logo">
 				<a href="#" title="Терен: тернопільські новини"> Терен </a>
 				<span>тернопільські новини</span>
 			</div>
-			<button class="send-post"></button>
+			<button class="send-post" on="tap:send-post.toggle"></button>
 		</header>
-
-		<!-- 		<div id="send-post">
-			<form>
-				<input type="text" placeholder="Прізвище та Ім'я" />
-				<input type="email" placeholder="email" />
-				<textarea placeholder="Новина"></textarea>
-
-				<input
-					type="file"
-					name="files[]"
-					id="files"
-					data-multiple-caption="{count} files selected"
-					multiple
-				/>
-				<label for="files">
-					<svg viewBox="0 0 20 17">
-						<path
-							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-						/>
-					</svg>
-					<span>Обрати файл</span>
-				</label>
-
-				<button>Надіслати</button>
-			</form>
-		</div> -->
-		<!-- Випадачка справа (надіслати новину) -->
 
 		<main>
 			<header>
@@ -1000,21 +1135,21 @@
 
 		<ul id="mobile-panel">
 			<li id="nav-home">
-				<a href="#">Головна</a>
+				<span>Головна</span>
 			</li>
 			<li id="nav-search">
-				<a href="#">Пошук</a>
+				<span>Пошук</span>
 			</li>
 
 			<li on="tap:mobile.toggle" id="nav-menu">
-				<a href="#">Меню</a>
+				<span>Меню</span>
 			</li>
 
 			<li id="nav-news">
-				<a href="#">Новини</a>
+				<span>Новини</span>
 			</li>
-			<li id="nav-send">
-				<a href="#">Повідомити новину</a>
+			<li id="nav-send" on="tap:send-post.toggle">
+				<span>Повідомити новину</span>
 			</li>
 		</ul>
 
