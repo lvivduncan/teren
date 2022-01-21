@@ -414,7 +414,7 @@
 			}
 
 			footer {
-				padding: var(--gap) 2.5% 0;
+				padding: var(--gap) 2.5% 70px;
 				background: var(--bg-gray);
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
@@ -441,6 +441,7 @@
 
 			#footer-logo p {
 				color: var(--gray);
+				font-size: 13px;
 			}
 
 			#footer-contact {
@@ -462,14 +463,14 @@
 			}
 
 			#footer-contact a[href^="mailto"] {
-				font-size: 14px;
+				font-size: 13px;
 				color: var(--cyan);
 			}
 
 			#footer-content {
 				grid-area: footer-content;
 				color: var(--time);
-				font-size: 14px;
+				font-size: 13px;
 			}
 			#footer-content p {
 				margin: 0 0 5px;
@@ -478,12 +479,12 @@
 				text-align: center;
 				padding: 0 0 35px;
 				color: var(--cyan);
-				font-size: 16px;
+				/* font-size: 16px; */
 				margin: var(--gap) 0 0;
 			}
 			footer nav a {
 				color: var(--cyan);
-				font-size: 16px;
+				font-size: 13px;
 				text-decoration: none;
 			}
 			#mobile-panel {
@@ -547,96 +548,6 @@
 				width: 28px;
 				height: 25px;
 			}
-
-			[amp-sidebar] {
-				width: 100vw;
-			}
-
-			amp-sidebar[side="left"][open] {
-				width: 100%;
-			}
-
-			#send-post {
-				padding: 20px 40px;
-			}
-			#send-post form {
-				display: block;
-				position: relative;
-				margin-top: calc(var(--gap) * 2);
-			}
-			#send-post input[type="text"],
-			#send-post input[type="email"],
-			#send-post textarea {
-				border: 1px solid var(--light);
-				outline: none;
-				padding: 10px 25px 10px 10px;
-				width: 100%;
-				margin: 0 0 calc(var(--gap) / 2);
-				font-family: inherit;
-				font-size: 14px;
-			}
-			#send-post form textarea {
-				resize: vertical;
-				height: 120px;
-				max-height: 300px;
-				min-height: 80px;
-			}
-			input[type="file"] {
-				width: 0.1px;
-				height: 0.1px;
-				opacity: 0;
-				overflow: hidden;
-				position: absolute;
-				z-index: -1;
-			}
-			input[type="file"] + label {
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				cursor: pointer;
-				overflow: hidden;
-				height: 48px;
-				padding: 0 calc(var(--gap) / 2);
-				font-family: inherit;
-				font-size: 14px;
-				display: grid;
-				grid-template-columns: 20px auto;
-				align-items: center;
-				gap: 10px;
-				transition: 0.5s;
-				color: var(--cyan);
-				background-color: var(--bg-gray);
-				margin: 0 0 calc(var(--gap) / 2);
-			}
-			input[type="file"] + label svg {
-				width: 20px;
-				height: 17px;
-				fill: var(--cyan);
-				transition: 0.5s;
-			}
-
-			#send-button-close {
-				position: absolute;
-				top: 25px;
-				right: 25px;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z'/%3E%3Cpath fill-rule='evenodd' d='M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z'/%3E%3C/svg%3E");
-				width: 20px;
-				height: 20px;
-				/* cursor: pointer; */
-			}
-			#send-post button {
-				display: block;
-				background: var(--cyan);
-				color: var(--white);
-				width: 100%;
-				font-size: 12px;
-				text-transform: uppercase;
-				text-decoration: none;
-				padding: 17px;
-				outline: none;
-				border: none;
-				cursor: pointer;
-				font-family: inherit;
-			}
 			#mobile {
 				padding: 20px 40px;
 			}
@@ -658,28 +569,6 @@
 				margin: 10px 0;
 				border: none;
 				border-top: 1px solid var(--light);
-			}
-			#search {
-				padding: 0 var(--gap);
-			}
-			#search form {
-				height: 92%;
-				display: flex;
-				flex-flow: column;
-				justify-content: center;
-				gap: var(--gap);
-			}
-			#search input {
-				border: 1px solid var(--light);
-				outline: none;
-				padding: 10px;
-			}
-			#search button {
-				outline: none;
-				padding: 10px;
-				border: none;
-				background: var(--cyan);
-				color: var(--white);
 			}
 			#share-buttons {
 				float: left;
@@ -710,41 +599,6 @@
 				<li><a href="#">Замовити послугу</a></li>
 			</ul>
 		</amp-sidebar>
-
-		<!-- 		<amp-sidebar id="send-post" layout="nodisplay" side="right">
-			<div id="send-button-close" on="tap:send-post.close"></div>
-
-			<form>
-				<input type="text" placeholder="Прізвище та Ім'я" />
-				<input type="email" placeholder="email" />
-				<textarea placeholder="Новина"></textarea>
-
-				<input
-					type="file"
-					name="files[]"
-					id="files"
-					data-multiple-caption="{count} files selected"
-					multiple
-				/>
-				<label for="files">
-					<svg viewBox="0 0 20 17">
-						<path
-							d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-						/>
-					</svg>
-					<span>Обрати файл</span>
-				</label>
-
-				<button>Надіслати</button>
-			</form>
-		</amp-sidebar> -->
-
-		<!-- 		<amp-sidebar id="search" layout="nodisplay" side="left">
-			<form>
-				<input type="search" value="" placeholder="введіть текст" />
-				<button>Шукати</button>
-			</form>
-		</amp-sidebar> -->
 
 		<header id="header">
 			<time>Пон, 1 Лис</time>

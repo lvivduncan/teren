@@ -108,6 +108,18 @@ a:focus
         display: none!important;
     }
 }
+
+@media (max-width: 776px) {
+    .mobile-hide {
+        display:none!important
+    }
+}
+
+@media (min-width: 776px) {
+    .desktop-hide {
+        display:none!important
+    }
+}
 /* показати/сховати залежно від розміру екрану */
 
 
