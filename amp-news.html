@@ -711,7 +711,7 @@
 			</ul>
 		</amp-sidebar>
 
-		<amp-sidebar id="send-post" layout="nodisplay" side="right">
+		<!-- 		<amp-sidebar id="send-post" layout="nodisplay" side="right">
 			<div id="send-button-close" on="tap:send-post.close"></div>
 
 			<form>
@@ -737,14 +737,14 @@
 
 				<button>Надіслати</button>
 			</form>
-		</amp-sidebar>
+		</amp-sidebar> -->
 
-		<amp-sidebar id="search" layout="nodisplay" side="left">
+		<!-- 		<amp-sidebar id="search" layout="nodisplay" side="left">
 			<form>
 				<input type="search" value="" placeholder="введіть текст" />
 				<button>Шукати</button>
 			</form>
-		</amp-sidebar>
+		</amp-sidebar> -->
 
 		<header id="header">
 			<time>Пон, 1 Лис</time>
@@ -752,7 +752,7 @@
 				<a href="#" title="Терен: тернопільські новини"> Терен </a>
 				<span>тернопільські новини</span>
 			</div>
-			<button class="send-post" on="tap:send-post.toggle"></button>
+			<a href="send-post.html" class="send-post"></a>
 		</header>
 
 		<main>
@@ -1109,8 +1109,8 @@
 			<li id="nav-home">
 				<a href="/">Головна</a>
 			</li>
-			<li on="tap:search.toggle" id="nav-search">
-				<span>Пошук</span>
+			<li id="nav-search">
+				<a href="search.html">Пошук</a>
 			</li>
 
 			<li on="tap:mobile.toggle" id="nav-menu">
@@ -1121,8 +1121,8 @@
 				<span>Новини</span>
 			</li>
 
-			<li id="nav-send" on="tap:send-post.toggle">
-				<span>Повідомити новину</span>
+			<li id="nav-send">
+				<a href="send-post.html">Повідомити новину</a>
 			</li>
 		</ul>
 	</body>
