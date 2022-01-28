@@ -54,28 +54,28 @@
 		body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
-	// клік на кнопку мобільного пошуку
-	getId("nav-search").addEventListener("click", (event) => {
-		event.preventDefault()
+	// // клік на кнопку мобільного пошуку
+	// getId("nav-search").addEventListener("click", (event) => {
+	// 	event.preventDefault()
 
-		nav.classList.add("active")
-		bodyWrapper.classList.add("active")
-		body.classList.add("fixed")
+	// 	nav.classList.add("active")
+	// 	bodyWrapper.classList.add("active")
+	// 	body.classList.add("fixed")
 
-		$("#nav input[type=search]").classList.add("active")
+	// 	$("#nav input[type=search]").classList.add("active")
 
-		body.scrollTop = document.documentElement.scrollTop = 0
-	})
+	// 	body.scrollTop = document.documentElement.scrollTop = 0
+	// })
 
-	// клік на кнопку мобільного надсилання новини
-	getId("nav-send").addEventListener("click", (event) => {
-		event.preventDefault()
+	// // клік на кнопку мобільного надсилання новини
+	// getId("nav-send").addEventListener("click", (event) => {
+	// 	event.preventDefault()
 
-		bodyWrapper.classList.add("active")
-		sendPost.className = "active"
+	// 	bodyWrapper.classList.add("active")
+	// 	sendPost.className = "active"
 
-		body.scrollTop = document.documentElement.scrollTop = 0
-	})
+	// 	body.scrollTop = document.documentElement.scrollTop = 0
+	// })
 
 	// клік на одну з двох кнопок "надіслати новину"
 	$$(".send-post").forEach((item) => {
