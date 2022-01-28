@@ -26,3 +26,11 @@
     left: calc(50% - 24px);
     z-index: 1;
 }
+
+#video-player{position:fixed;top:0;bottom:0;left:0;right:0;z-index:12;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;padding:50px}
+@media all and (max-width:1750px){#video-player{padding:40px}}
+@media all and (orientation:portrait) and (max-width:1300px){#video-player{padding:7px}}
+#close-video-player{position:absolute;text-align:center;top:5px;right:0;width:40px;height:40px}
+#close-video-player:after,#close-video-player:before{display:inline-block;content:' ';width:7px;height:40px;background-color:#777;transform:rotate(45deg)}#close-video-player:hover:after,#close-video-player:hover:before{background-color:#aaa}
+#close-video-player:after{transform:rotate(-45deg);position:relative;left:-6px}
+#video-player>div{width:100%;max-width:900px}
