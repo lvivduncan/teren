@@ -16,7 +16,7 @@
 #footer .wrapper 
 {
     display: grid;
-    gap: 35px 0;
+    gap: 10px 0;
     grid-template-columns: 1fr 710px 1fr;
     grid-template-areas:
         'footer-logo footer-content footer-contact'
@@ -141,6 +141,13 @@
     font-size: 16px;
 }
 
+@media(max-width:996px)
+{
+    #copy 
+    {
+        padding: 0 0 15px;
+    }
+}
 #copy a 
 {
     color: var(--cyan);
@@ -152,4 +159,22 @@
 #copy a:focus 
 {
     text-decoration: underline;
+}
+
+#copy p
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--gap)/3);
+    color: var(--gray);
+    margin: calc(var(--gap)/3) 0 0;
+}
+
+#copy svg
+{
+    width: 110px;
+    fill: var(--gray);
+    position: relative;
+    top: 2px;
 }

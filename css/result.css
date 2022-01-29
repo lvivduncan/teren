@@ -7,6 +7,23 @@
     padding: var(--gap) 0;
 }
 
+/* якщо немає виводу даних пошуку, а є тільки форма */
+#result.centered
+{
+    height: calc(100vh - 140px - 275px);
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+@media(max-width:996px)
+{
+    #result.centered
+    {
+        height: calc(100vh - 140px - 440px);
+    }    
+}
+
 #result > p
 {
     color: var(--cyan);
