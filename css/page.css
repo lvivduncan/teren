@@ -235,3 +235,21 @@
     text-decoration: none;
     transition: .5s;
 }
+
+/* */
+.tags a
+{
+    margin: 4px 13px 4px 0;
+    background: var(--light);
+    color: var(--white);
+    padding: 1px 12px 4px 12px;
+    text-decoration: none;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.tags a:hover
+{
+    background: var(--cyan);
+    color: var(--white);
+}
