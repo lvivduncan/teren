@@ -236,7 +236,6 @@
     transition: .5s;
 }
 
-/* */
 .tags a
 {
     margin: 4px 13px 4px 0;
@@ -247,9 +246,12 @@
     line-height: 30px;
     border-radius: 5px;
     font-size: 16px;
+    display: inline-block;
 }
-.tags a:hover
+
+.tags a:hover,
+.tags a:focus
 {
     background: var(--cyan);
-    color: var(--white);
+    color: var(--white)!important;
 }
