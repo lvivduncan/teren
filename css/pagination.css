@@ -29,6 +29,7 @@
 .pagination li a:hover
 {
     background: var(--cyan);
+    color: var(--white)!important;
 }
 
 .pagination svg

@@ -31,6 +31,25 @@
     gap: calc(var(--gap)/2)
 }
 
+@media(max-width:996px)
+{
+/*     .list .article
+    {
+        grid-template-columns: 1fr 2.5fr;
+    }     */
+
+    .list .article h1 a
+    {
+        font-size: 22px;
+        word-wrap: break-word;
+    }
+    
+/*     .list .article p
+    {
+        word-wrap: break-word;
+    } */
+}
+
 @media(max-width:420px)
 {
     .list .article
