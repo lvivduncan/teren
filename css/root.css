@@ -301,3 +301,9 @@ body.fixed
     background-color: var(--cyan);
     color: var(--white)!important;
 }
+
+/*2-2-2022*/
+iframe
+{
+    max-width:100%!important;
+}
