@@ -2,13 +2,90 @@
 {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
-    gap: var(--gap);
+    margin: calc(var(--gap)/2) 0;
 }
 
-.service > time 
+.service time 
 {
     font-size: 14px;
-    margin: 0;
+    margin: 0!important;
+    display: block;
+    padding-right: calc(var(--gap)/2);
+}
+
+.service a
+{
+    display: block;
+    padding-left: calc(var(--gap)/2);
+    position: relative;
+    color: var(--time);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.service a::before
+{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 3px);
+    background: var(--light);
+}
+
+/* ///////////////
+// модифікатори //
+/////////////// */
+.article-2-1 .service a,
+.article-2-1 .service a:hover,
+.article-2-1 .service a:focus
+{
+    color: var(--white)!important;
+}
+
+.article-2-1 .service a::before
+{
+    background: var(--white);
+}
+
+
+.article-8 .service
+{
+    display: block;
+}
+
+.article-8 .service time
+{
+    padding: 0;
+}
+
+.article-8 .service a,
+.article-8 .service a:hover,
+.article-8 .service a:focus
+{
+    display: block;
+    padding: 0;
+    color: var(--cyan);
+    margin: calc(var(--gap)/2) 0 0;
+}
+
+.article-8 .service a::before
+{
+    display: none;
+}
+
+#content .service a,
+#content .service a:hover,
+#content .service a:focus
+{
+    color: var(--cyan)!important;
+    font-weight: 700;
+}
+
+#content .service a::before
+{
+    background: var(--cyan);
 }
