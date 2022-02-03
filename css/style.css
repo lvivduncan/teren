@@ -13,6 +13,9 @@
 /* заголовок блоку анонсів */
 @import url('./title.css');
 
+/* блок -- дата + час */
+@import url('./service.css');
+
 /* окремий анонс  */
 @import url('./article.css');
 
