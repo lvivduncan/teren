@@ -44,3 +44,8 @@ picture source
     object-fit: cover;
 }
 /* 19:6 */
+
+.figure-caption
+{
+    font-style: italic;
+}
