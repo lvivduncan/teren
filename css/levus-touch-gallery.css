@@ -71,6 +71,9 @@
     display: block;
     transition: .5s;
     border: 1px solid #fff;
+    /* conflict */
+    margin: 0!important;
+    line-height: normal!important;
 }
 
 .levus-touch-gallery .slides li a
@@ -155,6 +158,9 @@
     opacity: .6;
     cursor: pointer;
     transition: .5s;
+    /* conflict */
+    margin: 0!important;
+    line-height: normal!important;
 }
 
 .levus-touch-gallery .thumbs li:hover,
