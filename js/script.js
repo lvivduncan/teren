@@ -198,170 +198,29 @@ function $(selector) {
 // levus touch gallery & fslightbox
 */
 /* prettier-ignore */
-"use strict";
-
-function _toConsumableArray(arr) {
-	return (
-		_arrayWithoutHoles(arr) ||
-		_iterableToArray(arr) ||
-		_unsupportedIterableToArray(arr) ||
-		_nonIterableSpread()
-	)
-}
-
-function _nonIterableSpread() {
-	throw new TypeError(
-		"Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
-	)
-}
-
-function _iterableToArray(iter) {
-	if (
-		(typeof Symbol !== "undefined" && iter[Symbol.iterator] != null) ||
-		iter["@@iterator"] != null
-	)
-		return Array.from(iter)
-}
-
-function _arrayWithoutHoles(arr) {
-	if (Array.isArray(arr)) return _arrayLikeToArray(arr)
-}
-
-function _createForOfIteratorHelper(o, allowArrayLike) {
-	var it =
-		(typeof Symbol !== "undefined" && o[Symbol.iterator]) || o["@@iterator"]
-	if (!it) {
-		if (
-			Array.isArray(o) ||
-			(it = _unsupportedIterableToArray(o)) ||
-			(allowArrayLike && o && typeof o.length === "number")
-		) {
-			if (it) o = it
-			var i = 0
-			var F = function F() {}
-			return {
-				s: F,
-				n: function n() {
-					if (i >= o.length) return { done: true }
-					return { done: false, value: o[i++] }
-				},
-				e: function e(_e) {
-					throw _e
-				},
-				f: F,
-			}
-		}
-		throw new TypeError(
-			"Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
-		)
-	}
-	var normalCompletion = true,
-		didErr = false,
-		err
-	return {
-		s: function s() {
-			it = it.call(o)
-		},
-		n: function n() {
-			var step = it.next()
-			normalCompletion = step.done
-			return step
-		},
-		e: function e(_e2) {
-			didErr = true
-			err = _e2
-		},
-		f: function f() {
-			try {
-				if (!normalCompletion && it.return != null) it.return()
-			} finally {
-				if (didErr) throw err
-			}
-		},
-	}
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-	if (!o) return
-	if (typeof o === "string") return _arrayLikeToArray(o, minLen)
-	var n = Object.prototype.toString.call(o).slice(8, -1)
-	if (n === "Object" && o.constructor) n = o.constructor.name
-	if (n === "Map" || n === "Set") return Array.from(o)
-	if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-		return _arrayLikeToArray(o, minLen)
-}
-
-function _arrayLikeToArray(arr, len) {
-	if (len == null || len > arr.length) len = arr.length
-	for (var i = 0, arr2 = new Array(len); i < len; i++) {
-		arr2[i] = arr[i]
-	}
-	return arr2
-}
-
-function _typeof(obj) {
-	"@babel/helpers - typeof"
-	return (
-		(_typeof =
-			"function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-				? function (obj) {
-						return typeof obj
-				  }
-				: function (obj) {
-						return obj &&
-							"function" == typeof Symbol &&
-							obj.constructor === Symbol &&
-							obj !== Symbol.prototype
-							? "symbol"
-							: typeof obj
-				  }),
-		_typeof(obj)
-	)
-}
-
 // fslightbox
 !(function (e, t) {
-	if (
-		"object" ==
-			(typeof exports === "undefined" ? "undefined" : _typeof(exports)) &&
-		"object" ==
-			(typeof module === "undefined" ? "undefined" : _typeof(module))
-	)
+	if ("object" == typeof exports && "object" == typeof module)
 		module.exports = t()
 	else if ("function" == typeof define && define.amd) define([], t)
 	else {
 		var n = t()
-
-		for (var o in n) {
-			;("object" ==
-			(typeof exports === "undefined" ? "undefined" : _typeof(exports))
-				? exports
-				: e)[o] = n[o]
-		}
+		for (var o in n) ("object" == typeof exports ? exports : e)[o] = n[o]
 	}
 })(window, function () {
 	return (function (e) {
 		var t = {}
-
 		function n(o) {
 			if (t[o]) return t[o].exports
-			var r = (t[o] = {
-				i: o,
-				l: !1,
-				exports: {},
-			})
+			var r = (t[o] = { i: o, l: !1, exports: {} })
 			return e[o].call(r.exports, r, r.exports, n), (r.l = !0), r.exports
 		}
-
 		return (
 			(n.m = e),
 			(n.c = t),
 			(n.d = function (e, t, o) {
 				n.o(e, t) ||
-					Object.defineProperty(e, t, {
-						enumerable: !0,
-						get: o,
-					})
+					Object.defineProperty(e, t, { enumerable: !0, get: o })
 			}),
 			(n.r = function (e) {
 				"undefined" != typeof Symbol &&
@@ -369,14 +228,11 @@ function _typeof(obj) {
 					Object.defineProperty(e, Symbol.toStringTag, {
 						value: "Module",
 					}),
-					Object.defineProperty(e, "__esModule", {
-						value: !0,
-					})
+					Object.defineProperty(e, "__esModule", { value: !0 })
 			}),
 			(n.t = function (e, t) {
 				if ((1 & t && (e = n(e)), 8 & t)) return e
-				if (4 & t && "object" == _typeof(e) && e && e.__esModule)
-					return e
+				if (4 & t && "object" == typeof e && e && e.__esModule) return e
 				var o = Object.create(null)
 				if (
 					(n.r(o),
@@ -386,7 +242,7 @@ function _typeof(obj) {
 					}),
 					2 & t && "string" != typeof e)
 				)
-					for (var r in e) {
+					for (var r in e)
 						n.d(
 							o,
 							r,
@@ -394,7 +250,6 @@ function _typeof(obj) {
 								return e[t]
 							}.bind(null, r)
 						)
-					}
 				return o
 			}),
 			(n.n = function (e) {
@@ -417,7 +272,6 @@ function _typeof(obj) {
 	})([
 		function (e, t, n) {
 			"use strict"
-
 			n.r(t)
 			var o,
 				r = "fslightbox-",
@@ -437,13 +291,12 @@ function _typeof(obj) {
 				b = "".concat(r, "opacity-"),
 				x = "".concat(b, "1"),
 				y = "".concat(r, "source")
-
 			function S(e) {
 				return (S =
 					"function" == typeof Symbol &&
-					"symbol" == _typeof(Symbol.iterator)
+					"symbol" == typeof Symbol.iterator
 						? function (e) {
-								return _typeof(e)
+								return typeof e
 						  }
 						: function (e) {
 								return e &&
@@ -451,10 +304,9 @@ function _typeof(obj) {
 									e.constructor === Symbol &&
 									e !== Symbol.prototype
 									? "symbol"
-									: _typeof(e)
+									: typeof e
 						  })(e)
 			}
-
 			"object" ===
 				("undefined" == typeof document ? "undefined" : S(document)) &&
 				(((o = document.createElement("style")).className = i),
@@ -464,7 +316,6 @@ function _typeof(obj) {
 					)
 				),
 				document.head.appendChild(o))
-
 			function w(e) {
 				var t,
 					n = e.props,
@@ -479,20 +330,16 @@ function _typeof(obj) {
 							"invalid" !== e ? (r[n] = e) : delete r[n],
 							0 === o &&
 								(!(function (e, t) {
-									for (var n in t) {
-										e[n] = t[n]
-									}
+									for (var n in t) e[n] = t[n]
 								})(t, r),
 								localStorage.setItem(
 									"fslightbox-types",
 									JSON.stringify(t)
 								)))
 					})
-
-				var i = function i(e) {
+				var i = function (e) {
 					o++, (r[e] = !1)
 				}
-
 				n.disableLocalStorage
 					? ((this.getSourceTypeFromLocalStorageByUrl =
 							function () {}),
@@ -502,25 +349,21 @@ function _typeof(obj) {
 					  )) ||
 					  ((t = {}), (this.getSourceTypeFromLocalStorageByUrl = i))
 			}
-
 			function L(e, t, n, o) {
 				var r = e.data,
 					i = e.elements.sources,
 					s = n / o,
 					c = 0
-
 				this.adjustSize = function () {
 					if ((c = r.maxSourceWidth / s) < r.maxSourceHeight)
 						return n < r.maxSourceWidth && (c = o), a()
 					;(c = o > r.maxSourceHeight ? r.maxSourceHeight : o), a()
 				}
-
-				var a = function a() {
+				var a = function () {
 					;(i[t].style.width = c * s + "px"),
 						(i[t].style.height = c + "px")
 				}
 			}
-
 			function C(e, t) {
 				var n = this,
 					o = e.collections.sourceSizers,
@@ -529,11 +372,9 @@ function _typeof(obj) {
 					s = r.sourceMainWrappers,
 					c = r.sources,
 					a = e.resolve
-
 				function l(e, n) {
 					;(o[t] = a(L, [t, e, n])), o[t].adjustSize()
 				}
-
 				this.runActions = function (e, o) {
 					c[t].classList.add(x),
 						i[t].classList.add(g),
@@ -542,7 +383,6 @@ function _typeof(obj) {
 						(n.runActions = l)
 				}
 			}
-
 			function F(e, t) {
 				var n,
 					o = this,
@@ -579,23 +419,17 @@ function _typeof(obj) {
 						})
 					})
 			}
-
 			function A(e, t, n) {
 				var o = e.elements.sources,
 					r = e.props.customClasses,
 					i = r[t] ? r[t] : ""
 				o[t].className = n + " " + i
 			}
-
 			function I(e, t) {
 				var n = e.elements.sources,
 					o = e.props.customAttributes
-
-				for (var r in o[t]) {
-					n[t].setAttribute(r, o[t][r])
-				}
+				for (var r in o[t]) n[t].setAttribute(r, o[t][r])
 			}
-
 			function T(e, t) {
 				var n = e.collections.sourceLoadHandlers,
 					o = e.elements,
@@ -609,7 +443,6 @@ function _typeof(obj) {
 					I(e, t),
 					i[t].appendChild(r[t])
 			}
-
 			function E(e, t) {
 				var n = e.collections.sourceLoadHandlers,
 					o = e.elements,
@@ -633,7 +466,6 @@ function _typeof(obj) {
 					setTimeout(n[t].handleNotMetaDatedVideoLoad, 3e3),
 					i[t].appendChild(r[t])
 			}
-
 			function N(e, t) {
 				var n = e.collections.sourceLoadHandlers,
 					o = e.elements,
@@ -653,7 +485,6 @@ function _typeof(obj) {
 					s[t].appendChild(i[t]),
 					n[t].handleYoutubeLoad()
 			}
-
 			function W(e, t) {
 				var n = e.collections.sourceLoadHandlers,
 					o = e.elements,
@@ -665,7 +496,6 @@ function _typeof(obj) {
 					i[t].appendChild(r[t]),
 					n[t].handleCustomLoad()
 			}
-
 			function z(e, t) {
 				var n = e.elements,
 					o = n.sources,
@@ -681,67 +511,55 @@ function _typeof(obj) {
 					i[t].appendChild(o[t]),
 					s[t].removeChild(s[t].firstChild)
 			}
-
 			function M(e) {
 				var t = e.collections,
 					n = t.sourceLoadHandlers,
 					o = t.sourcesRenderFunctions,
 					r = e.core.sourceDisplayFacade,
 					i = e.resolve
-
 				this.runActionsForSourceTypeAndIndex = function (t, s) {
 					var c
-
 					switch (("invalid" !== t && (n[s] = i(F, [s])), t)) {
 						case "image":
 							c = T
 							break
-
 						case "video":
 							c = E
 							break
-
 						case "youtube":
 							c = N
 							break
-
 						case "custom":
 							c = W
 							break
-
 						default:
 							c = z
 					}
-
 					;(o[s] = function () {
 						return c(e, s)
 					}),
 						r.displaySourcesWhichShouldBeDisplayed()
 				}
 			}
-
 			function P() {
 				var e,
 					t,
 					n,
 					o = {
-						isUrlYoutubeOne: function isUrlYoutubeOne(e) {
+						isUrlYoutubeOne: function (e) {
 							var t = document.createElement("a")
 							return (
 								(t.href = e), "www.youtube.com" === t.hostname
 							)
 						},
-						getTypeFromResponseContentType:
-							function getTypeFromResponseContentType(e) {
-								return e.slice(0, e.indexOf("/"))
-							},
+						getTypeFromResponseContentType: function (e) {
+							return e.slice(0, e.indexOf("/"))
+						},
 					}
-
 				function r() {
 					if (4 !== n.readyState) {
 						if (2 === n.readyState) {
 							var e
-
 							switch (
 								o.getTypeFromResponseContentType(
 									n.getResponseHeader("content-type")
@@ -750,20 +568,16 @@ function _typeof(obj) {
 								case "image":
 									e = "image"
 									break
-
 								case "video":
 									e = "video"
 									break
-
 								default:
 									e = "invalid"
 							}
-
 							;(n.onreadystatechange = null), n.abort(), t(e)
 						}
 					} else t("invalid")
 				}
-
 				;(this.setUrlToCheck = function (t) {
 					e = t
 				}),
@@ -775,7 +589,6 @@ function _typeof(obj) {
 							n.send()
 					})
 			}
-
 			function H(e, t, n) {
 				var o = e.props,
 					r = o.types,
@@ -795,7 +608,6 @@ function _typeof(obj) {
 							})
 					})
 			}
-
 			function k(e, t) {
 				var n = e.componentsServices.hideSourceLoaderIfNotYetCollection,
 					o = e.elements,
@@ -821,7 +633,6 @@ function _typeof(obj) {
 							o[t].appendChild(r[t])
 					})(e, t)
 			}
-
 			function O(e, t, n, o) {
 				var i = document.createElementNS(
 					"http://www.w3.org/2000/svg",
@@ -842,7 +653,6 @@ function _typeof(obj) {
 					i
 				)
 			}
-
 			function R(e, t) {
 				var n = document.createElement("div")
 				return (
@@ -852,7 +662,6 @@ function _typeof(obj) {
 					n
 				)
 			}
-
 			function D(e, t) {
 				var n = document.createElement("div")
 				;(n.className = "".concat(r, "toolbar")),
@@ -911,7 +720,6 @@ function _typeof(obj) {
 							)
 					})(e, n)
 			}
-
 			function j(e) {
 				var t = e.props.sources,
 					n = e.elements.container,
@@ -930,11 +738,9 @@ function _typeof(obj) {
 							var s = document.createElement("div")
 							s.className = a
 							var c = document.createElement("span")
-
 							n.setSlideNumber = function (e) {
 								return (c.innerHTML = e)
 							}
-
 							var l = document.createElement("span")
 							l.className = "".concat(r, "slash")
 							var u = document.createElement("div")
@@ -950,7 +756,6 @@ function _typeof(obj) {
 								})
 						})(e, o)
 			}
-
 			function X(e, t) {
 				var n = this,
 					o = e.elements.sourceMainWrappers,
@@ -968,19 +773,17 @@ function _typeof(obj) {
 					(this.positive = function () {
 						s(c())
 					})
-
-				var s = function s(e) {
+				var s = function (e) {
 						;(o[t].style.transform = "translateX(".concat(
 							e + i,
 							"px)"
 						)),
 							(i = 0)
 					},
-					c = function c() {
+					c = function () {
 						return (1 + r.slideDistance) * innerWidth
 					}
 			}
-
 			function B(e, t, n, o) {
 				var r = e.elements.container,
 					i = n.charAt(0).toUpperCase() + n.slice(1),
@@ -996,12 +799,10 @@ function _typeof(obj) {
 					})(s, o),
 					r.appendChild(s)
 			}
-
 			function U(e, t) {
 				var n = e.classList
 				n.contains(t) && n.remove(t)
 			}
-
 			function V(e) {
 				var t = this,
 					n = e.core,
@@ -1034,7 +835,6 @@ function _typeof(obj) {
 							}, 270)
 					})
 			}
-
 			function Y(e) {
 				var t,
 					n,
@@ -1049,7 +849,7 @@ function _typeof(obj) {
 					p = e.elements.sourceAnimationWrappers,
 					f = e.stageIndexes,
 					v =
-						((t = function t() {
+						((t = function () {
 							c.removeFromEachElementClassIfContains(
 								"sourceAnimationWrappers",
 								m
@@ -1089,43 +889,35 @@ function _typeof(obj) {
 							}, 270)
 					})
 			}
-
 			function _(e) {
 				var t = e.core,
 					n = t.lightboxCloser,
 					o = t.fullscreenToggler,
 					r = t.slideChangeFacade
-
 				this.listener = function (e) {
 					switch (e.key) {
 						case "Escape":
 							n.closeLightbox()
 							break
-
 						case "ArrowLeft":
 							r.changeToPrevious()
 							break
-
 						case "ArrowRight":
 							r.changeToNext()
 							break
-
 						case "F11":
 							e.preventDefault(), o.enterFullscreen()
 					}
 				}
 			}
-
 			function q(e) {
 				var t = e.collections.sourceMainWrappersTransformers,
 					n = e.elements,
 					o = e.sourcePointerProps,
 					r = e.stageIndexes
-
 				function i(e, n) {
 					t[e].byValue(o.swipedX)[n]()
 				}
-
 				this.runActionsForEvent = function (e) {
 					var t, c, a
 					n.container.contains(n.slideSwipingHoverer) ||
@@ -1142,7 +934,6 @@ function _typeof(obj) {
 							  i(r.next, "positive")
 				}
 			}
-
 			function J(e) {
 				var t = e.props.sources,
 					n = e.resolve,
@@ -1156,7 +947,6 @@ function _typeof(obj) {
 							o.isPointering && r.runActionsForEvent(e)
 					  })
 			}
-
 			function G(e) {
 				var t = e.collections.sourceMainWrappersTransformers,
 					n = e.core.slideIndexChanger,
@@ -1172,16 +962,13 @@ function _typeof(obj) {
 							(i("negative"), n.changeTo(r.next)),
 							i("zero")
 					})
-
-				var i = function i(e) {
+				var i = function (e) {
 					o[r.current].classList.add(u), t[r.current][e]()
 				}
 			}
-
 			function $(e, t) {
 				e.contains(t) && e.removeChild(t)
 			}
-
 			function K(e) {
 				var t = e.core.lightboxCloser,
 					n = e.elements,
@@ -1202,31 +989,25 @@ function _typeof(obj) {
 							(r.isPointering = !1)
 					})
 			}
-
 			function Q(e) {
 				var t = e.resolve,
 					n = e.sourcePointerProps,
 					o = t(K)
-
 				this.listener = function () {
 					n.isPointering &&
 						(n.swipedX ? o.runActions() : o.runNoSwipeActions())
 				}
 			}
-
 			function Z(e) {
 				var t, n, o
 				;(n = (t = e).core.classFacade),
 					(o = t.elements),
 					(n.removeFromEachElementClassIfContains = function (e, t) {
-						for (var n = 0; n < o[e].length; n++) {
-							U(o[e][n], t)
-						}
+						for (var n = 0; n < o[e].length; n++) U(o[e][n], t)
 					}),
 					(function (e) {
 						var t = e.core.eventsDispatcher,
 							n = e.props
-
 						t.dispatch = function (e) {
 							n[e] && n[e]()
 						}
@@ -1297,7 +1078,6 @@ function _typeof(obj) {
 					(function (e) {
 						var t = e.core.lightboxCloser,
 							n = (0, e.resolve)(V)
-
 						t.closeLightbox = function () {
 							n.isLightboxFadingOut || n.runActions()
 						}
@@ -1306,13 +1086,11 @@ function _typeof(obj) {
 					(function (e) {
 						var t = e.data,
 							n = e.core.scrollbarRecompensor
-
 						function o() {
 							document.body.offsetHeight > innerHeight &&
 								(document.body.style.marginRight =
 									t.scrollbarWidth + "px")
 						}
-
 						;(n.addRecompense = function () {
 							"complete" === document.readyState
 								? o()
@@ -1349,7 +1127,6 @@ function _typeof(obj) {
 							r = e.elements.sources,
 							i = e.sourcePointerProps,
 							s = e.stageIndexes
-
 						o.listener = function (e) {
 							"VIDEO" !== e.target.tagName && e.preventDefault(),
 								(i.isPointering = !0),
@@ -1370,17 +1147,12 @@ function _typeof(obj) {
 							n = e.core.sourceDisplayFacade,
 							o = e.props,
 							r = e.stageIndexes
-
 						function i(e) {
 							t[e] && (t[e](), delete t[e])
 						}
-
 						n.displaySourcesWhichShouldBeDisplayed = function () {
 							if (o.loadOnlyCurrentSource) i(r.current)
-							else
-								for (var e in r) {
-									i(r[e])
-								}
+							else for (var e in r) i(r[e])
 						}
 					})(e),
 					(function (e) {
@@ -1436,30 +1208,24 @@ function _typeof(obj) {
 							s = e.elements.sourceMainWrappers,
 							c = e.props,
 							a = e.stageIndexes
-
 						r.runActions = function () {
 							innerWidth < 992
 								? (i.maxSourceWidth = innerWidth)
 								: (i.maxSourceWidth = 0.9 * innerWidth),
 								(i.maxSourceHeight = 0.9 * innerHeight)
-
-							for (var e = 0; e < c.sources.length; e++) {
+							for (var e = 0; e < c.sources.length; e++)
 								U(s[e], u),
 									e !== a.current && n[e].negative(),
 									o[e] && o[e].adjustSize()
-							}
 						}
 					})(e)
 			}
-
 			function ee(e) {
 				var t = e.props.disableLocalStorage
-
 				if (!t) {
 					var n = localStorage.getItem("fslightbox-scrollbar-width")
 					if (n) return n
 				}
-
 				var o = (function () {
 						var e = document.createElement("div"),
 							t = e.style
@@ -1475,7 +1241,6 @@ function _typeof(obj) {
 						var e = document.createElement("div")
 						return (e.style.width = "100%"), e
 					})()
-
 				document.body.appendChild(o)
 				var i = o.offsetWidth
 				o.appendChild(r)
@@ -1491,7 +1256,6 @@ function _typeof(obj) {
 					c
 				)
 			}
-
 			function te(e) {
 				var t = e.core.eventsDispatcher,
 					n = e.data,
@@ -1509,9 +1273,8 @@ function _typeof(obj) {
 								r = 0;
 							r < n.length;
 							r++
-						) {
+						)
 							t[r] = o(X, [r])
-						}
 					})(e),
 					Z(e),
 					(o.container = document.createElement("div")),
@@ -1538,10 +1301,7 @@ function _typeof(obj) {
 							n.container.appendChild(r),
 							r.addEventListener("pointerdown", t.listener),
 							(n.sourceWrappersContainer = r)
-
-						for (var i = 0; i < o.length; i++) {
-							k(e, i)
-						}
+						for (var i = 0; i < o.length; i++) k(e, i)
 					})(e),
 					i.length > 1 &&
 						(function (e) {
@@ -1569,7 +1329,7 @@ function _typeof(obj) {
 								s = 0;
 							s < t.length;
 							s++
-						) {
+						)
 							if ("string" == typeof t[s]) {
 								var c = i.getTypeSetByClientForIndex(s)
 								if (c) r.runActionsForSourceTypeAndIndex(c, s)
@@ -1587,11 +1347,9 @@ function _typeof(obj) {
 								}
 							} else
 								r.runActionsForSourceTypeAndIndex("custom", s)
-						}
 					})(e),
 					t.dispatch("onInit")
 			}
-
 			function ne(e) {
 				var t = e.collections.sourceMainWrappersTransformers,
 					n = e.componentsServices,
@@ -1606,7 +1364,6 @@ function _typeof(obj) {
 					p = e.data,
 					f = e.elements,
 					h = e.stageIndexes
-
 				i.open = function () {
 					var o =
 						arguments.length > 0 && void 0 !== arguments[0]
@@ -1626,7 +1383,6 @@ function _typeof(obj) {
 						r.dispatch("onOpen")
 				}
 			}
-
 			function oe(e, t, n) {
 				return (oe = re()
 					? Reflect.construct
@@ -1637,13 +1393,11 @@ function _typeof(obj) {
 							return n && ie(r, n.prototype), r
 					  }).apply(null, arguments)
 			}
-
 			function re() {
 				if ("undefined" == typeof Reflect || !Reflect.construct)
 					return !1
 				if (Reflect.construct.sham) return !1
 				if ("function" == typeof Proxy) return !0
-
 				try {
 					return (
 						Date.prototype.toString.call(
@@ -1655,7 +1409,6 @@ function _typeof(obj) {
 					return !1
 				}
 			}
-
 			function ie(e, t) {
 				return (ie =
 					Object.setPrototypeOf ||
@@ -1663,7 +1416,6 @@ function _typeof(obj) {
 						return (e.__proto__ = t), e
 					})(e, t)
 			}
-
 			function se(e) {
 				return (
 					(function (e) {
@@ -1697,27 +1449,19 @@ function _typeof(obj) {
 					})()
 				)
 			}
-
 			function ce(e, t) {
 				;(null == t || t > e.length) && (t = e.length)
-
-				for (var n = 0, o = new Array(t); n < t; n++) {
-					o[n] = e[n]
-				}
-
+				for (var n = 0, o = new Array(t); n < t; n++) o[n] = e[n]
 				return o
 			}
-
 			function ae() {
 				for (
 					var e = document.getElementsByTagName("a"),
-						t = function t(_t) {
-							if (!e[_t].hasAttribute("data-fslightbox"))
+						t = function (t) {
+							if (!e[t].hasAttribute("data-fslightbox"))
 								return "continue"
-
-							var n = e[_t].getAttribute("data-fslightbox"),
-								o = e[_t].getAttribute("href")
-
+							var n = e[t].getAttribute("data-fslightbox"),
+								o = e[t].getAttribute("href")
 							fsLightboxInstances[n] ||
 								(fsLightboxInstances[n] = new FsLightbox())
 							var r = null
@@ -1727,10 +1471,10 @@ function _typeof(obj) {
 										.cloneNode(!0)).removeAttribute("id")
 								: (r = o),
 								fsLightboxInstances[n].props.sources.push(r),
-								fsLightboxInstances[n].elements.a.push(e[_t])
+								fsLightboxInstances[n].elements.a.push(e[t])
 							var i =
 								fsLightboxInstances[n].props.sources.length - 1
-							;(e[_t].onclick = function (e) {
+							;(e[t].onclick = function (e) {
 								e.preventDefault(),
 									fsLightboxInstances[n].open(i)
 							}),
@@ -1738,7 +1482,6 @@ function _typeof(obj) {
 								d("videosPosters", "data-video-poster"),
 								d("customClasses", "data-class"),
 								d("customClasses", "data-custom-class")
-
 							for (
 								var s = [
 										"href",
@@ -1748,14 +1491,14 @@ function _typeof(obj) {
 										"data-class",
 										"data-custom-class",
 									],
-									c = e[_t].attributes,
+									c = e[t].attributes,
 									a =
 										fsLightboxInstances[n].props
 											.customAttributes,
 									l = 0;
 								l < c.length;
 								l++
-							) {
+							)
 								if (
 									-1 === s.indexOf(c[l].name) &&
 									"data-" === c[l].name.substr(0, 5)
@@ -1764,25 +1507,20 @@ function _typeof(obj) {
 									var u = c[l].name.substr(5)
 									a[i][u] = c[l].value
 								}
-							}
-
 							function d(o, r) {
-								e[_t].hasAttribute(r) &&
+								e[t].hasAttribute(r) &&
 									(fsLightboxInstances[n].props[o][i] =
-										e[_t].getAttribute(r))
+										e[t].getAttribute(r))
 							}
 						},
 						n = 0;
 					n < e.length;
 					n++
-				) {
+				)
 					t(n)
-				}
-
 				var o = Object.keys(fsLightboxInstances)
 				window.fsLightbox = fsLightboxInstances[o[o.length - 1]]
 			}
-
 			;(window.FsLightbox = function () {
 				var e = this
 				;(this.props = {
@@ -1820,7 +1558,7 @@ function _typeof(obj) {
 						enterFullscreen: null,
 						exitFullscreen: null,
 						hideSourceLoaderIfNotYetCollection: [],
-						setSlideNumber: function setSlideNumber() {},
+						setSlideNumber: function () {},
 					}),
 					(this.resolve = function (t) {
 						var n =
@@ -1869,352 +1607,419 @@ function _typeof(obj) {
 							(fsLightboxInstances[e].props.sources = []),
 							(fsLightboxInstances[e].elements.a = [])
 					}
-
 					ae()
 				})
 		},
 	])
-}) // усі галереї
+})
 
-var levusSlider = document.querySelectorAll(".levus-touch-gallery") // для вставки лайтбоксу
+// усі галереї
+const levusSlider = document.querySelectorAll(".levus-touch-gallery")
 
-var body = document.body // every slider
+// для вставки лайтбоксу
+const body = document.body
 
-var _iterator = _createForOfIteratorHelper(levusSlider),
-	_step
+// every slider
+for (let slider of levusSlider) {
+	// оримуємо відступ згори до слайдера -- отримати розміри картинок тільки тоді, коли проскролять
+	const offsetTop = slider.offsetTop
 
-try {
-	var _loop = function _loop() {
-		var slider = _step.value
-		// оримуємо відступ згори до слайдера -- отримати розміри картинок тільки тоді, коли проскролять
-		var offsetTop = slider.offsetTop /////////////////////////////
-		// ховаємо до завантаження //
-		/////////////////////////////
+	/////////////////////////////
+	// ховаємо до завантаження //
+	/////////////////////////////
 
-		setTimeout(function () {
-			slider.classList.add("load")
-		}, 1500) // список з великими слайдами
+	setTimeout(() => {
+		slider.classList.add("load")
+	}, 1500)
 
-		var slidesUl = slider.querySelector(".slides ul") // усі слайди || all slides
+	// список з великими слайдами
+	const slidesUl = slider.querySelector(".slides ul")
 
-		var slides = slidesUl.querySelectorAll("li") // усі картинки у слайдах || all pictures from slides
+	////////////////////////////////////////////////////////
+	// якщо мобільний девайс -- додати стрілки для скролу //
+	////////////////////////////////////////////////////////
 
-		var images = slidesUl.querySelectorAll("img") // ширине батьківського блоку (враппера)
+	const left = document.createElement("span")
+	left.className = "left"
 
-		var parentWidth = parseInt(getComputedStyle(slider).width) // висота блоку для слайдів
+	const right = document.createElement("span")
+	right.className = "right"
 
-		setMaxHeightSlider(parentWidth) // висота блоку для слайдів
+	if (checkTouchDevice()) {
+		slidesUl.append(left, right)
+	}
 
-		window.addEventListener("resize", function () {
-			parentWidth = parseInt(getComputedStyle(slider).width)
-			setMaxHeightSlider(parentWidth)
-		}) // кількість слайдів || quantity slides
+	// left click
+	left.addEventListener("click", () => {
+		sliderLeft()
+	})
 
-		var length = slides.length // додаємо айді усім слайдам || set data-id attribute
+	// right click
+	right.addEventListener("click", () => {
+		sliderRight()
+	})
 
-		for (var i = 0; i < length; i++) {
-			slides[i].dataset.id = i
-		} ////////////////////////////////////////////////////
-		// генеруємо блок з тумбіками || thumbs generated //
-		////////////////////////////////////////////////////
+	// усі слайди || all slides
+	const slides = slidesUl.querySelectorAll("li")
 
-		var pics = ""
+	// усі картинки у слайдах || all pictures from slides
+	const images = slidesUl.querySelectorAll("img")
 
-		for (var _i = 0; _i < length; _i++) {
-			var pic = '<li data-id="'
-				.concat(_i, '"><img src="')
-				.concat(images[_i].dataset.thumb, '" alt=""></li>')
-			pics += pic
+	// ширинa батьківського блоку (враппера)
+	let parentWidth = parseInt(getComputedStyle(slider).width)
+
+	// висота блоку для слайдів
+	setMaxHeightSlider(parentWidth)
+
+	// висота блоку для слайдів
+	window.addEventListener("resize", () => {
+		parentWidth = parseInt(getComputedStyle(slider).width)
+		setMaxHeightSlider(parentWidth)
+	})
+
+	// кількість слайдів || quantity slides
+	const length = slides.length
+
+	// додаємо айді усім слайдам || set data-id attribute
+	for (let i = 0; i < length; i++) {
+		slides[i].dataset.id = i
+	}
+
+	////////////////////////////////////////////////////
+	// генеруємо блок з тумбіками || thumbs generated //
+	////////////////////////////////////////////////////
+
+	let pics = ""
+
+	for (let i = 0; i < length; i++) {
+		const pic = `<li data-id="${i}"><img src="${images[i].dataset.thumb}" alt=""></li>`
+		pics += pic
+	}
+
+	const thumbsWrapper = document.createElement("div")
+	thumbsWrapper.className = "thumbs"
+	const thumbs = document.createElement("ul")
+
+	thumbs.innerHTML = pics
+	thumbsWrapper.append(thumbs)
+	slider.append(thumbsWrapper)
+
+	////////////////////////
+	// генеруємо пімпочки //
+	////////////////////////
+
+	const dots = document.createElement("ul")
+	dots.className = "dots"
+
+	for (let i = 0; i < length; i++) {
+		const li = document.createElement("li")
+		li.dataset.id = i
+
+		if (i === 0) {
+			li.className = "active"
 		}
 
-		var thumbsWrapper = document.createElement("div")
-		thumbsWrapper.className = "thumbs"
-		var thumbs = document.createElement("ul")
-		thumbs.innerHTML = pics
-		thumbsWrapper.append(thumbs)
-		slider.append(thumbsWrapper) ////////////////////////
-		// генеруємо пімпочки //
-		////////////////////////
+		dots.append(li)
+	}
 
-		var dots = document.createElement("ul")
-		dots.className = "dots"
+	slider.append(dots)
 
-		for (var _i2 = 0; _i2 < length; _i2++) {
-			var li = document.createElement("li")
-			li.dataset.id = _i2
+	//////////////////////////
+	// перемінні для свайпу //
+	//////////////////////////
 
-			if (_i2 === 0) {
-				li.className = "active"
-			}
+	// drag check
+	let drag,
+		flag = false
 
-			dots.append(li)
+	// drag vars (current -- id current's element)
+	let start, finish, current
+	let shift = 1
+
+	// якщо кількість більше 4, то робимо грід, якщо менше -- центруємо
+	if (length > 4) {
+		thumbs.style.display = "grid"
+
+		// зсув на 1 елемент вліво || set shift to 1 el
+		thumbs.style.left = "-25%"
+
+		// встановлюємо кількість вічок
+		thumbs.style.gridTemplateColumns = `repeat(${length},25%)`
+
+		// центруємо активний елемент || active element centered
+		for (let i = 0; i < 2; i++) {
+			const last = thumbs.lastElementChild
+			thumbs.prepend(last)
 		}
+	} else {
+		const lis = thumbs.querySelectorAll("li")
 
-		slider.append(dots) //////////////////////////
-		// перемінні для свайпу //
-		//////////////////////////
-		// drag check
+		thumbs.style.display = "flex"
+		thumbs.style.alignItems = "center"
+		thumbs.style.justifyContent = "center"
 
-		var drag = void 0,
-			flag = false // drag vars (current -- id current's element)
+		for (let li of lis) {
+			li.style.width = "25%"
+		}
+	}
 
-		var start = void 0,
-			finish = void 0,
-			current = void 0
-		var shift = 1 // якщо кількість більше 4, то робимо грід, якщо менше -- центруємо
+	//////////////////////////////////////
+	// масив для позиціонування слайдів //
+	//////////////////////////////////////
 
-		if (length > 4) {
-			thumbs.style.display = "grid" // зсув на 1 елемент вліво || set shift to 1 el
+	// transformX
+	let elements = []
 
-			thumbs.style.left = "-25%" // встановлюємо кількість вічок
-
-			thumbs.style.gridTemplateColumns = "repeat(".concat(length, ",25%)") // центруємо активний елемент || active element centered
-
-			for (var _i3 = 0; _i3 < 2; _i3++) {
-				var last = thumbs.lastElementChild
-				thumbs.prepend(last)
-			}
+	// set transformX
+	for (let i = 0; i < length; i++) {
+		if (i === length - 1) {
+			elements.push(-100)
+		} else if (i === 0) {
+			elements.push(0)
 		} else {
-			var lis = thumbs.querySelectorAll("li")
-			thumbs.style.display = "flex"
-			thumbs.style.alignItems = "center"
-			thumbs.style.justifyContent = "center"
+			elements.push(100)
+		}
+	}
 
-			var _iterator2 = _createForOfIteratorHelper(lis),
-				_step2
+	// малюємо слайди та тумбіки після завантаження сторінки
+	render()
 
-			try {
-				for (_iterator2.s(); !(_step2 = _iterator2.n()).done; ) {
-					var _li = _step2.value
-					_li.style.width = "25%"
-				}
-			} catch (err) {
-				_iterator2.e(err)
-			} finally {
-				_iterator2.f()
-			}
-		} //////////////////////////////////////
-		// масив для позиціонування слайдів //
-		//////////////////////////////////////
-		// transformX
+	// події
+	for (let i = 0; i < length; i++) {
+		// тимчасова перемінна для зручності || temporary var
+		const slide = slides[i]
 
-		var elements = [] // set transformX
+		// disable drag image (for firefox)
+		slide.addEventListener("dragstart", (event) => event.preventDefault())
 
-		for (var _i4 = 0; _i4 < length; _i4++) {
-			if (_i4 === length - 1) {
-				elements.push(-100)
-			} else if (_i4 === 0) {
-				elements.push(0)
-			} else {
-				elements.push(100)
-			}
-		} // малюємо слайди та тумбіки після завантаження сторінки
-
-		render() // події
-
-		for (var _i5 = 0; _i5 < length; _i5++) {
-			// тимчасова перемінна для зручності || temporary var
-			var slide = slides[_i5] // disable drag image (for firefox)
-
-			slide.addEventListener("dragstart", function (event) {
-				return event.preventDefault()
-			})
+		// якщо мобільний девайс -- відключити свайпи
+		if (!checkTouchDevice()) {
 			slide.addEventListener("pointerdown", sliderStart)
 			slide.addEventListener("pointermove", sliderMove)
 			slide.addEventListener("pointerup", sliderEnd)
 			slide.addEventListener("pointercancel", sliderEnd)
-			slide.addEventListener("pointerleave", sliderEnd) // disable click
+			slide.addEventListener("pointerleave", sliderEnd)
+		}
 
-			slide.addEventListener("click", function (event) {
-				return event.preventDefault()
-			})
-		} // клік на тумбік
+		// disable click
+		slide.addEventListener("click", (event) => event.preventDefault())
+	}
 
-		thumbs.addEventListener("click", function (event) {
-			var id = event.target.parentNode.dataset.id // якщо поточний слайд має номер більший за номер тумбіка
+	// клік на тумбік
+	thumbs.addEventListener("click", (event) => {
+		const id = event.target.parentNode.dataset.id
 
+		// якщо поточний слайд має номер більший за номер тумбіка
+		if (current > id) {
+			for (let i = 0; i < Math.abs(current - id); i++) {
+				const last = elements.shift()
+				elements.push(last)
+			}
+		}
+
+		// якщо поточний слайд має номер менший за номер тумбіка
+		if (current < id) {
+			for (let i = 0; i < Math.abs(current - id); i++) {
+				const first = elements.pop()
+				elements.unshift(first)
+			}
+		}
+
+		render()
+	})
+
+	// клік на пімпочку
+	dots.addEventListener("click", (event) => {
+		if (event.target.tagName === "LI") {
+			const id = event.target.dataset.id
+
+			// якщо поточний слайд має номер більший за номер тумбіка
 			if (current > id) {
-				for (var _i6 = 0; _i6 < Math.abs(current - id); _i6++) {
-					var _last = elements.shift()
-
-					elements.push(_last)
+				for (let i = 0; i < Math.abs(current - id); i++) {
+					const last = elements.shift()
+					elements.push(last)
 				}
-			} // якщо поточний слайд має номер менший за номер тумбіка
+			}
 
+			// якщо поточний слайд має номер менший за номер тумбіка
 			if (current < id) {
-				for (var _i7 = 0; _i7 < Math.abs(current - id); _i7++) {
-					var first = elements.pop()
+				for (let i = 0; i < Math.abs(current - id); i++) {
+					const first = elements.pop()
 					elements.unshift(first)
 				}
 			}
 
 			render()
-		}) // клік на пімпочку
+		}
+	})
 
-		dots.addEventListener("click", function (event) {
-			if (event.target.tagName === "LI") {
-				var id = event.target.dataset.id // якщо поточний слайд має номер більший за номер тумбіка
+	// натискання
+	function sliderStart(event) {
+		drag = true
 
-				if (current > id) {
-					for (var _i8 = 0; _i8 < Math.abs(current - id); _i8++) {
-						var _last2 = elements.shift()
+		// where it was pressed
+		start = event.pageX
+	}
 
-						elements.push(_last2)
-					}
-				} // якщо поточний слайд має номер менший за номер тумбіка
+	// рух мишкою
+	function sliderMove(event) {
+		if (drag) {
+			// куди дотягнули || where it was moved
+			finish = event.pageX
 
-				if (current < id) {
-					for (var _i9 = 0; _i9 < Math.abs(current - id); _i9++) {
-						var first = elements.pop()
-						elements.unshift(first)
-					}
+			// якщо вліво || if to left
+			if (finish - start < 0) {
+				shift = finish - start
+
+				if (flag === false) {
+					flag = true
 				}
-
-				render()
 			}
-		}) // натискання
 
-		function sliderStart(event) {
-			drag = true // where it was pressed
+			// якщо вправо || if to right
+			if (finish - start > 0) {
+				shift = Math.abs(start - finish)
 
-			start = event.pageX
-		} // рух мишкою
-
-		function sliderMove(event) {
-			if (drag) {
-				// куди дотягнули || where it was moved
-				finish = event.pageX // якщо вліво || if to left
-
-				if (finish - start < 0) {
-					shift = finish - start
-
-					if (flag === false) {
-						flag = true
-					}
-				} // якщо вправо || if to right
-
-				if (finish - start > 0) {
-					shift = Math.abs(start - finish)
-
-					if (flag === false) {
-						flag = true
-					}
-				} // speed * 2
-
-				this.style.transform = "translateX(".concat(shift * 2, "px)") // cursor grab
-
-				this.querySelector("a").className = "grab"
-			}
-		} // відпускання мишки + вихід за край слайду
-
-		function sliderEnd() {
-			if (drag) {
-				// to right
-				if (finish - start < 0) {
-					var first = elements.pop()
-					elements.unshift(first)
-				} // to left
-
-				if (finish - start > 0) {
-					var _last3 = elements.shift()
-
-					elements.push(_last3)
+				if (flag === false) {
+					flag = true
 				}
-
-				render() // set null
-
-				drag = false // set null
-
-				flag = false // cursor default
-
-				this.querySelector("a").className = ""
-			}
-		} // висота блоку зі слайдами залеже від найбільшого слайду
-
-		function setMaxHeightSlider(parentWidth) {
-			// максимальна висота
-			var dataHeight = Math.max.apply(
-				Math,
-				_toConsumableArray(
-					_toConsumableArray(images).map(function (image) {
-						return image.dataset.height
-					})
-				)
-			)
-			slidesUl.style.height = "".concat(
-				(parentWidth / dataHeight) * 500,
-				"px"
-			)
-		} // перемальовка елементів || render slides and thumbs
-
-		function render() {
-			//////////////////
-			// render slide //
-			//////////////////
-			for (var _i10 = 0; _i10 < length; _i10++) {
-				slides[_i10].style.transform = "translateX(".concat(
-					elements[_i10],
-					"%)"
-				) // set opacity 1 for current
-
-				if (elements[_i10] === 0) {
-					slides[_i10].style.opacity = 1
-					current = slides[_i10].dataset.id
-
-					var _lis = slider.querySelectorAll(".thumbs li")
-
-					for (var k = 0; k < length; k++) {
-						if (_lis[k].dataset.id === current) {
-							_lis[k].classList.add("active")
-						} else {
-							_lis[k].classList.remove("active")
-						}
-					}
-				} else {
-					slides[_i10].style.opacity = 0
-				}
-			} ///////////////////
-			// render thumbs //
-			///////////////////
-			// якщо тягнули вправо || if drag to right
-
-			if (shift > 0) {
-				var _last4 = thumbs.lastElementChild
-				thumbs.prepend(_last4)
-				thumbs.style.transition = "none"
-				thumbs.style.transform = "translateX(-25%)"
-			} // якщо тягнули вліво || if drag to left
-
-			if (shift < 0) {
-				var first = thumbs.firstElementChild
-				thumbs.append(first)
-				thumbs.style.transition = "none"
-				thumbs.style.transform = "translateX(25%)"
 			}
 
-			setTimeout(function () {
-				thumbs.style.transform = "translateX(0)"
-				thumbs.style.transition = ".5s"
-			}, 60) /////////////////
-			// render dots //
-			/////////////////
+			// speed * 2
+			this.style.transform = `translateX(${shift * 2}px)`
 
-			var lis = slider.querySelectorAll(".dots li")
-
-			for (var _i11 = 0; _i11 < length; _i11++) {
-				lis[_i11].classList.remove("active")
-			}
-
-			lis[current].classList.add("active")
+			// cursor grab
+			this.querySelector("a").className = "grab"
 		}
 	}
 
-	for (_iterator.s(); !(_step = _iterator.n()).done; ) {
-		_loop()
-	} // 11-02-2022
-} catch (err) {
-	_iterator.e(err)
-} finally {
-	_iterator.f()
+	// відпускання мишки + вихід за край слайду
+	function sliderEnd() {
+		if (drag) {
+			// to right
+			if (finish - start < 0) {
+				const first = elements.pop()
+				elements.unshift(first)
+			}
+
+			// to left
+			if (finish - start > 0) {
+				const last = elements.shift()
+				elements.push(last)
+			}
+
+			render()
+
+			// set null
+			drag = false
+
+			// set null
+			flag = false
+
+			// cursor default
+			this.querySelector("a").className = ""
+		}
+	}
+
+	// to left
+	function sliderLeft() {
+		const first = elements.pop()
+		elements.unshift(first)
+
+		render()
+	}
+
+	// to right
+	function sliderRight() {
+		const last = elements.shift()
+		elements.push(last)
+
+		render()
+	}
+
+	// висота блоку зі слайдами залеже від найбільшого слайду
+	function setMaxHeightSlider(parentWidth) {
+		// максимальна висота
+		const dataHeight = Math.max(
+			...[...images].map((image) => image.dataset.height)
+		)
+
+		slidesUl.style.height = `${(parentWidth / dataHeight) * 500}px`
+	}
+
+	// перемальовка елементів || render slides and thumbs
+	function render() {
+		//////////////////
+		// render slide //
+		//////////////////
+
+		for (let i = 0; i < length; i++) {
+			slides[i].style.transform = `translateX(${elements[i]}%)`
+
+			// set opacity 1 for current
+			if (elements[i] === 0) {
+				slides[i].style.opacity = 1
+
+				current = slides[i].dataset.id
+				const lis = slider.querySelectorAll(".thumbs li")
+
+				for (let k = 0; k < length; k++) {
+					if (lis[k].dataset.id === current) {
+						lis[k].classList.add("active")
+					} else {
+						lis[k].classList.remove("active")
+					}
+				}
+			} else {
+				slides[i].style.opacity = 0
+			}
+		}
+
+		///////////////////
+		// render thumbs //
+		///////////////////
+
+		// якщо тягнули вправо || if drag to right
+		if (shift > 0) {
+			const last = thumbs.lastElementChild
+			thumbs.prepend(last)
+
+			thumbs.style.transition = "none"
+			thumbs.style.transform = `translateX(-25%)`
+		}
+
+		// якщо тягнули вліво || if drag to left
+		if (shift < 0) {
+			const first = thumbs.firstElementChild
+			thumbs.append(first)
+
+			thumbs.style.transition = "none"
+			thumbs.style.transform = `translateX(25%)`
+		}
+
+		setTimeout(() => {
+			thumbs.style.transform = `translateX(0)`
+			thumbs.style.transition = ".5s"
+		}, 60)
+
+		/////////////////
+		// render dots //
+		/////////////////
+		const lis = slider.querySelectorAll(".dots li")
+		for (let i = 0; i < length; i++) {
+			lis[i].classList.remove("active")
+		}
+
+		lis[current].classList.add("active")
+	}
 }
+
+function checkTouchDevice() {
+	return (
+		"ontouchstart" in window ||
+		navigator.maxTouchPoints > 0 ||
+		navigator.msMaxTouchPoints > 0
+	)
+}
+
 // 11-02-2022
