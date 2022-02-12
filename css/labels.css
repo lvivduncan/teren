@@ -1,0 +1,45 @@
+/* кольорові блямби */
+.label
+{
+    display: flex;
+    border-radius: 3px;
+    color: var(--white);
+    background: var(--light);
+    font-size: 10px;
+    padding: 2px 5px;
+    text-transform: lowercase;
+    line-height: unset;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.label.yellow
+{
+    background: var(--yellow);
+}
+
+.label.green
+{
+    background: var(--green);
+}
+
+.label.darkgreen
+{
+    background: var(--darkgreen);
+}
+
+.label.red
+{
+    background: var(--red);
+}
+
+.label.darkgray
+{
+    background: var(--darkgray);
+}
+
+.label.violet
+{
+    background: var(--violet);
+}

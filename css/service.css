@@ -3,7 +3,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin: calc(var(--gap)/2) 0;
+    margin: 0 0 calc(var(--gap)/2);
+    gap: calc(var(--gap)/4);
+
+    /* костиль. TODO: почистити стилі! */
+    position: static!important;
 }
 
 .service time 
@@ -11,29 +15,20 @@
     font-size: 14px;
     margin: 0!important;
     display: block;
-    padding-right: calc(var(--gap)/2);
+
+    /* костиль. TODO: почистити стилі! */
+    position: static!important;
+    background: transparent!important;
+    padding: 0!important;
+    font-weight: normal!important;
 }
 
 .service a
 {
     display: block;
-    padding-left: calc(var(--gap)/2);
     position: relative;
-    color: var(--time);
     font-size: 13px;
     text-transform: uppercase;
-}
-
-.service a::before
-{
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    position: absolute;
-    left: 0;
-    top: calc(50% - 3px);
-    background: var(--light);
 }
 
 /* ///////////////
@@ -51,12 +46,6 @@
     background: var(--white);
 }
 
-
-.article-8 .service
-{
-    display: block;
-}
-
 .article-8 .service time
 {
     padding: 0;
@@ -66,15 +55,9 @@
 .article-8 .service a:hover,
 .article-8 .service a:focus
 {
-    display: block;
+    display: inline-block;
     padding: 0;
     color: var(--cyan);
-    margin: calc(var(--gap)/2) 0 0;
-}
-
-.article-8 .service a::before
-{
-    display: none;
 }
 
 #content .service a,
@@ -82,10 +65,12 @@
 #content .service a:focus
 {
     color: var(--cyan)!important;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
-#content .service a::before
+/**/
+.article-3 .service,
+.article-4 .service
 {
-    background: var(--cyan);
+    margin: calc(var(--gap)/2) 0;
 }

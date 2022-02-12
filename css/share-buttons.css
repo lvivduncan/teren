@@ -4,7 +4,11 @@
 
 .share-buttons
 {
-    display: block;
+    /* display: block; */
+
+    display: flex;
+    gap: 0 calc(var(--gap)/2);
+    flex-wrap: wrap;
 }
 
 .share-buttons a

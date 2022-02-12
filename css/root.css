@@ -28,6 +28,14 @@ body
     --light: #aab2bd;
     --black: #000;
 
+    /* labels */
+    --yellow: #ffae00; 
+    --green: #3ea72d;
+    --darkgreen: #247817;
+    --red: #990000;
+    --darkgray: #6a6a6a; 
+    --violet: violet;
+
     --bg-gray: #f6f7fb;
 
     /* стандартний відступ між новинами */
@@ -282,9 +290,14 @@ body.fixed
     text-align: center;
 }
 
+.tags
+{
+    display: flex;
+    gap: calc(var(--gap)/4);
+    flex-wrap: wrap;
+}
 .tags a
 {
-    margin: 4px 13px 4px 0;
     background-color: var(--gray);
     color: var(--white);
     padding: 1px 12px 4px 12px;
