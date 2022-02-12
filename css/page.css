@@ -146,6 +146,15 @@
     font-weight: 400;
 }
 
+#content main h1,
+#content main h2,
+#content main h3,
+#content main h4,
+#content main h5
+{
+    margin: 0 0 calc(var(--gap)/4*3);
+}
+
 #content main .picture 
 {
     margin: 0 0 calc(var(--gap)/4*3);
