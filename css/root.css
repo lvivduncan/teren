@@ -282,7 +282,6 @@ body.fixed
     text-align: center;
 }
 
-/* tags */
 .tags a
 {
     margin: 4px 13px 4px 0;
@@ -293,6 +292,7 @@ body.fixed
     line-height: 30px;
     border-radius: 5px;
     font-size: 16px;
+    display: inline-block;
 }
 
 .tags a:hover,
@@ -302,8 +302,9 @@ body.fixed
     color: var(--white)!important;
 }
 
-/*2-2-2022*/
 iframe
 {
     max-width:100%!important;
 }
+
+/* 12-02-2022 */
